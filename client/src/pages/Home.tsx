@@ -297,7 +297,7 @@ export default function Home() {
               "San Rafael", "Villacastín", "Ituero y Lama", "Otero de Herreros", 
               "Navas de San Antonio", "Prádena", "Turégano", "Pedraza", 
               "Sepúlveda", "Boceguillas", "Cuéllar", "Palazuelos de Eresma", 
-              "Trescasas", "Torrecaballeros", "Hontoria"
+              "Trescasas", "Torrecaballeros", "Hontoria", "Coca"
             ].map((zona) => {
               const page = Object.values(locationPagesData).find(p => p.barrio === zona);
               const slug = page ? page.slug : null;

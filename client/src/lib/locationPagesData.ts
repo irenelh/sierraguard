@@ -495,6 +495,60 @@ export const locationPagesData: Record<string, LocationPageData> = {
     ctaText: "Solicitar Inspección Gratuita",
     trustBadges: ["Especialistas en Patrimonio", "Discreción Total", "Garantía por Escrito", "Atención Personalizada"],
   },
+  "control-de-plagas-coca": {
+    barrio: "Coca",
+    slug: "control-de-plagas-coca",
+    h1: "Control de Plagas en Coca | Desinsectación y Desratización Profesional",
+    metaDescription: "Servicios de control de plagas en Coca. Especialistas en tratamientos para viviendas y negocios. Desinsectación, desratización y control de aves. Certificado CEPA.",
+    introParrafo: "Coca, con su impresionante castillo y su riqueza histórica, es una de las localidades más importantes de la provincia. Sin embargo, las estructuras antiguas y el entorno rural pueden favorecer la aparición de plagas como roedores, termitas o avispas. En Sierra Guard, ofrecemos soluciones de control de plagas adaptadas a las necesidades específicas de Coca, protegiendo tanto el patrimonio como la salud de sus habitantes y negocios.",
+    bloqueConfianza: "Entendemos la importancia de preservar la integridad de los edificios y la tranquilidad de los vecinos en Coca. Nuestros técnicos cualificados emplean métodos de control integrados que son efectivos contra las plagas pero respetuosos con el entorno. Ofrecemos tratamientos preventivos y curativos con total garantía, asegurando que tu propiedad esté libre de insectos y roedores no deseados.",
+    layoutVariant: "simple",
+    mapEmbedUrl: "https://maps.google.com/maps?q=Coca+Segovia&t=&z=13&ie=UTF8&iwloc=&output=embed",
+    faqs: [
+      { question: "¿Realizáis tratamientos contra termitas en estructuras antiguas?", answer: "Sí, somos expertos en el control de xilófagos (termitas y carcoma). Realizamos inspecciones detalladas y aplicamos tratamientos específicos para proteger la madera estructural." },
+      { question: "¿Atendéis a negocios de hostelería en Coca?", answer: "Por supuesto. Ofrecemos planes de mantenimiento para bares y restaurantes, asegurando el cumplimiento de la normativa sanitaria y la ausencia de plagas." },
+      { question: "¿Cuánto tardáis en llegar a Coca?", answer: "Damos servicio rápido en toda la provincia. Para urgencias, podemos estar en Coca en un plazo muy breve. Contáctanos para confirmar disponibilidad." }
+    ],
+    serviciosEspecificos: [
+      {
+        titulo: "Control de Roedores",
+        descripcion: "Desratización segura para viviendas y naves",
+        items: [
+          "Inspección de puntos de acceso",
+          "Colocación de portacebos de seguridad",
+          "Monitorización y seguimiento",
+          "Sellado de vías de entrada"
+        ]
+      },
+      {
+        titulo: "Desinsectación General",
+        descripcion: "Eliminación de cucarachas, hormigas y avispas",
+        items: [
+          "Tratamientos con gel sin plazo de seguridad",
+          "Retirada de nidos de avispas",
+          "Fumigación perimetral",
+          "Control de plagas estacionales"
+        ]
+      },
+      {
+        titulo: "Protección de la Madera",
+        descripcion: "Tratamientos contra termitas y carcoma",
+        items: [
+          "Diagnóstico de patologías de la madera",
+          "Tratamientos curativos y preventivos",
+          "Sistemas de cebos para termitas",
+          "Protección de vigas y estructuras"
+        ]
+      }
+    ],
+    ctaText: "Solicitar Inspección Gratuita",
+    trustBadges: [
+      "Técnicos Certificados",
+      "Cobertura en toda la zona de Coca",
+      "Tratamientos garantizados",
+      "Presupuesto sin compromiso"
+    ]
+  }
 };
 
 /**

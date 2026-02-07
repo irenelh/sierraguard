@@ -172,7 +172,7 @@ export const serviceCategoriesData: ServiceCategory[] = [
     nombre: "Desratización",
     h1: "Desratización Profesional en Segovia | Smart Traps 24/7 y Rodent Proofing",
     metaDescription: "Desratización profesional en Segovia. Smart traps con alertas en tiempo real, rodent proofing permanente. Control de ratas y ratones. Certificado CEPA. Garantía 100%.",
-    intro: "La desratización es crítica en Segovia, especialmente en zonas comerciales, almacenes logísticos y viviendas antiguas. Las ratas y ratones no solo dañan infraestructuras y mercancía, sino que comprometen la seguridad alimentaria, transmiten enfermedades y generan responsabilidad legal para empresas. Sierra Guard ofrece desratización inteligente con smart traps conectadas a nube (alertas en tiempo real), auditorías estructurales para identificar puntos de entrada, y sellado permanente (rodent proofing) que cierra accesos de forma definitiva.",
+    intro: "Protege tu hogar o negocio en Segovia de ratas y ratones con tecnología avanzada. Ofrecemos desratización inteligente con monitorización 24/7 y sellado definitivo de accesos (Rodent Proofing). Soluciones rápidas, seguras y con certificado CEPA para garantizar espacios libres de roedores.",
     servicios: [
       {
         titulo: "Smart Traps 24/7",

@@ -11,6 +11,7 @@ import CatchAllRoute from "./pages/CatchAllRoute";
 import BarriosPage from "./pages/BarriosPage";
 import BlogPage from "./pages/BlogPage";
 import BlogArticlePage from "./pages/BlogArticlePage";
+import Calculadora from "./pages/Calculadora";
 
 
 function Router() {
@@ -18,6 +19,7 @@ function Router() {
     <Switch>
       <Route path={"/"} component={Home} />
       {/* <Route path="/barrios" component={BarriosPage} /> */}
+      <Route path="/calculadora" component={Calculadora} />
       <Route path="/blog/:slug" component={BlogArticlePage} />
       <Route path="/blog" component={BlogPage} />
       <Route path="/servicios/:slug" component={ServicePageRoute} />

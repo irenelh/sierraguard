@@ -40,7 +40,7 @@ export const serviceCategoriesData: ServiceCategory[] = [
     nombre: "Desinsectación",
     h1: "Desinsectación Profesional en Segovia | Control de Cucarachas, Chinches, Termitas y Avispas",
     metaDescription: "Desinsectación profesional en Segovia. Control de cucarachas, chinches, termitas, avispas, hormigas, pulgas y mosquitos. Métodos seguros, certificados CEPA. Respuesta en 24h.",
-    intro: "Expertos en desinsectación en Segovia. Eliminamos cucarachas, chinches, termitas y avispas de forma definitiva. Protege tu hogar o negocio con tratamientos rápidos, seguros y garantizados por profesionales certificados.",
+    intro: "Servicio líder de desinsectación en Segovia. Eliminamos todo tipo de plagas: cucarachas, chinches, termitas, hormigas y avispas. Garantizamos resultados definitivos con tratamientos rápidos, seguros para tu familia y mascotas, y certificados por sanidad. Recupera hoy mismo la tranquilidad de tu hogar o negocio.",
     servicios: [
       {
         titulo: "Control de Cucarachas",
@@ -172,7 +172,7 @@ export const serviceCategoriesData: ServiceCategory[] = [
     nombre: "Desratización",
     h1: "Desratización Profesional en Segovia | Smart Traps 24/7 y Rodent Proofing",
     metaDescription: "Desratización profesional en Segovia. Smart traps con alertas en tiempo real, rodent proofing permanente. Control de ratas y ratones. Certificado CEPA. Garantía 100%.",
-    intro: "Protege tu hogar o negocio en Segovia de ratas y ratones con tecnología avanzada. Ofrecemos desratización inteligente con monitorización 24/7 y sellado definitivo de accesos (Rodent Proofing). Soluciones rápidas, seguras y con certificado CEPA para garantizar espacios libres de roedores.",
+    intro: "Expertos en desratización en Segovia. Eliminamos ratas y ratones mediante tecnología avanzada Smart Traps con monitorización 24/7 y sellado estructural definitivo (Rodent Proofing). Solución rápida, discreta y 100% eficaz. Evita riesgos sanitarios y daños materiales con nuestra garantía de eliminación certificada.",
     servicios: [
       {
         titulo: "Smart Traps 24/7",
@@ -260,7 +260,7 @@ export const serviceCategoriesData: ServiceCategory[] = [
     nombre: "Desinfección",
     h1: "Desinfección Profesional en Segovia | Legionella, Bioseguridad y Patógenos",
     metaDescription: "Desinfección profesional en Segovia. Auditoría de legionella, desinfección de patógenos, purificación de aire UV-C. Hospitales, clínicas, gimnasios. Certificado CEPA.",
-    intro: "La desinfección es esencial en Segovia para clínicas, hospitales, gimnasios y espacios de salud pública. La legionella en torres de refrigeración, patógenos aéreos en sistemas HVAC, y contaminación de superficies representan riesgos epidemiológicos graves. Sierra Guard ofrece auditorías especializadas de legionella, desinfección de patógenos mediante tecnología UV-C, y purificación de aire profesional.",
+    intro: "Desinfección profesional y bioseguridad en Segovia. Especialistas en control de Legionella, purificación de aire y eliminación de patógenos en clínicas, gimnasios y espacios públicos. Ofrecemos auditorías técnicas, tratamientos con tecnología UV-C y certificación sanitaria oficial para garantizar un entorno seguro, saludable y libre de virus.",
     servicios: [
       {
         titulo: "Auditoría de Legionella",
@@ -347,7 +347,7 @@ export const serviceCategoriesData: ServiceCategory[] = [
     nombre: "Control de Aves",
     h1: "Control de Aves en Segovia | Palomas, Pinchos Antipalomas y Redes de Protección",
     metaDescription: "Control de aves en Segovia. Retirada de palomas, instalación de pinchos antipalomas y redes de protección. Métodos humanitarios. Certificado CEPA. Garantía 100%.",
-    intro: "El control de aves es cada vez más demandado en Segovia, especialmente en zonas comerciales y residenciales. Las palomas y otras aves generan acumulación de heces, daños a estructuras, contaminación de espacios, y transmisión de enfermedades. Sierra Guard ofrece control humanitario de aves con métodos no invasivos: instalación de pinchos antipalomas, redes de protección, y sistemas de ahuyentamiento.",
+    intro: "Control de aves y palomas en Segovia. Protege la fachada de tu edificio con instalación de redes, pinchos antipalomas y sistemas disuasorios invisibles. Soluciones éticas, duraderas y sin mantenimiento para evitar daños estructurales y riesgos sanitarios. Solicita tu inspección gratuita y presupuesto sin compromiso.",
     servicios: [
       {
         titulo: "Control de Palomas",
@@ -422,7 +422,7 @@ export const serviceCategoriesData: ServiceCategory[] = [
     nombre: "Tratamientos de Madera",
     h1: "Tratamientos de Madera en Segovia | Carcoma y Termitas en Estructuras",
     metaDescription: "Tratamientos de madera en Segovia. Control de carcoma, tratamiento contra termitas en madera. Protección de estructuras. Certificado CEPA. Garantía 100%.",
-    intro: "Los tratamientos de madera son críticos en Segovia, especialmente en edificios históricos y viviendas antiguas. La carcoma y las termitas dañan estructuras de madera, comprometiendo la integridad de vigas, puertas y muebles. Sierra Guard ofrece tratamientos especializados con métodos de bajo impacto químico, inyecciones profesionales, y protección preventiva.",
+    intro: "Tratamientos especializados para madera en Segovia. Eliminamos carcoma y termitas de forma definitiva en vigas, muebles y estructuras históricas. Utilizamos inyecciones de alta presión y geles de absorción profunda sin dañar el patrimonio. Garantía de protección a largo plazo y certificación para edificaciones.",
     servicios: [
       {
         titulo: "Tratamiento contra Carcoma",
@@ -484,7 +484,7 @@ export const serviceCategoriesData: ServiceCategory[] = [
     nombre: "Higiene Ambiental",
     h1: "Higiene Ambiental en Segovia | Higienización de Espacios y Gestión de Contenedores",
     metaDescription: "Higiene ambiental en Segovia. Higienización de espacios, gestión de contenedores higiénicos, bacteriostáticos. Comercios, industrias, viviendas. Certificado CEPA.",
-    intro: "La higiene ambiental es fundamental en Segovia para mantener espacios limpios, seguros y libres de contaminación. Sierra Guard ofrece servicios de higienización integral: limpieza de espacios, gestión de contenedores higiénicos, y aplicación de bacteriostáticos. Nuestro enfoque combina desinfección química con métodos ecológicos, adaptados a cada sector: comercios, industrias alimentarias, y viviendas.",
+    intro: "Soluciones integrales de higiene ambiental en Segovia. Mantenimiento de espacios saludables con gestión de contenedores higiénicos, bacteriostáticos y purificación de aire. Servicio adaptado a normativas sanitarias para oficinas, hostelería y centros educativos. Mejora la imagen y seguridad de tu negocio.",
     servicios: [
       {
         titulo: "Higienización de Espacios",
@@ -546,7 +546,7 @@ export const serviceCategoriesData: ServiceCategory[] = [
     nombre: "Inspección y Prevención",
     h1: "Inspección y Prevención de Plagas en Segovia | Auditorías y Planes de Mantenimiento",
     metaDescription: "Inspección y prevención de plagas en Segovia. Auditorías completas, inspección de termitas, programas de prevención. Planes de mantenimiento periódico. Certificado CEPA.",
-    intro: "La inspección y prevención es la estrategia más efectiva para evitar infestaciones costosas. Sierra Guard ofrece auditorías completas de plagas, inspecciones especializadas de termitas, y programas de prevención personalizados. Nuestro enfoque proactivo detecta problemas antes de que se conviertan en crisis, ahorrando tiempo y dinero a empresas y viviendas de Segovia.",
+    intro: "Auditorías y planes de prevención de plagas en Segovia. Detectamos riesgos antes de que se conviertan en infestaciones costosas. Inspecciones técnicas detalladas, monitoreo continuo y certificados oficiales para cumplimiento de normativas de sanidad. Protege tu inversión con un mantenimiento proactivo y profesional.",
     servicios: [
       {
         titulo: "Inspección General de Plagas",

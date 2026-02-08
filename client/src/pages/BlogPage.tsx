@@ -73,10 +73,23 @@ export default function BlogPage() {
 
       {/* ===== ARTÍCULOS ===== */}
       <section className="py-20">
-        <div className="container max-w-4xl">
-          <div className="grid grid-cols-1 gap-8">
+        <div className="container max-w-7xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredArticles.map(article => (
               <article key={article.id} className="border border-border rounded-lg overflow-hidden hover:shadow-lg transition">
+                {article.image && (
+                  <Link href={`/blog/${article.slug}`}>
+                    <div className="w-full h-48 overflow-hidden cursor-pointer group">
+                       <img 
+                         src={article.image} 
+                         alt={article.title} 
+                         loading="lazy"
+                         referrerPolicy="no-referrer"
+                         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                       />
+                     </div>
+                  </Link>
+                )}
                 <div className="p-6">
                   <div className="flex items-center gap-4 mb-4 text-sm text-muted-foreground">
                     <div className="flex items-center gap-1">

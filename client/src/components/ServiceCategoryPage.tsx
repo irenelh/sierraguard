@@ -11,7 +11,11 @@ import {
   Target, 
   Search,
   Shield,
-  Quote
+  Quote,
+  ShieldCheck,
+  Award,
+  Clock,
+  BadgeCheck
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
@@ -126,10 +130,10 @@ export default function ServiceCategoryPage({ service }: ServiceCategoryPageProp
       {/* ===== HERO SECTION ===== */}
       <section className="py-16 bg-gradient-to-br from-primary/10 to-primary/5 border-b border-border">
         <div className="container max-w-4xl">
-          <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
+          <h1 className="text-3xl lg:text-4xl font-bold text-foreground mb-6 leading-tight">
             {service.h1}
           </h1>
-          <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+          <p className="text-lg text-muted-foreground leading-relaxed mb-8">
             {service.intro}
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
@@ -196,6 +200,8 @@ export default function ServiceCategoryPage({ service }: ServiceCategoryPageProp
       </section>
 
       {/* ===== BLOQUE DE CONFIANZA ===== */}
+      {/* SECCIÓN ELIMINADA POR PETICIÓN DEL USUARIO */}
+      {/* 
       <section className="py-12 bg-primary text-white relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
           <Shield className="w-96 h-96 absolute -top-20 -left-20 rotate-12" />
@@ -214,9 +220,10 @@ export default function ServiceCategoryPage({ service }: ServiceCategoryPageProp
           </p>
         </div>
       </section>
+      */}
 
-      {/* ===== BENEFICIOS ===== */}
-      <section className="py-16 bg-white">
+    {/* ===== BENEFICIOS / POR QUÉ ELEGIRNOS ===== */}
+      <section className="py-16 bg-primary/5">
         <div className="container max-w-6xl">
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -228,13 +235,20 @@ export default function ServiceCategoryPage({ service }: ServiceCategoryPageProp
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {service.beneficios.map((beneficio, index) => (
-              <div key={index} className="flex flex-col items-center text-center p-5 bg-gray-50 rounded-xl border border-gray-100 hover:shadow-lg hover:border-primary/20 transition-all duration-300 group">
-                <div className="w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
-                  <CheckCircle2 className="w-6 h-6 text-primary" />
+            {[
+              { icon: CheckCircle2, text: "Respuesta en menos de 24 horas" },
+              { icon: ShieldCheck, text: "Métodos seguros para familias y mascotas" },
+              { icon: Award, text: "Certificado CEPA" },
+              { icon: Clock, text: "Horarios flexibles adaptados a ti" },
+              { icon: BadgeCheck, text: "Técnicos cualificados y certificados" },
+              { icon: Star, text: "Garantía 100% de eliminación" }
+            ].map((item, index) => (
+              <div key={index} className="flex flex-col items-center text-center p-5 bg-white rounded-xl border border-gray-100 hover:shadow-lg hover:border-primary/20 transition-all duration-300 group">
+                <div className="w-12 h-12 bg-primary/10 rounded-full shadow-sm flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
+                  <item.icon className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="text-base font-semibold text-foreground group-hover:text-primary transition-colors">
-                  {beneficio}
+                  {item.text}
                 </h3>
               </div>
             ))}

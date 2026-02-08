@@ -31,7 +31,8 @@ Las avispas, especialmente la avispa velutina, son un problema creciente en prim
     date: "2026-02-06",
     readTime: 5,
     category: "Plagas",
-    tags: ["cucarachas", "ratas", "termitas", "avispas", "segovia"]
+    tags: ["cucarachas", "ratas", "termitas", "avispas", "segovia"],
+    image: "https://loremflickr.com/800/600/insect,pest?lock=1"
   },
   {
     id: "2",
@@ -64,7 +65,8 @@ Décimo, considera un programa de prevención profesional con Sierra Guard para 
     date: "2026-02-05",
     readTime: 6,
     category: "Prevención",
-    tags: ["prevención", "plagas", "hogar", "consejos"]
+    tags: ["prevención", "plagas", "hogar", "consejos"],
+    image: "https://loremflickr.com/800/600/clean,home?lock=2"
   },
   {
     id: "3",
@@ -83,7 +85,8 @@ Las termitas, aunque menos activas en invierno, continúan dañando estructuras 
     date: "2026-02-04",
     readTime: 4,
     category: "Plagas",
-    tags: ["invierno", "ratas", "cucarachas", "prevención"]
+    tags: ["invierno", "ratas", "cucarachas", "prevención"],
+    image: "https://loremflickr.com/800/600/rat,winter?lock=3"
   },
   {
     id: "4",
@@ -104,7 +107,8 @@ El tratamiento profesional es esencial. Sierra Guard utiliza métodos modernos c
     date: "2026-02-03",
     readTime: 5,
     category: "Plagas",
-    tags: ["termitas", "madera", "daños", "tratamiento"]
+    tags: ["termitas", "madera", "daños", "tratamiento"],
+    image: "https://loremflickr.com/800/600/termite,wood?lock=4"
   },
   {
     id: "5",
@@ -123,7 +127,8 @@ Si encuentras un nido de avispa velutina, no intentes retirarlo por tu cuenta. C
     date: "2026-02-02",
     readTime: 4,
     category: "Plagas",
-    tags: ["avispas", "velutina", "seguridad", "urgente"]
+    tags: ["avispas", "velutina", "seguridad", "urgente"],
+    image: "https://loremflickr.com/800/600/wasp,insect?lock=5"
   },
   {
     id: "6",
@@ -144,7 +149,8 @@ En Sierra Guard, nuestros técnicos certificados realizan inspecciones completas
     date: "2026-02-01",
     readTime: 5,
     category: "Tratamiento",
-    tags: ["profesional", "DIY", "comparación", "eficacia"]
+    tags: ["profesional", "DIY", "comparación", "eficacia"],
+    image: "https://loremflickr.com/800/600/worker,protection?lock=6"
   },
   {
     id: "7",
@@ -163,7 +169,8 @@ Nuestros sistemas de monitoreo remoto permiten detectar actividad de roedores en
     date: "2026-01-31",
     readTime: 4,
     category: "Negocios",
-    tags: ["desratización", "restaurantes", "comercios", "higiene"]
+    tags: ["desratización", "restaurantes", "comercios", "higiene"],
+    image: "https://loremflickr.com/800/600/restaurant,kitchen?lock=7"
   },
   {
     id: "8",
@@ -180,7 +187,8 @@ La prevención requiere mantenimiento regular y desinfección de sistemas de agu
     date: "2026-01-30",
     readTime: 4,
     category: "Desinfección",
-    tags: ["legionella", "torres", "HVAC", "salud"]
+    tags: ["legionella", "torres", "HVAC", "salud"],
+    image: "https://loremflickr.com/800/600/water,pipe?lock=8"
   },
   {
     id: "9",
@@ -197,7 +205,8 @@ El tratamiento profesional es más efectivo que los intentos DIY. Sierra Guard u
     date: "2026-01-29",
     readTime: 4,
     category: "Plagas",
-    tags: ["chinches", "detección", "tratamiento", "hogar"]
+    tags: ["chinches", "detección", "tratamiento", "hogar"],
+    image: "https://loremflickr.com/800/600/bed,bedroom?lock=9"
   },
   {
     id: "10",
@@ -214,7 +223,8 @@ El control de hormigas requiere identificar y eliminar la colonia completa, incl
     date: "2026-01-28",
     readTime: 4,
     category: "Plagas",
-    tags: ["hormigas", "control", "cebos", "colonias"]
+    tags: ["hormigas", "control", "cebos", "colonias"],
+    image: "https://loremflickr.com/800/600/ant,insect?lock=10"
   },
   {
     id: "11",
@@ -231,7 +241,8 @@ Para control profesional, Sierra Guard ofrece tratamientos de nebulización que 
     date: "2026-01-27",
     readTime: 4,
     category: "Plagas",
-    tags: ["mosquitos", "verano", "prevención", "control"]
+    tags: ["mosquitos", "verano", "prevención", "control"],
+    image: "https://loremflickr.com/800/600/mosquito,insect?lock=11"
   },
   {
     id: "12",
@@ -250,7 +261,8 @@ Contacta a Sierra Guard para diseñar un programa de mantenimiento preventivo pe
     date: "2026-01-26",
     readTime: 5,
     category: "Prevención",
-    tags: ["mantenimiento", "preventivo", "programa", "anual"]
+    tags: ["mantenimiento", "preventivo", "programa", "anual"],
+    image: "https://loremflickr.com/800/600/shield,protection?lock=12"
   }
 ];
 

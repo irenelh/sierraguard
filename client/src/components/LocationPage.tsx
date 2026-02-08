@@ -100,10 +100,10 @@ export default function LocationPage({
           <div className="inline-block px-3 py-1 mb-6 text-sm font-semibold text-green-800 bg-green-100 rounded-full">
             Servicio Local en {barrio}
           </div>
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-gray-900 leading-tight tracking-tight">
+          <h1 className="text-3xl md:text-4xl font-extrabold mb-6 text-gray-900 leading-tight tracking-tight">
             {h1}
           </h1>
-          <p className="text-xl text-gray-600 mb-10 leading-relaxed max-w-3xl">
+          <p className="text-lg text-gray-600 mb-10 leading-relaxed max-w-3xl">
             {introParrafo}
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
@@ -268,11 +268,11 @@ export default function LocationPage({
               <span className="text-lg font-semibold text-primary">{barrio}, Segovia</span>
             </div>
 
-            <h1 className="text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6">
+            <h1 className="text-3xl lg:text-4xl font-bold text-foreground leading-tight mb-6">
               {h1}
             </h1>
 
-            <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               {introParrafo}
             </p>
 

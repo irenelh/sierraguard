@@ -74,11 +74,11 @@ export default function ServicePage({
       <section className="relative min-h-[500px] flex items-center pt-8 overflow-hidden bg-gradient-to-br from-primary/10 to-primary/5">
         <div className="container relative z-10">
           <div className="max-w-3xl">
-            <h1 className="text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6">
+            <h1 className="text-3xl lg:text-4xl font-bold text-foreground leading-tight mb-6">
               {h1}
             </h1>
 
-            <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               {metaDescription}
             </p>
 

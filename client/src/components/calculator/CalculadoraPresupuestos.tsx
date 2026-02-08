@@ -59,7 +59,7 @@ export default function CalculadoraPresupuestos() {
       return;
     }
 
-    if (paso < 8) {
+    if (paso < 7) {
       setPaso(paso + 1);
     } else {
       // Calcular presupuesto
@@ -90,6 +90,7 @@ export default function CalculadoraPresupuestos() {
       <ResumenPresupuesto
         resultado={resultado}
         state={state}
+        onStateChange={handleStateChange}
         onVolver={() => {
           setResultado(null);
           setPaso(1);
@@ -114,8 +115,9 @@ export default function CalculadoraPresupuestos() {
     <div className="w-full max-w-2xl mx-auto p-6">
       {/* Indicador de progreso */}
       <div className="mb-8">
-        <div className="flex justify-between mb-2">
-          {[1, 2, 3, 4, 5, 6, 7, 8].map((num) => (
+        {/* Círculos numerados (ocultos en móvil para evitar overflow) */}
+        <div className="hidden md:flex justify-between mb-2">
+          {[1, 2, 3, 4, 5, 6, 7].map((num) => (
             <div
               key={num}
               className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm ${
@@ -128,11 +130,18 @@ export default function CalculadoraPresupuestos() {
             </div>
           ))}
         </div>
-        <div className="w-full bg-gray-200 h-2 rounded">
+        
+        {/* Barra de progreso (visible siempre) */}
+        <div className="w-full bg-gray-200 h-2 rounded mt-2 md:mt-0">
           <div
             className="bg-green-600 h-2 rounded transition-all"
             style={{ width: `${(paso / 7) * 100}%` }}
           />
+        </div>
+        
+        {/* Texto de paso móvil */}
+        <div className="md:hidden text-center mt-2 text-sm font-medium text-gray-600">
+          Paso {paso} de 7
         </div>
       </div>
 
@@ -182,9 +191,6 @@ export default function CalculadoraPresupuestos() {
             onChange={(extras) => handleStateChange({ extras })}
           />
         )}
-        {paso === 8 && (
-          <PasoContacto state={state} onChange={handleStateChange} />
-        )}
 
         {/* Mensaje de error */}
         {error && (
@@ -209,13 +215,13 @@ export default function CalculadoraPresupuestos() {
           onClick={handleNext}
           className="flex-1 px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors"
         >
-          {paso === 8 ? 'Calcular Presupuesto' : 'Siguiente'}
+          {paso === 7 ? 'Calcular Presupuesto' : 'Siguiente'}
         </button>
       </div>
 
       {/* Indicador de paso */}
       <p className="text-center text-gray-600 text-sm mt-4">
-        Paso {paso} de 8
+        Paso {paso} de 7
       </p>
     </div>
   );

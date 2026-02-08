@@ -81,10 +81,10 @@ export default function ServicesPage() {
       {/* ===== HERO ===== */}
       <section className="pt-12 pb-20 bg-gradient-to-br from-primary/10 to-primary/5">
         <div className="container max-w-4xl">
-          <h1 className="text-5xl lg:text-6xl font-bold text-foreground mb-6">
+          <h1 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
             Nuestros Servicios
           </h1>
-          <p className="text-xl text-muted-foreground leading-relaxed">
+          <p className="text-lg text-muted-foreground leading-relaxed">
             Soluciones profesionales de control de plagas adaptadas a cada necesidad. Desde desinsectación especializada hasta bioseguridad hospitalaria.
           </p>
         </div>

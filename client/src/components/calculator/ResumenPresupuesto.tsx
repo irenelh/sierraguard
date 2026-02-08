@@ -1,20 +1,24 @@
 import { CalculatorState, CalculoResultado } from '@/types/calculator';
 import { PLAGAS_DISPONIBLES, UBICACIONES_DISPONIBLES, EXTRAS_DISPONIBLES } from '@/utils/calculoPresupuesto';
 import { useState } from 'react';
+import PasoContacto from './PasoContacto';
 
 interface ResumenPresupuestoProps {
   resultado: CalculoResultado;
   state: CalculatorState;
+  onStateChange: (updates: Partial<CalculatorState>) => void;
   onVolver: () => void;
 }
 
 export default function ResumenPresupuesto({
   resultado,
   state,
+  onStateChange,
   onVolver,
 }: ResumenPresupuestoProps) {
   const [enviando, setEnviando] = useState(false);
   const [enviado, setEnviado] = useState(false);
+  const [mostrarFormulario, setMostrarFormulario] = useState(false);
 
   const nombrePlaga = PLAGAS_DISPONIBLES.find((p) => p.id === state.tipoplaga)?.nombre || state.tipoplaga;
   const nombreUbicacion = UBICACIONES_DISPONIBLES.find((u) => u.id === state.ubicacion)?.nombre || state.ubicacion;
@@ -69,6 +73,41 @@ export default function ResumenPresupuesto({
     );
   }
 
+  // Vista 2: Formulario de Contacto
+  if (mostrarFormulario) {
+    return (
+      <div className="w-full max-w-2xl mx-auto p-6">
+        <div className="bg-white rounded-lg shadow-lg p-8">
+          <button
+            onClick={() => setMostrarFormulario(false)}
+            className="text-sm text-gray-500 hover:text-gray-700 mb-6 flex items-center gap-1"
+          >
+            ← Volver al presupuesto
+          </button>
+          
+          <PasoContacto state={state} onChange={onStateChange} />
+          
+          <div className="mt-8 flex gap-4">
+            <button
+              onClick={() => setMostrarFormulario(false)}
+              className="flex-1 px-6 py-3 border border-gray-300 rounded-lg font-semibold hover:bg-gray-50"
+            >
+              Cancelar
+            </button>
+            <button
+              onClick={handleContactar}
+              disabled={!state.nombre || !state.email || !state.telefono || enviando}
+              className="flex-1 px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {enviando ? 'Enviando...' : 'Confirmar Solicitud'}
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Vista 1: Resumen de Presupuesto
   return (
     <div className="w-full max-w-2xl mx-auto p-6">
       <div className="bg-gradient-to-r from-green-600 to-green-700 rounded-lg shadow-lg p-8 text-white mb-6">
@@ -148,14 +187,13 @@ export default function ResumenPresupuesto({
           onClick={onVolver}
           className="flex-1 px-6 py-3 border border-gray-300 rounded-lg font-semibold hover:bg-gray-50"
         >
-          Modificar Presupuesto
+          Volver a Calcular
         </button>
         <button
-          onClick={handleContactar}
-          disabled={enviando}
-          className="flex-1 px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed"
+          onClick={() => setMostrarFormulario(true)}
+          className="flex-1 px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 shadow-lg hover:shadow-xl transition-all"
         >
-          {enviando ? 'Enviando...' : 'Solicitar Presupuesto Formal'}
+          Solicitar Presupuesto Formal
         </button>
       </div>
     </div>

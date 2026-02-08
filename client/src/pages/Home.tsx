@@ -39,7 +39,7 @@ export default function Home() {
       <section
         className="relative min-h-[calc(100vh-140px)] flex items-center overflow-hidden"
         style={{
-          backgroundImage: "url('https://private-us-east-1.manuscdn.com/sessionFile/pJ5hSiXSQku5X6UXcVcPGG/sandbox/7wk4ZxCsNdaMYgmx2lJ94m-img-1_1770374059000_na1fn_aGVyby1iYWNrZ3JvdW5k.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvcEo1aFNpWFNRa3U1WDZVWGNWY1BHRy9zYW5kYm94Lzd3azRaeENzTmRhTVlnbXgybEo5NG0taW1nLTFfMTc3MDM3NDA1OTAwMF9uYTFmbl9hR1Z5YnkxaVlXTnJaM0p2ZFc1ay5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=h2uKTJgimYhKcL7VYkrY4HsiX4dwYnyeW2firmBQyLicI-9ZIuffeE~R3EkBeKLwyA4EofaAIQ7G3lb6XT8iteoXNKTvFT7nkqsh-rTrjV1KWu6mFr6edf4kfShCPaQ9CbdQ-SciLd7v-jbp4ORnc1DPrX~P~X5WH16vYlfRNEK~fq~n3~ISFDL0ymiia~96Oc6ho8UJyFMP3-aHrXPFuuxdooNsw1a5w22bofn05US6KU9hJ14ltsbhSrpTV-kYe7RKJoavTXWepBHh~9~2~EK-Pa~PwfvXQhOgKJhxOEm9Y0JRingDcz8zjDcLEHIIWu3ZTNPwFmbHXyaBcHXWWQ__')",
+          backgroundImage: "url('/images/control-plagas-segovia-imagen.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -71,13 +71,15 @@ export default function Home() {
                   <Phone className="mr-2" size={20} />
                   Te Llamamos Gratis
                 </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-white text-white hover:bg-white/10 font-bold text-lg h-14 px-8 rounded-lg"
-                >
-                  Ver Servicios
-                </Button>
+                <Link href="/calculadora">
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-white text-white hover:bg-white/10 font-bold text-lg h-14 px-8 rounded-lg w-full"
+                  >
+                    Calcular Presupuesto Online
+                  </Button>
+                </Link>
               </div>
 
               {/* Trust Badges */}

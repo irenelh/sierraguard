@@ -108,12 +108,13 @@ export default function Header() {
 
           {/* CTA y Botón Móvil */}
           <div className="flex items-center gap-4">
-            <a 
-              href="tel:+34921234567"
-              className="hidden md:flex bg-primary text-white hover:bg-primary/90 px-5 py-2.5 rounded-md font-semibold text-sm transition-all shadow-sm hover:shadow-md transform hover:-translate-y-0.5"
-            >
-              Pedir Presupuesto
-            </a>
+            <Link href="/calculadora">
+              <div 
+                className="hidden md:flex bg-primary text-white hover:bg-primary/90 px-5 py-2.5 rounded-md font-semibold text-sm transition-all shadow-sm hover:shadow-md transform hover:-translate-y-0.5 cursor-pointer"
+              >
+                Calcula tu presupuesto
+              </div>
+            </Link>
 
             {/* Mobile Menu Toggle */}
             <button

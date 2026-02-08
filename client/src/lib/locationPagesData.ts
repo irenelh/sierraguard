@@ -548,6 +548,61 @@ export const locationPagesData: Record<string, LocationPageData> = {
       "Tratamientos garantizados",
       "Presupuesto sin compromiso"
     ]
+  },
+
+  "control-de-plagas-sepulveda": {
+    barrio: "Sepúlveda",
+    slug: "control-de-plagas-sepulveda",
+    h1: "Control de Plagas en Sepúlveda | Protección de Patrimonio y Hostelería",
+    metaDescription: "Control de plagas en Sepúlveda. Especialistas en protección de edificios históricos y hostelería. Termitas, roedores, avispas. Servicio rápido y discreto.",
+    introParrafo: "Sepúlveda, joya medieval y turística de Segovia, requiere un cuidado especial en el control de plagas. La conservación de sus edificios históricos y la calidad de su oferta gastronómica dependen de un entorno libre de plagas. Sierra Guard ofrece servicios especializados para Sepúlveda, combinando la protección del patrimonio contra xilófagos (termitas y carcoma) con soluciones de higiene avanzadas para restaurantes y casas rurales.",
+    bloqueConfianza: "Conocemos los desafíos únicos de Sepúlveda: muros de piedra que pueden ocultar nidos, estructuras de madera vulnerables y la necesidad de discreción en zonas turísticas. Nuestro equipo técnico aplica tratamientos que respetan la estética y la integridad de los edificios, utilizando productos de última generación y mínima toxicidad. Garantizamos la tranquilidad de residentes y visitantes con intervenciones rápidas y efectivas.",
+    layoutVariant: "simple",
+    mapEmbedUrl: "https://maps.google.com/maps?q=Sepulveda+Segovia&t=&z=13&ie=UTF8&iwloc=&output=embed",
+    faqs: [
+      { question: "¿Ofrecéis servicios para casas rurales en Sepúlveda?", answer: "Sí, tenemos planes específicos para alojamientos rurales que garantizan habitaciones libres de chinches y zonas comunes seguras, protegiendo sus reseñas online." },
+      { question: "¿Cómo tratáis las plagas de madera en edificios históricos?", answer: "Realizamos inspecciones no invasivas y tratamientos curativos/preventivos especializados (inyección, cebos) que detienen el deterioro sin dañar la estructura original." },
+      { question: "¿Atendéis urgencias de avispas en Sepúlveda?", answer: "Sí, retiramos nidos de avispas de forma urgente y segura, algo vital en zonas con afluencia de turistas y actividades al aire libre." }
+    ],
+    serviciosEspecificos: [
+      {
+        titulo: "Protección del Patrimonio (Madera)",
+        descripcion: "Expertos en termitas y carcoma",
+        items: [
+          "Detección acústica de actividad",
+          "Tratamientos de inyección en vigas",
+          "Sistema de cebos anti-termitas",
+          "Garantía certificada de tratamiento"
+        ]
+      },
+      {
+        titulo: "Hostelería y Turismo Seguro",
+        descripcion: "Control para restaurantes y hoteles",
+        items: [
+          "Prevención de cucarachas y roedores",
+          "Certificados para sanidad",
+          "Control de chinches en alojamientos",
+          "Servicio discreto y flexible"
+        ]
+      },
+      {
+        titulo: "Control Ambiental General",
+        descripcion: "Soluciones para el entorno rural",
+        items: [
+          "Control de roedores en exteriores",
+          "Tratamientos contra moscas y mosquitos",
+          "Retirada de nidos de avispas",
+          "Desinfección de espacios"
+        ]
+      }
+    ],
+    ctaText: "Pedir Presupuesto Gratuito",
+    trustBadges: [
+      "Especialistas en Patrimonio",
+      "Servicio Urgente Hostelería",
+      "Garantía por Escrito",
+      "Cobertura Total en Sepúlveda"
+    ]
   }
 };
 

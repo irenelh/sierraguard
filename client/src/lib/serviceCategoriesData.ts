@@ -360,6 +360,24 @@ export const serviceCategoriesData: ServiceCategory[] = [
         texto: "Desinfección de vestuarios y piscina. Sierra Guard utilizó métodos profesionales sin residuos químicos. Nuestros clientes notan la diferencia.",
         rating: 5
       }
+    ],
+    faqs: [
+      {
+        question: "¿Cuál es la diferencia entre desinsectación y desinfección?",
+        answer: "La desinsectación elimina plagas (cucarachas, roedores, etc.). La desinfección elimina bacterias, virus y microorganismos patógenos. Son servicios complementarios. La desinfección es especialmente importante en cocinas, baños, hospitales y espacios de comida. Utilizamos productos desinfectantes certificados que eliminan 99,9% de patógenos. Recomendamos desinfección mensual en negocios de hostelería y trimestral en viviendas."
+      },
+      {
+        question: "¿Cuándo es necesaria la desinfección?",
+        answer: "La desinfección es necesaria después de: Plagas (cucarachas, roedores), Enfermedades contagiosas, Inundaciones o daños por agua, Cambio de inquilino, Brotes de infecciones. También recomendamos desinfección periódica en: Restaurantes y cocinas, Clínicas y consultorios, Oficinas compartidas, Escuelas, Espacios públicos. Ofrecemos desinfección urgente 24/7 para emergencias sanitarias."
+      },
+      {
+        question: "¿Cuál es el precio de la desinfección?",
+        answer: "El precio de desinfección en Segovia varía entre €150-400 según el área y tipo de desinfectante. Una vivienda de 100 m² cuesta aproximadamente €200. Un restaurante de 150 m² cuesta €300-400. Incluye aplicación de desinfectante profesional, tiempo de contacto, y verificación. Ofrecemos paquetes mensuales para negocios desde €80/mes. Solicita presupuesto personalizado sin compromiso."
+      },
+      {
+        question: "¿Es segura la desinfección para alimentos y superficies de cocina?",
+        answer: "Sí, utilizamos desinfectantes certificados seguros para superficies de alimentos. Todos nuestros productos cumplen normativas de higiene alimentaria (UE 528/2012). Aplicamos desinfectantes aptos para cocinas y superficies de contacto con alimentos. Después del tratamiento, recomendamos enjuague con agua potable antes de usar. Nuestros técnicos están capacitados en protocolos de higiene alimentaria."
+      }
     ]
   },
   {
@@ -435,6 +453,24 @@ export const serviceCategoriesData: ServiceCategory[] = [
         texto: "Palomas en la terraza. Sierra Guard instaló pinchos antipalomas. Problema resuelto sin dañar animales. Excelente solución.",
         rating: 5
       }
+    ],
+    faqs: [
+      {
+        question: "¿Cuáles son los problemas causados por las aves?",
+        answer: "Las aves causan: Daño a estructuras (nidos en cornisas, canaletas), Contaminación por excrementos (bacterias, hongos), Ruido y molestias, Plagas secundarias (ácaros, insectos), Riesgos sanitarios (histoplasmosis, salmonella). Las palomas y gaviotas son especialmente problemáticas en zonas urbanas. El control profesional es necesario para evitar daños estructurales y riesgos sanitarios."
+      },
+      {
+        question: "¿Cómo eliminar palomas de un edificio?",
+        answer: "El control de palomas requiere múltiples estrategias: Instalación de pinchos disuasorios, Redes de protección, Trampas humanitarias, Tratamientos químicos disuasorios, Eliminación de fuentes de alimento. No recomendamos envenenamiento (es inhumano e inefectivo). Nuestro enfoque es preventivo y humanitario. Ofrecemos inspección gratuita para identificar puntos de anidación y proponer soluciones personalizadas."
+      },
+      {
+        question: "¿Cuál es el precio del control de aves?",
+        answer: "El precio del control de aves varía según la solución: Pinchos disuasorios: €200-500, Redes de protección: €500-2.000, Trampas humanitarias: €150-300, Tratamiento químico: €200-400. El precio final depende del tamaño del área y tipo de ave. Ofrecemos inspección gratuita y presupuesto personalizado. Muchos edificios de Segovia confían en nuestro servicio de control de aves."
+      },
+      {
+        question: "¿Es legal el control de aves?",
+        answer: "Sí, el control de aves es legal cuando se realiza de forma humanitaria. Las trampas y métodos disuasorios (pinchos, redes) son legales. El envenenamiento está prohibido en muchas jurisdicciones. Nuestros métodos cumplen con leyes de protección animal y normativas locales. Recomendamos consultar con autoridades locales para proyectos grandes. Ofrecemos asesoramiento legal sobre el mejor método para tu situación."
+      }
     ]
   },
   {
@@ -499,6 +535,24 @@ export const serviceCategoriesData: ServiceCategory[] = [
     ],
     cta: "Llama ahora",
     testimonios: [],
+    faqs: [
+      {
+        question: "¿Cuáles son los tipos de plagas de madera?",
+        answer: "Los principales xilófagos son: Termitas (subterráneas y de madera seca), Carcoma (escarabajo que perfora madera), Polilla de la madera, Hormigas carpinteras. Cada una requiere tratamiento diferente. Las termitas son las más destructivas (pueden comprometer estructuras). La carcoma es común en muebles antiguos. Ofrecemos identificación profesional y tratamiento especializado para cada tipo."
+      },
+      {
+        question: "¿Cómo detectar plagas de madera en casa?",
+        answer: "Signos de plagas de madera: Agujeros pequeños en la madera, Serrín o polvo de madera, Madera blanda o hueca, Túneles visibles, Ruido de \"clic\" dentro de la madera (termitas), Alas de insectos alados. Si notas estos signos, es urgente actuar. Ofrecemos inspección profesional con cámara térmica para detectar plagas ocultas. La detección temprana evita daños estructurales graves."
+      },
+      {
+        question: "¿Cuál es el precio del tratamiento de madera?",
+        answer: "El precio del tratamiento de madera varía según el tipo y extensión: Carcoma: €300-800, Termitas: €800-2.500, Polilla: €200-600, Tratamiento preventivo: €150-400. El precio depende del área afectada, tipo de madera y método de tratamiento (inyección, barrera química, etc.). Ofrecemos presupuesto personalizado después de inspección. Algunos tratamientos requieren múltiples visitas."
+      },
+      {
+        question: "¿Cuánto tiempo dura el tratamiento de madera?",
+        answer: "El tratamiento inicial dura 1-3 días (inyecciones, aplicación de barreras). Sin embargo, el proceso completo puede tomar 3-6 meses con inspecciones de seguimiento. Las plagas de madera tienen ciclos de vida lentos y colonias grandes. Recomendamos inspecciones mensuales durante 6 meses después del tratamiento. La garantía típica es de 1-2 años con mantenimiento preventivo anual."
+      }
+    ]
   },
   {
     id: "higiene-ambiental",
@@ -562,6 +616,24 @@ export const serviceCategoriesData: ServiceCategory[] = [
     ],
     cta: "Llama ahora",
     testimonios: [],
+    faqs: [
+      {
+        question: "¿Qué es la higiene ambiental?",
+        answer: "La higiene ambiental es el conjunto de medidas para mantener espacios limpios, seguros y libres de contaminantes. Incluye: Desinfección regular, Control de plagas, Gestión de residuos, Limpieza especializada, Tratamiento de aire, Control de legionella. Es especialmente importante en: Hospitales, Clínicas, Restaurantes, Oficinas, Escuelas, Espacios públicos. Ofrecemos programas de higiene ambiental personalizados para cada tipo de negocio."
+      },
+      {
+        question: "¿Cuál es la importancia de la higiene ambiental en restaurantes?",
+        answer: "La higiene ambiental es crítica en restaurantes para: Cumplir normativas sanitarias, Prevenir intoxicaciones alimentarias, Proteger la reputación del negocio, Evitar clausuras, Garantizar seguridad de clientes. Incluye control de plagas, desinfección de cocinas, gestión de residuos y limpieza especializada. Recomendamos programa mensual de higiene ambiental. Ofrecemos auditorías sanitarias y documentación para inspecciones oficiales."
+      },
+      {
+        question: "¿Cuál es el precio del servicio de higiene ambiental?",
+        answer: "El precio del servicio de higiene ambiental depende del tipo de negocio y frecuencia: Programa mensual (restaurante 150 m²): €250-400/mes, Programa trimestral (oficina 200 m²): €300-500/trimestre, Programa anual (clínica): €1.500-3.000/año. Incluye inspecciones, tratamientos, documentación y asesoramiento. Ofrecemos paquetes personalizados según necesidades. Solicita presupuesto sin compromiso."
+      },
+      {
+        question: "¿Qué normativas cumple el servicio de higiene ambiental?",
+        answer: "Nuestro servicio cumple con: ROESB (Registro Oficial de Establecimientos Sanitarios), ISO 9001 (Gestión de calidad), UE 528/2012 (Biocidas), EN 16636 (Norma europea de control de plagas), Normativas locales de Segovia, Protocolos de higiene alimentaria. Proporcionamos documentación completa para auditorías sanitarias y inspecciones oficiales. Nuestro equipo está capacitado en todas las normativas aplicables."
+      }
+    ]
   },
   {
     id: "inspeccion-y-prevencion",

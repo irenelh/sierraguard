@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Phone, CheckCircle2, MapPin, Shield, Zap, Award, ChevronDown, ChevronUp } from "lucide-react";
+import { Phone, CheckCircle2, MapPin, Shield, Zap, Award, ChevronDown, ChevronUp, ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link } from "wouter";
 import Header from "@/components/Header";
@@ -51,8 +51,11 @@ export default function LocationPage({
   zonasCercanas,
   mapEmbedUrl,
 }: LocationPageProps) {
-  // Actualizar meta tags dinámicamente
+  // Actualizar meta tags dinámicamente y resetear scroll
   useEffect(() => {
+    // Scroll al inicio al cargar la página
+    window.scrollTo(0, 0);
+
     document.title = `${h1} | Sierra Guard`;
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
@@ -98,7 +101,7 @@ export default function LocationPage({
         {/* HERO SIMPLE */}
         <section className="pt-24 pb-16 px-4 container max-w-4xl mx-auto text-left">
           <div className="inline-block px-3 py-1 mb-6 text-sm font-semibold text-green-800 bg-green-100 rounded-full">
-            Servicio Local en {barrio}
+            Servicio en {barrio}
           </div>
           <h1 className="text-3xl md:text-4xl font-extrabold mb-6 text-gray-900 leading-tight tracking-tight">
             {h1}
@@ -137,6 +140,18 @@ export default function LocationPage({
                   </ul>
                 </div>
               ))}
+            </div>
+            
+            <div className="mt-12 text-center">
+              <Link href="/#servicios">
+                <Button 
+                  variant="outline" 
+                  className="group relative border-2 border-[#1d4620] text-[#1d4620] hover:bg-[#1d4620] hover:text-white font-bold text-lg px-10 py-6 h-auto rounded-xl transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 flex items-center gap-3 mx-auto"
+                >
+                  Ver todos los servicios
+                  <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+                </Button>
+              </Link>
             </div>
           </div>
         </section>
@@ -207,28 +222,38 @@ export default function LocationPage({
         <section id="contact-form" className="py-12 px-4 bg-white">
            <div className={`container mx-auto border border-gray-200 p-6 sm:p-8 rounded-sm shadow-sm bg-gray-50 ${mapEmbedUrl ? 'max-w-6xl' : 'max-w-2xl'}`}>
               <div className={mapEmbedUrl ? 'grid grid-cols-1 md:grid-cols-2 gap-8 items-start' : ''}>
-                {/* Columna Izquierda: Formulario */}
-                <div>
-                  <h2 className="text-2xl font-bold text-center mb-2 text-gray-900">Contactar con Sierra Guard</h2>
-                  <p className="text-center text-gray-600 mb-8">Rellena el formulario o llámanos directamente.</p>
-                   <form className="space-y-4">
-                      <div>
-                        <label className="block text-sm font-bold text-gray-700 mb-1">Teléfono</label>
-                        <input type="tel" placeholder="Tu teléfono" className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-[#1d4620] focus:ring-1 focus:ring-[#1d4620]" required />
+                {/* Columna Izquierda: Contacto Directo */}
+                <div className="flex flex-col gap-6">
+                  <div className="text-center md:text-left mb-2">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-2">Contactar con Sierra Guard</h2>
+                    <p className="text-gray-600">Estamos disponibles para atenderte.</p>
+                  </div>
+
+                  {/* Sección Teléfono */}
+                  <a href="tel:+34921234567" className="group block">
+                    <div className="bg-white border-2 border-[#1d4620] rounded-xl p-4 shadow-sm hover:shadow-md transition-all group-hover:-translate-y-1 flex items-center gap-4">
+                      <div className="bg-[#1d4620] p-3 rounded-full text-white">
+                        <Phone size={24} />
                       </div>
-                      <div>
-                        <label className="block text-sm font-bold text-gray-700 mb-1">Tipo de Problema</label>
-                        <select className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-[#1d4620] focus:ring-1 focus:ring-[#1d4620]">
-                          <option>Selecciona una opción</option>
-                          <option>Urgencia 24h</option>
-                          <option>Presupuesto general</option>
-                          <option>Consulta</option>
-                        </select>
+                      <div className="text-left">
+                         <span className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Llámanos Ahora</span>
+                         <span className="block text-xl sm:text-2xl font-bold text-[#1d4620]">+34 921 234 567</span>
                       </div>
-                      <Button type="submit" size="lg" className="w-full bg-[#1d4620] hover:bg-[#153316] text-white font-bold text-lg h-12 rounded">
-                        Solicitar Llamada
-                      </Button>
-                   </form>
+                    </div>
+                  </a>
+
+                  {/* Sección Email */}
+                  <a href="mailto:contacto@controldeplagassegovia.com" className="group block">
+                    <div className="bg-white border border-gray-200 rounded-xl p-4 shadow-sm hover:shadow-md transition-all group-hover:-translate-y-1 flex items-center gap-4">
+                       <div className="bg-gray-100 p-3 rounded-full text-gray-600 group-hover:bg-[#1d4620] group-hover:text-white transition-colors">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                       </div>
+                       <div className="text-left overflow-hidden">
+                          <span className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Escríbenos un Email</span>
+                          <span className="block text-base sm:text-lg font-bold text-gray-800 truncate">contacto@controldeplagassegovia.com</span>
+                       </div>
+                    </div>
+                  </a>
                 </div>
 
                 {/* Columna Derecha: Mapa (si existe) */}
@@ -353,6 +378,18 @@ export default function LocationPage({
               </div>
             ))}
           </div>
+          
+          <div className="mt-12 text-center">
+            <Link href="/#servicios">
+              <Button 
+                variant="outline" 
+                className="group relative border-2 border-[#1d4620] text-[#1d4620] hover:bg-[#1d4620] hover:text-white font-bold text-lg px-10 py-6 h-auto rounded-xl transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 flex items-center gap-3 mx-auto"
+              >
+                Ver todos los servicios
+                <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -427,53 +464,43 @@ export default function LocationPage({
         </div>
       </section>
 
-      {/* ===== FORMULARIO DE CONTACTO ===== */}
+      {/* ===== CONTACTO DIRECTO ===== */}
       <section id="contact-form" className="py-20 bg-white">
         <div className="container max-w-2xl">
           <h2 className="text-4xl font-bold text-center mb-4 text-foreground">
-            Solicita tu Llamada Gratis
+            Contactar con Sierra Guard
           </h2>
           <p className="text-center text-muted-foreground mb-12">
-            Rellena el formulario y nos pondremos en contacto en menos de 24 horas.
+            Estamos disponibles para atenderte.
           </p>
 
-          <form className="bg-gray-50 p-8 rounded-lg shadow-md space-y-6">
-            <div>
-              <label className="block text-sm font-semibold text-foreground mb-2">
-                Teléfono
-              </label>
-              <input
-                type="tel"
-                placeholder="+34 xxx xxx xxx"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                required
-              />
-            </div>
+          <div className="flex flex-col gap-6">
+            {/* Sección Teléfono */}
+            <a href="tel:+34921234567" className="group block">
+              <div className="bg-white border-2 border-[#1d4620] rounded-xl p-4 shadow-sm hover:shadow-md transition-all group-hover:-translate-y-1 flex items-center gap-4">
+                <div className="bg-[#1d4620] p-3 rounded-full text-white">
+                  <Phone size={24} />
+                </div>
+                <div className="text-left">
+                    <span className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Llámanos Ahora</span>
+                    <span className="block text-xl sm:text-2xl font-bold text-[#1d4620]">+34 921 234 567</span>
+                </div>
+              </div>
+            </a>
 
-            <div>
-              <label className="block text-sm font-semibold text-foreground mb-2">
-                Tipo de Problema
-              </label>
-              <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
-                <option>Selecciona una opción</option>
-                <option>Urgente - Necesito respuesta hoy</option>
-                <option>Importante - Esta semana</option>
-                <option>Consulta - Próximas semanas</option>
-              </select>
-            </div>
-
-            <Button
-              type="submit"
-              size="lg"
-              className="w-full bg-primary hover:bg-primary/90 text-white font-bold text-lg h-12"
-            >
-              Solicitar Llamada Gratis
-            </Button>
-
-            <p className="text-xs text-muted-foreground text-center">
-              Protegemos tu privacidad. Nunca compartimos tus datos.
-            </p>
-          </form>
+            {/* Sección Email */}
+            <a href="mailto:contacto@controldeplagassegovia.com" className="group block">
+              <div className="bg-white border border-gray-200 rounded-xl p-4 shadow-sm hover:shadow-md transition-all group-hover:-translate-y-1 flex items-center gap-4">
+                  <div className="bg-gray-100 p-3 rounded-full text-gray-600 group-hover:bg-[#1d4620] group-hover:text-white transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  </div>
+                  <div className="text-left overflow-hidden">
+                    <span className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Escríbenos un Email</span>
+                    <span className="block text-base sm:text-lg font-bold text-gray-800 truncate">contacto@controldeplagassegovia.com</span>
+                  </div>
+              </div>
+            </a>
+          </div>
         </div>
       </section>
 

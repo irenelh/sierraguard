@@ -54,6 +54,9 @@ interface ServiceCategoryPageProps {
 export default function ServiceCategoryPage({ service }: ServiceCategoryPageProps) {
   // Update meta tags dynamically
   useEffect(() => {
+    // Scroll to top on mount
+    window.scrollTo(0, 0);
+
     document.title = `${service.h1} | Sierra Guard`;
     
     // Update meta description

@@ -254,6 +254,42 @@ export const locationPagesData: Record<string, LocationPageData> = {
     ]
   },
 
+  "control-de-plagas-la-granja-san-ildefonso": {
+    barrio: "Real Sitio de San Ildefonso (La Granja)",
+    slug: "control-de-plagas-la-granja-san-ildefonso",
+    h1: "Control de Plagas en La Granja de San Ildefonso | Servicio Urgente",
+    metaDescription: "Control de plagas en La Granja (San Ildefonso). Expertos en protección de viviendas y patrimonio. Desratización, desinsectación y madera. Servicio rápido.",
+    introParrafo: "El Real Sitio de San Ildefonso, con su Palacio Real y entorno natural privilegiado, merece la mejor protección. Sierra Guard ofrece servicios de control de plagas en La Granja adaptados a su riqueza histórica y natural, protegiendo viviendas, negocios y jardines contra todo tipo de plagas.",
+    bloqueConfianza: "Especialistas en la zona de La Granja y Valsaín. Nuestros técnicos conocen la fauna local y aplican tratamientos respetuosos con el entorno natural del Parque Nacional, garantizando eficacia sin riesgos ambientales.",
+    layoutVariant: "simple",
+    mapEmbedUrl: "https://maps.google.com/maps?q=La+Granja+de+San+Ildefonso&t=&z=13&ie=UTF8&iwloc=&output=embed",
+    faqs: [
+      { question: "¿Atendéis urgencias en La Granja?", answer: "Sí, ofrecemos servicio de urgencia 24h en todo el Real Sitio de San Ildefonso y Valsaín." },
+      { question: "¿Los tratamientos afectan a los jardines?", answer: "No. Utilizamos productos específicos y técnicas de aplicación controlada que protegen la flora y fauna no objetivo de sus jardines." },
+      { question: "¿Realizáis tratamientos de madera?", answer: "Sí, somos expertos en proteger vigas y estructuras de madera contra termitas y carcoma, algo vital en las construcciones tradicionales de la zona." },
+      { question: "¿Dáis garantía?", answer: "Sí, todos nuestros trabajos están garantizados por escrito." }
+    ],
+    serviciosEspecificos: [
+      {
+        titulo: "Protección de Jardines y Exteriores",
+        descripcion: "Control de roedores e insectos en zonas verdes.",
+        items: ["Tratamientos perimetrales", "Control de avispas", "Protección de árboles", "Seguridad para mascotas"],
+      },
+      {
+        titulo: "Desratización",
+        descripcion: "Eliminación de ratas y ratones.",
+        items: ["Estaciones de cebo seguras", "Monitorización continua", "Sellado de accesos", "Sin riesgos para fauna local"],
+      },
+      {
+        titulo: "Tratamientos de Madera",
+        descripcion: "Conservación de estructuras.",
+        items: ["Inspección gratuita", "Tratamiento contra carcoma", "Barreras antitermitas", "Certificados de garantía"],
+      }
+    ],
+    ctaText: "Pedir Presupuesto Gratuito",
+    trustBadges: ["Expertos en Patrimonio", "Respeto Medioambiental", "Garantía Total", "Atención Inmediata"],
+  },
+
   "control-de-plagas-sepulveda": {
     barrio: "Sepúlveda",
     slug: "control-de-plagas-sepulveda",
@@ -307,6 +343,41 @@ export const locationPagesData: Record<string, LocationPageData> = {
       "Garantía por Escrito",
       "Cobertura Total en Sepúlveda"
     ]
+  },
+
+  "control-de-plagas-palazuelos-de-eresma": {
+    barrio: "Palazuelos de Eresma",
+    slug: "control-de-plagas-palazuelos-de-eresma",
+    h1: "Control de Plagas en Palazuelos de Eresma | Desinsectación y Desratización",
+    metaDescription: "Servicio de control de plagas en Palazuelos de Eresma. Desratización, desinsectación y tratamientos seguros para viviendas y chalets. Presupuesto gratis.",
+    introParrafo: "Palazuelos de Eresma, como zona residencial en crecimiento cerca de Segovia, requiere una atención especializada en el control de plagas. En Sierra Guard protegemos tu hogar y tu jardín de roedores, insectos y otras plagas comunes en la zona, garantizando la seguridad de tu familia y mascotas.",
+    bloqueConfianza: "Somos la empresa de confianza para los vecinos de Palazuelos, Tabanera del Monte y Parque Robledo. Ofrecemos tratamientos rápidos, eficaces y garantizados, adaptados a las necesidades de viviendas unifamiliares y comunidades.",
+    layoutVariant: "simple",
+    mapEmbedUrl: "https://maps.google.com/maps?q=Palazuelos+de+Eresma+Segovia&t=&z=13&ie=UTF8&iwloc=&output=embed",
+    faqs: [
+      { question: "¿Cubrís zonas como Parque Robledo o Tabanera?", answer: "Sí, nuestro servicio abarca todo el municipio de Palazuelos de Eresma, incluyendo Parque Robledo, Tabanera del Monte y Carrascalejo." },
+      { question: "¿Son seguros los tratamientos para jardines y mascotas?", answer: "Absolutamente. Utilizamos portacebos de seguridad y productos específicos que eliminan la plaga sin poner en riesgo a niños o animales domésticos en jardines y zonas comunes." },
+      { question: "¿Cuánto tardáis en acudir?", answer: "Ofrecemos respuesta rápida, generalmente en menos de 24 horas, para solucionar tu problema de plagas lo antes posible." }
+    ],
+    serviciosEspecificos: [
+      {
+        titulo: "Desratización en Chalets y Parcelas",
+        descripcion: "Control efectivo de roedores en exteriores e interiores.",
+        items: ["Protección perimetral", "Cebos de seguridad", "Eliminación de nidos", "Prevención de accesos"]
+      },
+      {
+        titulo: "Control de Hormigas y Avispas",
+        descripcion: "Eliminación de insectos molestos en temporada.",
+        items: ["Tratamiento de hormigueros", "Retirada segura de avisperos", "Barreras químicas", "Garantía de eficacia"]
+      },
+      {
+        titulo: "Tratamientos Preventivos",
+        descripcion: "Mantenimiento para comunidades y particulares.",
+        items: ["Inspecciones periódicas", "Prevención de cucarachas", "Control de plagas estacionales", "Certificados de sanidad"]
+      }
+    ],
+    ctaText: "Pedir Presupuesto Sin Compromiso",
+    trustBadges: ["Servicio Rápido", "Seguro para Mascotas", "Técnicos Cualificados", "Garantía Total"]
   }
 };
 

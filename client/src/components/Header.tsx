@@ -64,10 +64,10 @@ export default function Header() {
           {/* Derecha: Teléfono destacado */}
           <a 
             href="tel:+34921234567" 
-            className="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-3 py-1 rounded-full transition-colors"
+            className="flex items-center gap-2 bg-white text-primary hover:bg-white/90 px-3 py-1 rounded-full transition-colors font-bold shadow-sm"
           >
             <Phone size={14} />
-            <span className="font-bold tracking-wide">+34 921 234 567</span>
+            <span className="tracking-wide">+34 921 234 567</span>
           </a>
         </div>
       </div>

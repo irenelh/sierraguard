@@ -6,7 +6,6 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import WhatsAppWidget from "./components/WhatsAppWidget";
 import Home from "./pages/Home";
-import ServicePageRoute from "./pages/ServicePageRoute";
 import CatchAllRoute from "./pages/CatchAllRoute";
 import BarriosPage from "./pages/BarriosPage";
 import BlogPage from "./pages/BlogPage";
@@ -22,7 +21,6 @@ function Router() {
       <Route path="/calculadora" component={Calculadora} />
       <Route path="/blog/:slug" component={BlogArticlePage} />
       <Route path="/blog" component={BlogPage} />
-      <Route path="/servicios/:slug" component={ServicePageRoute} />
       {/* Ruta catch-all para Categorías de Servicio y Location Pages */}
       <Route path="/:slug" component={CatchAllRoute} />
       <Route path="{/404}" component={NotFound} />

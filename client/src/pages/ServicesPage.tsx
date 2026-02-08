@@ -22,10 +22,10 @@ export default function ServicesPage() {
     },
     {
       titulo: "Desratización",
-      descripcion: "Smart traps 24/7 con monitorización en tiempo real y rodent proofing permanente.",
+      descripcion: "Sistemas de monitoreo 24/7 y rodent proofing permanente.",
       slug: "desratizacion",
       beneficios: [
-        "Smart traps conectadas",
+        "Trampas de alta seguridad",
         "Rodent proofing",
         "Dashboard online",
       ],

@@ -35,7 +35,7 @@ export default function CatchAllRoute() {
           ctaText={locationData.ctaText}
           ctaUrgencia={locationData.ctaUrgencia}
           trustBadges={locationData.trustBadges}
-          layoutVariant={locationData.layoutVariant}
+          layoutVariant="simple"
           textoSeo={locationData.textoSeo}
           seoSections={locationData.seoSections}
           faqs={locationData.faqs}

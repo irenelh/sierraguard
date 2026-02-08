@@ -36,7 +36,7 @@ export const serviceCategoriesData: ServiceCategory[] = [
   {
     id: "desinsectacion",
     slug: "desinsectacion",
-    image: "https://private-us-east-1.manuscdn.com/sessionFile/pJ5hSiXSQku5X6UXcVcPGG/sandbox/7wk4ZxCsNdaMYgmx2lJ94m-img-2_1770374055000_na1fn_c2VydmljZS1kZXNpbnNlY3RhY2lvbg.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvcEo1aFNpWFNRa3U1WDZVWGNWY1BHRy9zYW5kYm94Lzd3azRaeENzTmRhTVlnbXgybEo5NG0taW1nLTJfMTc3MDM3NDA1NTAwMF9uYTFmbl9jMlZ5ZG1salpTMWtaWE5wYm5ObFkzUmhZMmx2YmcucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=N3-KoWdiBl5ZxJgTNB9matMq9vyS7KxqdIgpMKfh5rUXMf~zJAtzSyOW0RDYbYUbOxXluxe8nJxOUmrqvuGPMosv58EBW3H1xH1QO5F~kRwXwy8E~9qOicDGKH0lUFzAqLezg8lkx50R1pN46yqsyhpAMT0BkBB3QXLFOlkfQmLSBgFjLVeWpW78J4fj23svkz3tBIOW3Iz8xHB9R-0Z6Uef8i8LFEEyRQ0oiJJf-XRf~ig5-TktqR21FkviqvbfbsPy-A6RUnBvlNFBB5v2ane7B2W~SRLDKT5yIzke4OLGwGaDkLZfQeBV1ku3CiWcFRpWMo9d8QOxSLkxeLIypw__",
+    image: "/images/servicio-desinsectacion-en-segovia.png",
     nombre: "Desinsectación",
     h1: "Desinsectación Profesional en Segovia | Control de Cucarachas, Chinches, Termitas y Avispas",
     metaDescription: "Desinsectación profesional en Segovia. Control de cucarachas, chinches, termitas, avispas, hormigas, pulgas y mosquitos. Métodos seguros, certificados CEPA. Respuesta en 24h.",
@@ -119,7 +119,7 @@ export const serviceCategoriesData: ServiceCategory[] = [
         descripcion: "Realizamos inspecciones periódicas y mantenimiento preventivo"
       }
     ],
-    cta: "Te Llamamos Gratis en 24 Horas",
+    cta: "Llama ahora",
     testimonios: [
       {
         nombre: "María García",
@@ -148,36 +148,36 @@ export const serviceCategoriesData: ServiceCategory[] = [
     ],
     faqs: [
       {
-        question: "¿Es seguro para mis mascotas y niños?",
-        answer: "Sí, utilizamos productos de última generación y geles específicos que son seguros. En tratamientos que requieren plazo de seguridad, te informaremos detalladamente para garantizar la protección de tu familia y mascotas."
+        question: "¿Cuánto tiempo tarda la desinsectación de cucarachas?",
+        answer: "La desinsectación de cucarachas muestra resultados en 24-48 horas. Sin embargo, el tratamiento completo dura 2-3 semanas con múltiples aplicaciones. Las cucarachas tienen ciclos de reproducción rápidos, por lo que es necesario eliminar tanto adultos como huevos. Realizamos seguimientos a los 7 y 14 días. La mayoría de clientes notan eliminación del 90% en la primera semana."
       },
       {
-        question: "¿Cuánto tiempo tarda en hacer efecto?",
-        answer: "Depende de la plaga. Para cucarachas, notarás una reducción drástica en 24-48 horas. En tratamientos térmicos para chinches, el efecto es inmediato. Nuestros técnicos te darán una estimación precisa según tu caso."
+        question: "¿Por qué aparecen cucarachas en casa si está limpia?",
+        answer: "Las cucarachas no son signo de suciedad. Pueden entrar desde el exterior a través de grietas, tuberías, desagües o incluso en cajas de compras. Buscan agua y calor más que comida. Una sola cucaracha puede reproducirse y crear una infestación en 2-3 meses. Si ves una cucaracha, es probable que haya más. Recomendamos inspección profesional inmediata para identificar puntos de entrada."
       },
       {
-        question: "¿Ofrecen garantía en el servicio?",
-        answer: "Absolutamente. Todos nuestros tratamientos de desinsectación incluyen garantía por escrito y certificado CEPA. Si el problema persiste dentro del periodo garantizado, realizamos tratamientos adicionales sin coste."
+        question: "¿Es efectivo el tratamiento de cucarachas en una sola visita?",
+        answer: "No recomendamos tratamientos de una sola visita. Las cucarachas requieren múltiples aplicaciones (2-3 visitas) porque tienen ciclos de reproducción complejos. Un tratamiento único solo elimina adultos, pero los huevos eclosionan después. Nuestro protocolo incluye: Visita 1 (Tratamiento inicial), Visita 2 (7 días después), Visita 3 (14 días después). Esto garantiza eliminación total."
       },
       {
-        question: "¿Debo preparar la casa antes del tratamiento?",
-        answer: "Te proporcionaremos una lista de verificación sencilla antes de nuestra visita. Generalmente implica facilitar el acceso a zonas clave y guardar alimentos expuestos. No es necesario mover muebles pesados."
+        question: "¿Cuál es el precio de desinsectación de cucarachas?",
+        answer: "El precio de desinsectación de cucarachas en Segovia es €180-350 para viviendas de 100 m². Incluye inspección, tratamiento químico, sellado de grietas, seguimiento a 7 días y garantía de 30 días. Locales comerciales y restaurantes tienen precios especiales desde €250/mes con servicio preventivo mensual. Solicita presupuesto personalizado sin compromiso."
       }
     ]
   },
   {
     id: "desratizacion",
     slug: "desratizacion",
-    image: "https://private-us-east-1.manuscdn.com/sessionFile/pJ5hSiXSQku5X6UXcVcPGG/sandbox/7wk4ZxCsNdaMYgmx2lJ94m-img-3_1770374054000_na1fn_c2VydmljZS1kZXNyYXRpemFjaW9u.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvcEo1aFNpWFNRa3U1WDZVWGNWY1BHRy9zYW5kYm94Lzd3azRaeENzTmRhTVlnbXgybEo5NG0taW1nLTNfMTc3MDM3NDA1NDAwMF9uYTFmbl9jMlZ5ZG1salpTMWtaWE55WVhScGVtRmphVzl1LnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=Gi~Z0ppOFlU23Y9VsY926BnbY5j~Sv7QSqq5OW87OrTyc89Q-ulvku~4RRxN-syk0KFEA33qZS1mG2u~E7uMiIDieqvyfrj4wagGfGs-s8fHsMQ2hP04CndT2K9yfX4yn79I~14BbonBjRdes1SPUmwg952RVHfagzSXlO5KHLJMo1X0KjLnZONMys6~m~Qwef93jUL~IeukCWBGSGB-Y0PPOOtdhJmGQiIxScv2Ak31vP20iOcXCmo4iRI9bF0uEqSveACH4NDLWv7m54sqbfz92S89qABNpMvnaLmaCEwGAr5WGz-WVp1tasGaOzJaG8~5txovZLXWZvy10FRwCQ__",
+    image: "/images/servicio-desratizacion-en-segovia.png",
     nombre: "Desratización",
-    h1: "Desratización Profesional en Segovia | Smart Traps 24/7 y Rodent Proofing",
-    metaDescription: "Desratización profesional en Segovia. Smart traps con alertas en tiempo real, rodent proofing permanente. Control de ratas y ratones. Certificado CEPA. Garantía 100%.",
-    intro: "Expertos en desratización en Segovia. Eliminamos ratas y ratones mediante tecnología avanzada Smart Traps con monitorización 24/7 y sellado estructural definitivo (Rodent Proofing). Solución rápida, discreta y 100% eficaz. Evita riesgos sanitarios y daños materiales con nuestra garantía de eliminación certificada.",
+    h1: "Desratización Profesional en Segovia | Control Integral y Rodent Proofing",
+    metaDescription: "Desratización profesional en Segovia. Control integral de roedores, rodent proofing permanente. Control de ratas y ratones. Certificado CEPA. Garantía 100%.",
+    intro: "Expertos en desratización en Segovia. Eliminamos ratas y ratones mediante estrategias de control integral y sellado estructural definitivo (Rodent Proofing). Solución rápida, discreta y 100% eficaz. Evita riesgos sanitarios y daños materiales con nuestra garantía de eliminación certificada.",
     servicios: [
       {
-        titulo: "Smart Traps 24/7",
-        descripcion: "Monitorización en tiempo real con alertas instantáneas",
-        items: ["Monitorización en tiempo real", "Alertas instantáneas a teléfono", "Dashboard online", "Reportes automáticos"],
+        titulo: "Control Integral",
+        descripcion: "Sistemas de control seguros y eficaces",
+        items: ["Inspección detallada", "Estaciones de seguridad", "Control de actividad", "Reportes de seguimiento"],
         servicePageSlug: "desratizacion-ratas"
       },
       {
@@ -196,12 +196,12 @@ export const serviceCategoriesData: ServiceCategory[] = [
         items: ["Auditoría completa de almacenes", "Tratamiento de zonas de riesgo", "Reportes técnicos", "Cumplimiento normativo"]
       }
     ],
-    bloqueConfianza: "Las empresas de retail y logística en Azoguejo enfrentan auditorías constantes y presión regulatoria. La competencia regional ofrece trampas pasivas que requieren revisión manual. Sierra Guard revoluciona con smart traps conectadas a nube, que envían alertas instantáneas. Nuestro equipo CEPA realiza auditorías estructurales completas, identifica y sella todos los puntos de entrada. Resultado: reducción de 95% en 30 días, con documentación para auditorías.",
+    bloqueConfianza: "Las empresas de retail y logística en Azoguejo enfrentan auditorías constantes y presión regulatoria. La competencia regional ofrece soluciones estándar que a menudo son insuficientes. Sierra Guard revoluciona con sistemas de control integral y seguimiento detallado. Nuestro equipo CEPA realiza auditorías estructurales completas, identifica y sella todos los puntos de entrada. Resultado: reducción de 95% en 30 días, con documentación para auditorías.",
     beneficios: [
       "Reducción de 95% en 30 días",
-      "Smart traps con alertas en tiempo real",
+      "Sistemas de control de alta seguridad",
       "Rodent proofing permanente",
-      "Reportes automáticos para auditorías",
+      "Documentación detallada para auditorías",
       "Garantía 100%"
     ],
     proceso: [
@@ -212,8 +212,8 @@ export const serviceCategoriesData: ServiceCategory[] = [
       },
       {
         paso: 2,
-        titulo: "Instalación de smart traps",
-        descripcion: "Colocamos trampas conectadas a nube en zonas estratégicas"
+        titulo: "Instalación de sistemas de control",
+        descripcion: "Colocamos estaciones de seguridad en zonas estratégicas"
       },
       {
         paso: 3,
@@ -222,8 +222,8 @@ export const serviceCategoriesData: ServiceCategory[] = [
       },
       {
         paso: 4,
-        titulo: "Monitorización",
-        descripcion: "Recibimos alertas instantáneas de actividad"
+        titulo: "Seguimiento",
+        descripcion: "Realizamos revisiones periódicas de actividad"
       },
       {
         paso: 5,
@@ -231,18 +231,18 @@ export const serviceCategoriesData: ServiceCategory[] = [
         descripcion: "Generamos documentación para auditorías sanitarias"
       }
     ],
-    cta: "Auditoría Gratis + Llamada en 24 Horas",
+    cta: "Llama ahora",
     testimonios: [
       {
         nombre: "Carlos Fernández",
         empresa: "Almacén Logístico Azoguejo",
-        texto: "Smart traps de Sierra Guard revolucionaron nuestro control de plagas. Alertas en tiempo real, reducción de 95% en 30 días. Excelente inversión.",
+        texto: "El sistema de control de Sierra Guard revolucionó nuestro control de plagas. Eficacia total, reducción de 95% en 30 días. Excelente inversión.",
         rating: 5
       },
       {
         nombre: "Ana Martínez",
         empresa: "Tienda de Alimentación",
-        texto: "Ratas en el almacén. Sierra Guard hizo auditoría, selló todo, instaló smart traps. Problema resuelto. Muy profesional.",
+        texto: "Ratas en el almacén. Sierra Guard hizo auditoría, selló todo, instaló estaciones de control. Problema resuelto. Muy profesional.",
         rating: 5
       },
       {
@@ -251,12 +251,34 @@ export const serviceCategoriesData: ServiceCategory[] = [
         texto: "Ratones en casa. Sierra Guard identificó puntos de entrada, selló todo, instaló trampas. Ahora duermo tranquilo.",
         rating: 5
       }
+    ],
+    faqs: [
+      {
+        question: "¿Cuánto tiempo tarda la desratización en hacer efecto?",
+        answer: "La desratización profesional comienza a mostrar resultados entre 3-7 días. Sin embargo, el proceso completo puede durar 2-4 semanas dependiendo del nivel de infestación. Realizamos inspecciones de seguimiento a los 7, 14 y 21 días para garantizar la eliminación total. En casos severos, pueden ser necesarios tratamientos adicionales. Nuestro objetivo es eliminar 100% de la población de roedores."
+      },
+      {
+        question: "¿Es segura la desratización para mascotas y niños?",
+        answer: "Sí, utilizamos métodos profesionales seguros para familias con mascotas y niños. Empleamos cebos en estaciones cerradas que solo los roedores pueden acceder. Los productos que usamos están certificados y cumplen con normativas europeas (UE 528/2012). Recomendamos mantener a mascotas y niños alejados de las áreas de tratamiento durante 24 horas. Todos nuestros técnicos están capacitados en protocolos de seguridad."
+      },
+      {
+        question: "¿Cuál es el precio de una desratización en Segovia?",
+        answer: "El precio de desratización en Segovia varía entre €150-400 según el tamaño del área y nivel de infestación. Una vivienda de 100 m² cuesta aproximadamente €200-250. Incluye inspección inicial, colocación de cebos, seguimiento a 7 días y garantía de 30 días. Ofrecemos presupuestos personalizados sin compromiso. Usa nuestra calculadora online para obtener un presupuesto estimado en 2 minutos."
+      },
+      {
+        question: "¿Cuántas visitas necesita una desratización?",
+        answer: "Una desratización típica requiere 2-3 visitas: Visita 1 (Inspección y colocación de cebos), Visita 2 (Seguimiento a 7-10 días), Visita 3 (Verificación final a 21 días). En casos de infestación severa, pueden ser necesarias 4-5 visitas. Cada visita dura 30-45 minutos. Proporcionamos un plan de tratamiento personalizado después de la inspección inicial."
+      },
+      {
+        question: "¿Cómo prevenir una infestación de roedores?",
+        answer: "La prevención es clave. Sella grietas y agujeros en paredes (especialmente alrededor de tuberías), elimina fuentes de alimento (basura, comida expuesta), mantén la higiene, sella grietas en el sótano y ático, instala guardapolvos en puertas exteriores, y realiza inspecciones regulares. Recomendamos tratamientos preventivos trimestrales en zonas de riesgo. Nuestro servicio de mantenimiento preventivo cuesta €50/mes y evita infestaciones futuras."
+      }
     ]
   },
   {
     id: "desinfeccion",
     slug: "desinfeccion",
-    image: "https://private-us-east-1.manuscdn.com/sessionFile/pJ5hSiXSQku5X6UXcVcPGG/sandbox/7wk4ZxCsNdaMYgmx2lJ94m-img-4_1770374055000_na1fn_c2VydmljZS1kZXNpbmZlY2Npb24.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvcEo1aFNpWFNRa3U1WDZVWGNWY1BHRy9zYW5kYm94Lzd3azRaeENzTmRhTVlnbXgybEo5NG0taW1nLTRfMTc3MDM3NDA1NTAwMF9uYTFmbl9jMlZ5ZG1salpTMWtaWE5wYm1abFkyTnBiMjQucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=Ut4WPLfxSvSZy9ZDUa2tRp~y9iSAUbEqhLBHCW9k7~ySV9LekZSLDa5qtP2PKFM2n6KFoUrLswZCGJSdCiJvBwtJmgN77h6E6tTkr12dyquMQI-b1TtgTvFQdVm6-aKpca6jP1zTIjDffcOiCLTHe3A18LmajwbmMxufFX8dojvDOLzUeNi0g7PPT4vrhV482lVcFb6XHLDLqnUZ7ZnPcS9DyHpezFPDXUNWfIxk5CLYz9zXe8arPPnSSyB~RhWEKRDGoEyyUtGlYJrOJCybK8FbnkMeuBelGcoqasY7R1QvUKR4HMk6lks~2S0fZNlfDDd~WhsCf0SRNt665tQ6jg__",
+    image: "/images/servicio-desinfectacion-en-segovia.png",
     nombre: "Desinfección",
     h1: "Desinfección Profesional en Segovia | Legionella, Bioseguridad y Patógenos",
     metaDescription: "Desinfección profesional en Segovia. Auditoría de legionella, desinfección de patógenos, purificación de aire UV-C. Hospitales, clínicas, gimnasios. Certificado CEPA.",
@@ -324,7 +346,7 @@ export const serviceCategoriesData: ServiceCategory[] = [
         descripcion: "Generamos documentación para auditorías sanitarias"
       }
     ],
-    cta: "Auditoría Técnica Gratis + Llamada en 24 Horas",
+    cta: "Llama ahora",
     testimonios: [
       {
         nombre: "Dr. Miguel Sánchez",
@@ -343,7 +365,7 @@ export const serviceCategoriesData: ServiceCategory[] = [
   {
     id: "control-de-aves",
     slug: "control-de-aves",
-    image: "https://placehold.co/600x400?text=Control+de+Aves",
+    image: "/images/servicio-control-aves-en-segovia.png",
     nombre: "Control de Aves",
     h1: "Control de Aves en Segovia | Palomas, Pinchos Antipalomas y Redes de Protección",
     metaDescription: "Control de aves en Segovia. Retirada de palomas, instalación de pinchos antipalomas y redes de protección. Métodos humanitarios. Certificado CEPA. Garantía 100%.",
@@ -405,7 +427,7 @@ export const serviceCategoriesData: ServiceCategory[] = [
         descripcion: "Realizamos seguimiento periódico"
       }
     ],
-    cta: "Inspección Gratis + Llamada en 24 Horas",
+    cta: "Llama ahora",
     testimonios: [
       {
         nombre: "Roberto Díaz",
@@ -418,7 +440,7 @@ export const serviceCategoriesData: ServiceCategory[] = [
   {
     id: "tratamientos-de-madera",
     slug: "tratamientos-de-madera",
-    image: "https://placehold.co/600x400?text=Tratamientos+de+Madera",
+    image: "/images/servicio-tratamientos-madera-en-segovia.png",
     nombre: "Tratamientos de Madera",
     h1: "Tratamientos de Madera en Segovia | Carcoma y Termitas en Estructuras",
     metaDescription: "Tratamientos de madera en Segovia. Control de carcoma, tratamiento contra termitas en madera. Protección de estructuras. Certificado CEPA. Garantía 100%.",
@@ -475,12 +497,13 @@ export const serviceCategoriesData: ServiceCategory[] = [
         descripcion: "Realizamos inspecciones periódicas"
       }
     ],
-    cta: "Inspección Gratis + Llamada en 24 Horas",
+    cta: "Llama ahora",
     testimonios: [],
   },
   {
     id: "higiene-ambiental",
     slug: "higiene-ambiental",
+    image: "/images/servicio-higiene-ambiental-en-segovia.png",
     nombre: "Higiene Ambiental",
     h1: "Higiene Ambiental en Segovia | Higienización de Espacios y Gestión de Contenedores",
     metaDescription: "Higiene ambiental en Segovia. Higienización de espacios, gestión de contenedores higiénicos, bacteriostáticos. Comercios, industrias, viviendas. Certificado CEPA.",
@@ -537,12 +560,13 @@ export const serviceCategoriesData: ServiceCategory[] = [
         descripcion: "Realizamos inspecciones periódicas"
       }
     ],
-    cta: "Auditoría Gratis + Llamada en 24 Horas",
+    cta: "Llama ahora",
     testimonios: [],
   },
   {
     id: "inspeccion-y-prevencion",
     slug: "inspeccion-y-prevencion",
+    image: "/images/servicio-inspeccion-y-prevencion-control-plagas-segovia.png",
     nombre: "Inspección y Prevención",
     h1: "Inspección y Prevención de Plagas en Segovia | Auditorías y Planes de Mantenimiento",
     metaDescription: "Inspección y prevención de plagas en Segovia. Auditorías completas, inspección de termitas, programas de prevención. Planes de mantenimiento periódico. Certificado CEPA.",
@@ -604,7 +628,7 @@ export const serviceCategoriesData: ServiceCategory[] = [
         descripcion: "Generamos documentación para auditorías"
       }
     ],
-    cta: "Auditoría Gratis + Llamada en 24 Horas",
+    cta: "Llama ahora",
     testimonios: [],
   }
 ];

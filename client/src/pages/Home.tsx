@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Phone, CheckCircle2, MapPin, Shield, Zap, Award, Bug, ShieldAlert, Sparkles, Feather, Hammer, ArrowRight, ClipboardCheck, PhoneCall, BadgeCheck, Building2, Home as HomeIcon } from "lucide-react";
+import { Phone, CheckCircle2, MapPin, Shield, Zap, Award, Bug, ShieldAlert, Sparkles, Feather, Hammer, ArrowRight, ClipboardCheck, PhoneCall, BadgeCheck, Building2, Home as HomeIcon, ShieldCheck, Star, Calculator } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link } from "wouter";
 import Header from "@/components/Header";
@@ -51,7 +51,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
             {/* Texto Hero */}
             <div className="space-y-6 lg:col-span-2">
-              <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight">
+              <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight">
                 Control de plagas en Segovia | Servicio profesional y urgente
               </h1>
               <p className="text-xl text-gray-100 leading-relaxed">
@@ -69,7 +69,7 @@ export default function Home() {
                   }}
                 >
                   <Phone className="mr-2" size={20} />
-                  Te Llamamos Gratis
+                  Llamar ahora
                 </Button>
                 <Link href="/calculadora">
                   <Button
@@ -119,84 +119,88 @@ export default function Home() {
             {serviceCategoriesData.map((service) => {
               // Icon mapping
               const icons: any = {
-                "desinsectacion": <Bug className="w-10 h-10 text-primary mb-4" />,
-                "desratizacion": <ShieldAlert className="w-10 h-10 text-primary mb-4" />,
-                "desinfeccion": <Sparkles className="w-10 h-10 text-primary mb-4" />,
-                "control-de-aves": <Feather className="w-10 h-10 text-primary mb-4" />,
-                "tratamientos-de-madera": <Hammer className="w-10 h-10 text-primary mb-4" />,
+                "desinsectacion": <Bug className="w-6 h-6 text-primary" />,
+                "desratizacion": <ShieldAlert className="w-6 h-6 text-primary" />,
+                "desinfeccion": <Sparkles className="w-6 h-6 text-primary" />,
+                "control-de-aves": <Feather className="w-6 h-6 text-primary" />,
+                "tratamientos-de-madera": <Hammer className="w-6 h-6 text-primary" />,
               };
 
               // Short descriptions mapping
               const shortDescs: any = {
-                "desinsectacion": "Eliminación eficaz de cucarachas, chinches y hormigas.",
-                "desratizacion": "Control de roedores con monitoreo inteligente 24/7.",
-                "desinfeccion": "Ambientes libres de patógenos y bacterias.",
-                "control-de-aves": "Sistemas discretos para proteger tu fachada.",
-                "tratamientos-de-madera": "Protección estructural contra termitas y carcoma."
+                "desinsectacion": "Elimina cucarachas, chinches y hormigas. Tratamientos seguros sin abandonar tu vivienda.",
+                "desratizacion": "Solución definitiva para ratas y ratones. Monitorización inteligente y sellado de accesos.",
+                "desinfeccion": "Desinfección certificada de virus y bacterias. Cumplimiento de normativa sanitaria.",
+                "control-de-aves": "Ahuyentadores de palomas discretos. Protege tu edificio sin dañar su estética.",
+                "tratamientos-de-madera": "Expertos en termitas y carcoma. Tratamientos curativos con garantía certificada.",
+                "higiene-ambiental": "Control de calidad del aire y legionella. Auditorías para cumplimiento normativo.",
+                "inspeccion-y-prevencion": "Diagnóstico técnico preventivo. Identificamos y corregimos riesgos antes de la plaga."
               };
 
               return (
                 <a
-                  key={service.id}
-                  href={`/${service.slug}`}
-                  className="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-all border border-gray-100 hover:border-primary/20 flex flex-col items-start h-full"
-                >
-                  <div className="bg-primary/5 p-3 rounded-xl mb-6 group-hover:bg-primary/10 transition-colors">
-                    {icons[service.id] || <Shield className="w-8 h-8 text-primary" />}
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
-                    {service.nombre}
-                  </h3>
-                  
-                  <p className="text-gray-600 mb-8 leading-relaxed flex-grow">
-                    {shortDescs[service.id] || service.metaDescription.split('.')[0] + '.'}
-                  </p>
-                  
-                  <div className="flex items-center text-primary font-bold text-sm group-hover:translate-x-1 transition-transform mt-auto">
-                    Ver servicio <ArrowRight className="ml-2 w-4 h-4" />
-                  </div>
-                </a>
+            key={service.id}
+            href={`/${service.slug}`}
+            className="group bg-white p-0 rounded-2xl shadow-sm hover:shadow-md transition-all border border-gray-100 hover:border-primary/20 flex flex-col items-start h-full overflow-hidden"
+          >
+            {service.image && (
+              <div className="w-full h-32 relative">
+                <img 
+                  src={service.image} 
+                  alt={service.nombre}
+                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute -bottom-6 left-6 bg-white p-3 rounded-xl shadow-md border border-gray-100 z-10">
+                  {icons[service.id] || <Shield className="w-6 h-6 text-primary" />}
+                </div>
+              </div>
+            )}
+
+            <div className={`flex flex-col items-start h-full w-full ${service.image ? 'pt-10 px-8 pb-8' : 'p-8'}`}>
+              {!service.image && (
+                <div className="bg-primary/5 p-3 rounded-xl mb-6 group-hover:bg-primary/10 transition-colors">
+                  {icons[service.id] || <Shield className="w-6 h-6 text-primary" />}
+                </div>
+              )}
+              
+              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
+                {service.nombre}
+              </h3>
+              
+              <p className="text-gray-600 mb-8 leading-relaxed flex-grow">
+                {shortDescs[service.id] || service.metaDescription.split('.')[0] + '.'}
+              </p>
+              
+              <div className="flex items-center text-primary font-bold text-sm group-hover:translate-x-1 transition-transform mt-auto">
+                Ver servicio <ArrowRight className="ml-2 w-4 h-4" />
+              </div>
+            </div>
+          </a>
               );
             })}
           </div>
         </div>
       </section>
 
-      {/* ===== SERVICIOS ADICIONALES ===== */}
-      <section className="py-20 bg-white">
-        <div className="container">
-          <h2 className="text-3xl font-bold text-center mb-12 text-foreground">
-            Servicios Adicionales de Control de Plagas en Segovia
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {serviceCategoriesData.flatMap(category => 
-              category.servicios.map(subService => ({
-                ...subService,
-                categorySlug: category.slug,
-                categoryName: category.nombre
-              }))
-            )
-            .filter(item => item.servicePageSlug)
-            .map((item, index) => (
-              <Link key={index} href={`/servicios/${item.servicePageSlug}`}>
-                <div className="p-6 border border-gray-100 rounded-xl hover:shadow-md transition-shadow bg-gray-50/50 cursor-pointer h-full group">
-                  <div className="flex items-center gap-3 mb-3">
-                    <CheckCircle2 className="text-primary shrink-0" size={20} />
-                    <h3 className="font-bold text-gray-900 group-hover:text-primary transition-colors">{item.titulo}</h3>
-                  </div>
-                  <p className="text-sm text-gray-600 mb-4">{item.descripcion}</p>
-                  <div className="flex items-center justify-between mt-auto">
-                    <div className="text-xs text-primary font-semibold uppercase tracking-wide">
-                      {item.categoryName}
-                    </div>
-                    <ArrowRight className="w-4 h-4 text-primary opacity-0 group-hover:opacity-100 transition-opacity transform group-hover:translate-x-1" />
-                  </div>
-                </div>
-              </Link>
-            ))}
+
+
+      {/* ===== CALCULADORA CTA ===== */}
+      <section className="py-12 bg-primary text-white">
+        <div className="container flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="flex-1 text-center md:text-left">
+            <h2 className="text-2xl font-bold mb-2">¿Quieres saber cuánto cuesta tu tratamiento?</h2>
+            <p className="text-white/90 text-lg">
+              Obtén un presupuesto estimado en menos de 1 minuto con nuestra calculadora online.
+            </p>
           </div>
+          <Link href="/calculadora">
+            <Button size="lg" variant="secondary" className="font-bold text-primary hover:text-primary/90 min-w-[200px] h-14 text-lg shadow-lg">
+              <Calculator className="mr-2 h-6 w-6" />
+              Calcular Presupuesto
+            </Button>
+          </Link>
         </div>
       </section>
 
@@ -329,71 +333,83 @@ export default function Home() {
       {/* ===== POR QUÉ ELEGIRNOS (NUEVO DISEÑO) ===== */}
       <section className="py-16 md:py-24 bg-white relative overflow-hidden">
         <div className="container max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
-              ¿Por Qué Elegirnos como tu Empresa de <span className="text-primary">Control de Plagas en Segovia</span>?
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Más que exterminadores, somos tus vecinos expertos en protección ambiental.
-            </p>
-          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            
+            {/* Left Column: Content */}
+            <div>
+              <div className="mb-10 text-left">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+                  ¿Por Qué Elegirnos como tu Empresa de <span className="text-primary">Control de Plagas en Segovia</span>?
+                </h2>
+                <p className="text-lg text-gray-600">
+                  No somos una franquicia ni un intermediario. Somos vecinos expertos comprometidos con la protección ambiental de nuestra ciudad.
+                </p>
+              </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            {/* Card 1: Experiencia Local */}
-            <div className="group p-8 rounded-2xl bg-gray-50 border border-gray-100 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 relative overflow-hidden">
-              <div className="absolute -top-4 -right-4 opacity-[0.03] group-hover:opacity-10 transition-opacity duration-500 rotate-12">
-                <MapPin size={120} className="text-primary" />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-x-12 md:gap-y-10">
+                {/* Item 1: Experiencia Local */}
+                <div className="flex flex-col items-start">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-4">
+                    <MapPin size={24} />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">Expertos en Segovia</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    Conocemos cada rincón, desde el Acueducto hasta los nuevos barrios. Tratamientos adaptados a la zona.
+                  </p>
+                </div>
+
+                {/* Item 2: Rapidez */}
+                <div className="flex flex-col items-start">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-4">
+                    <Zap size={24} />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">Respuesta Inmediata</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    Llegamos volando a cualquier punto. Actuamos en menos de 24h y atendemos urgencias.
+                  </p>
+                </div>
+
+                {/* Item 3: Seguridad (Eco) */}
+                <div className="flex flex-col items-start">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-4">
+                    <ShieldCheck size={24} />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">Seguridad Total</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    Biocidas de última generación seguros para niños y mascotas. Tu salud es prioritaria.
+                  </p>
+                </div>
+
+                {/* Item 4: Garantía */}
+                <div className="flex flex-col items-start">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-4">
+                    <Award size={24} />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">Garantía por Escrito</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    Precio cerrado sin sorpresas. Si la plaga persiste, nosotros también hasta eliminarla.
+                  </p>
+                </div>
               </div>
-              <div className="w-14 h-14 bg-white rounded-xl shadow-sm border border-gray-100 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform duration-300 group-hover:bg-primary group-hover:text-white">
-                <MapPin size={28} />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">Expertos en Segovia</h3>
-              <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-                Conocemos cada rincón, desde el Acueducto hasta los nuevos barrios. Tratamientos adaptados a la arquitectura local.
-              </p>
             </div>
 
-            {/* Card 2: Rapidez */}
-            <div className="group p-8 rounded-2xl bg-gray-50 border border-gray-100 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 relative overflow-hidden">
-              <div className="absolute -top-4 -right-4 opacity-[0.03] group-hover:opacity-10 transition-opacity duration-500 rotate-12">
-                <Zap size={120} className="text-primary" />
+            {/* Right Column: Image */}
+            <div className="relative">
+              <div className="relative rounded-[2rem] overflow-hidden shadow-2xl">
+                <img 
+                  src="/images/control-plagas-en-segovia.jpeg" 
+                  alt="Técnico experto en control de plagas" 
+                  className="w-full h-full object-cover aspect-[4/5] md:aspect-square lg:aspect-[4/5]"
+                  loading="lazy"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-60"></div>
               </div>
-              <div className="w-14 h-14 bg-white rounded-xl shadow-sm border border-gray-100 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform duration-300 group-hover:bg-primary group-hover:text-white">
-                <Zap size={28} />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">Respuesta Inmediata</h3>
-              <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-                Sabemos que las plagas no esperan. Actuamos en menos de 24h y atendemos urgencias fines de semana.
-              </p>
+              
+              {/* Decorative Background Element */}
+              <div className="absolute -z-10 top-12 -right-12 w-full h-full bg-primary/5 rounded-[2rem] transform rotate-3"></div>
             </div>
 
-            {/* Card 3: Seguridad (Eco) */}
-            <div className="group p-8 rounded-2xl bg-gray-50 border border-gray-100 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 relative overflow-hidden">
-              <div className="absolute -top-4 -right-4 opacity-[0.03] group-hover:opacity-10 transition-opacity duration-500 rotate-12">
-                <Sparkles size={120} className="text-primary" />
-              </div>
-              <div className="w-14 h-14 bg-white rounded-xl shadow-sm border border-gray-100 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform duration-300 group-hover:bg-primary group-hover:text-white">
-                <Sparkles size={28} />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">Seguridad Total</h3>
-              <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-                Biocidas de última generación seguros para niños y mascotas. Tu salud es nuestra prioridad innegociable.
-              </p>
-            </div>
-
-            {/* Card 4: Garantía */}
-            <div className="group p-8 rounded-2xl bg-gray-50 border border-gray-100 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 relative overflow-hidden">
-              <div className="absolute -top-4 -right-4 opacity-[0.03] group-hover:opacity-10 transition-opacity duration-500 rotate-12">
-                <Shield size={120} className="text-primary" />
-              </div>
-              <div className="w-14 h-14 bg-white rounded-xl shadow-sm border border-gray-100 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform duration-300 group-hover:bg-primary group-hover:text-white">
-                <Shield size={28} />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">Garantía por Escrito</h3>
-              <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-                Si la plaga persiste, nosotros también. Ofrecemos garantía de post-servicio certificada y seguimiento.
-              </p>
-            </div>
           </div>
         </div>
       </section>

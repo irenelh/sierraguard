@@ -107,9 +107,9 @@ export const serviceCategories: ServiceCategory[] = [
         id: "ratas",
         name: "Control de Ratas",
         icon: "🐀",
-        shortDescription: "Eliminación de ratas con smart traps",
+        shortDescription: "Eliminación de ratas con trampas de alta seguridad",
         priceRange: "Desde 120€",
-        features: ["Smart traps con monitoreo 24/7", "Sellado de puntos de entrada", "Gestión de residuos", "Garantía 60 días"],
+        features: ["Trampas de alta seguridad y monitoreo", "Sellado de puntos de entrada", "Gestión de residuos", "Garantía 60 días"],
         urgency: "24-48 horas"
       },
       {

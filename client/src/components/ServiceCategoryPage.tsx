@@ -15,7 +15,8 @@ import {
   ShieldCheck,
   Award,
   Clock,
-  BadgeCheck
+  BadgeCheck,
+  Calculator
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
@@ -30,6 +31,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ServiceCategory } from "@/lib/serviceCategoriesData";
 import { useEffect } from "react";
+import { Link } from "wouter";
 
 const getServiceIcon = (title: string) => {
   const t = title.toLowerCase();
@@ -89,28 +91,48 @@ export default function ServiceCategoryPage({ service }: ServiceCategoryPageProp
     updateMeta("og:description", service.metaDescription);
     updateMeta("og:type", "website");
 
-    // Schema Markup JSON-LD Service
+    // Schema Markup JSON-LD
+    const graph: any[] = [
+      {
+        "@type": "Service",
+        serviceType: service.nombre,
+        provider: {
+          "@type": "LocalBusiness",
+          name: "Sierra Guard",
+          telephone: "+34921234567",
+          address: {
+              "@type": "PostalAddress",
+              addressLocality: "Segovia",
+              addressRegion: "Segovia",
+              addressCountry: "ES"
+          }
+        },
+        areaServed: {
+          "@type": "City",
+          name: "Segovia"
+        },
+        description: service.metaDescription,
+        url: `https://sierraguard.es/servicios/${service.slug}`
+      }
+    ];
+
+    if (service.faqs && service.faqs.length > 0) {
+      graph.push({
+        "@type": "FAQPage",
+        mainEntity: service.faqs.map(faq => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.answer
+          }
+        }))
+      });
+    }
+
     const schema = {
       "@context": "https://schema.org",
-      "@type": "Service",
-      serviceType: service.nombre,
-      provider: {
-        "@type": "LocalBusiness",
-        name: "Sierra Guard",
-        telephone: "+34921234567",
-        address: {
-            "@type": "PostalAddress",
-            addressLocality: "Segovia",
-            addressRegion: "Segovia",
-            addressCountry: "ES"
-        }
-      },
-      areaServed: {
-        "@type": "City",
-        name: "Segovia"
-      },
-      description: service.metaDescription,
-      url: `https://sierraguard.es/servicios/${service.slug}`
+      "@graph": graph
     };
 
     const schemaScript = document.createElement("script");
@@ -129,25 +151,45 @@ export default function ServiceCategoryPage({ service }: ServiceCategoryPageProp
       <Header />
       {/* ===== HERO SECTION ===== */}
       <section className="py-16 bg-gradient-to-br from-primary/10 to-primary/5 border-b border-border">
-        <div className="container max-w-4xl">
-          <h1 className="text-3xl lg:text-4xl font-bold text-foreground mb-6 leading-tight">
-            {service.h1}
-          </h1>
-          <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-            {service.intro}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-white font-bold text-lg h-14 px-8 rounded-lg"
-              onClick={() => {
-                const form = document.getElementById("contact-form");
-                form?.scrollIntoView({ behavior: "smooth" });
-              }}
-            >
-              <Phone className="mr-2" size={20} />
-              {service.cta}
-            </Button>
+        <div className="container max-w-6xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Column: Text */}
+            <div className="text-left">
+              <h1 className="text-3xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
+                {service.h1}
+              </h1>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                {service.intro}
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button
+                  size="lg"
+                  className="bg-primary hover:bg-primary/90 text-white font-bold text-lg h-14 px-8 rounded-lg"
+                  onClick={() => {
+                    const form = document.getElementById("contact-form");
+                    form?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                >
+                  <Phone className="mr-2" size={20} />
+                  {service.cta}
+                </Button>
+              </div>
+            </div>
+
+            {/* Right Column: Image */}
+            <div className="relative h-[300px] lg:h-[400px] w-full rounded-2xl overflow-hidden shadow-xl">
+              {service.image ? (
+                <img 
+                  src={service.image} 
+                  alt={service.h1}
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                <div className="w-full h-full bg-primary/10 flex items-center justify-center">
+                  <ShieldCheck className="w-32 h-32 text-primary/20" />
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </section>
@@ -196,6 +238,24 @@ export default function ServiceCategoryPage({ service }: ServiceCategoryPageProp
               </Card>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ===== CALCULADORA CTA ===== */}
+      <section className="py-12 bg-primary text-white">
+        <div className="container max-w-6xl flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="flex-1 text-center md:text-left">
+            <h2 className="text-2xl font-bold mb-2">¿Quieres saber cuánto cuesta tu tratamiento de {service.nombre.toLowerCase()}?</h2>
+            <p className="text-white/90 text-lg">
+              Obtén un presupuesto estimado en menos de 1 minuto con nuestra calculadora online.
+            </p>
+          </div>
+          <Link href="/calculadora">
+            <Button size="lg" variant="secondary" className="font-bold text-primary hover:text-primary/90 min-w-[200px] h-14 text-lg shadow-lg">
+              <Calculator className="mr-2 h-6 w-6" />
+              Calcular Presupuesto
+            </Button>
+          </Link>
         </div>
       </section>
 

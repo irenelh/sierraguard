@@ -63,9 +63,13 @@ export const blogArticles: BlogArticle[] = [
         ]
       }
     },
-    content: `Las plagas en Segovia afectan al 65% de los hogares según datos de 2024. Identificar la plaga correctamente es el primer paso para eliminarla. Este artículo cubre las 5 plagas más comunes, sus características, síntomas y soluciones.
+    content: `Las plagas en Segovia afectan al 65% de los hogares según datos de 2024. El clima continental, con inviernos fríos y veranos calurosos, empuja a muchas especies a buscar refugio en el interior de viviendas y negocios. Identificar la plaga correctamente es el primer paso para eliminarla de forma efectiva y segura.
+
+En este artículo, analizamos en profundidad las 5 plagas más frecuentes en nuestra provincia, detallando sus características, cómo detectarlas a tiempo y las mejores estrategias de control.
 
 ## Las 5 Plagas Más Comunes en Segovia
+
+A continuación, presentamos una comparativa rápida de las plagas que más afectan a los segovianos:
 
 | Plaga | Porcentaje | Búsquedas/mes | Precio | Tiempo |
 | :--- | :--- | :--- | :--- | :--- |
@@ -75,108 +79,124 @@ export const blogArticles: BlogArticle[] = [
 | **Hormigas** | 12% | 40-70 | €100-200 | 1-2 semanas |
 | **Mosquitos** | 8% | 50-100 | €100-150 | 1-2 semanas |
 
+---
+
 ## 1. Cucarachas (35% de infestaciones)
+Las cucarachas son, con diferencia, la plaga más común y persistente en Segovia. Su capacidad de adaptación y reproducción rápida las convierte en un enemigo formidable.
 
-### Identificación
-*   **Tamaño:** 1-3 cm
-*   **Color:** Marrón oscuro, negro
-*   **Ciclo de vida:** 1-2 años
-*   **Reproducción:** 20-40 ninfas cada 6-8 semanas
+### Identificación: ¿Cómo son?
+No todas son iguales. En nuestra zona predominan la **cucaracha alemana** (pequeña y rubia, habitual en cocinas) y la **cucaracha oriental** (grande y negra, común en alcantarillas y sótanos).
+*   **Tamaño:** Oscilan entre 1 y 3 cm.
+*   **Color:** Marrón claro a negro brillante.
+*   **Ciclo de vida:** Viven 1-2 años, pero su tasa reproductiva es explosiva.
+*   **Reproducción:** Una hembra puede generar de 20 a 40 ninfas cada 6-8 semanas.
 
-### Síntomas
-*   Excrementos pequeños (1-3mm)
-*   Olor almendrado
-*   Cucarachas vivas de noche
-*   Cápsulas de huevos (ootecas)
+### Síntomas de Alarma
+A menudo, no verás a los insectos hasta que la infestación es grave, ya que son nocturnos. Fíjate en:
+*   **Excrementos:** Pequeños puntos negros similares a pimienta molida o posos de café en esquinas y cajones.
+*   **Olor:** Un olor rancio y dulzón (almendrado) característico en infestaciones grandes.
+*   **Avistamientos diurnos:** Si ves una de día, significa que los nidos están superpoblados.
+*   **Ootecas:** Cápsulas de huevos vacías en rincones oscuros.
 
-### Solución
-*   **DIY:** €20-50 (30-50% efectividad)
-*   **Profesional:** €150-300 (95-99% efectividad)
-*   **Tiempo:** 24-48 horas
+### Solución y Tratamiento
+*   **DIY (Hazlo tú mismo):** Los sprays de supermercado matan al contacto pero dispersan la plaga. Coste: €20-50 (Efectividad baja: 30-50%).
+*   **Profesional:** El uso de geles biocidas con efecto cascada es la única solución definitiva. Coste: €150-300 (Efectividad: 95-99%).
+*   **Tiempo de eliminación:** 24-48 horas para notar una reducción drástica.
+
+---
 
 ## 2. Roedores (30% de infestaciones)
+Ratas y ratones buscan calor y comida, especialmente en otoño e invierno. Son peligrosos por las enfermedades que transmiten y los daños materiales que causan.
 
 ### Identificación
-*   **Tamaño:** 7-25 cm (según especie)
-*   **Ciclo de vida:** 1-3 años
-*   **Reproducción:** 8-12 crías cada 6-8 semanas
+El ratón doméstico y la rata gris son los visitantes más indeseados.
+*   **Tamaño:** Desde 7 cm (ratones) hasta 25 cm (ratas), sin contar la cola.
+*   **Comportamiento:** Son neofóbicos (recelan de lo nuevo), lo que dificulta su captura.
+*   **Reproducción:** Una pareja puede dar lugar a una colonia de 200 individuos en un año.
 
-### Síntomas
-*   Excrementos alargados (5-10mm)
-*   Ruidos en paredes y ático
-*   Daños en cables y estructuras
-*   Olor desagradable
+### Síntomas en el Hogar
+*   **Ruidos:** Rasguños o correteos en falsos techos y paredes por la noche.
+*   **Excrementos:** De 5-10 mm, oscuros y terminados en punta (ratón) o romos (rata).
+*   **Daños:** Cables roídos, bolsas de comida rotas y madera mordisqueada.
+*   **Manchas:** Marcas de grasa (sebo) en los rodapiés por donde pasan habitualmente.
 
 ### Solución
-*   **DIY:** €30-80 (40-60% efectividad)
-*   **Profesional:** €150-300 (90-95% efectividad)
-*   **Tiempo:** 3-7 días
+*   **DIY:** Trampas mecánicas o pegamento. A menudo insuficientes para colonias. Coste: €30-80 (Efectividad: 40-60%).
+*   **Profesional:** Estaciones de cebo seguras y sellado de puntos de entrada. Coste: €150-300 (Efectividad: 90-95%).
+*   **Tiempo:** 3-7 días para control total.
+
+---
 
 ## 3. Termitas (15% de infestaciones)
+La "plaga invisible". Las termitas subterráneas son devastadoras en el casco histórico de Segovia, afectando a vigas y estructuras antiguas.
 
 ### Identificación
-*   **Tamaño:** 5-10mm
-*   **Ciclo de vida:** 15-30 años (colonia)
-*   **Reproducción:** Reina produce 1.000+ huevos/día
+A menudo se confunden con hormigas aladas.
+*   **Apariencia:** Insectos blancos y blandos (obreras) o negros con alas (reproductoras).
+*   **Diferencia clave:** Tienen el cuerpo recto, sin la "cintura de avispa" de las hormigas.
+*   **Colonia:** Pueden tener millones de individuos y extenderse por varios edificios.
 
-### Síntomas
-*   Daños en madera
-*   Galerías en estructuras
-*   Olor a humedad
-*   Alas desprendidas
+### Síntomas (Difíciles de ver)
+*   **Madera hueca:** Al golpear marcos o vigas, suenan a vacío.
+*   **Canales de barro:** Túneles marrones que suben por paredes o cimientos.
+*   **Enjambrazón:** Aparición repentina de cientos de insectos alados en primavera.
 
 ### Solución
-*   **DIY:** No recomendado
-*   **Profesional:** €800-2.500 (garantía 1-2 años)
-*   **Tiempo:** 1-2 semanas
+*   **DIY:** Totalmente desaconsejado. Los sprays no llegan al termitero.
+*   **Profesional:** Sistema de cebos (sentri-tech) que elimina la colonia o barreras químicas. Coste: €800-2.500 (Garantía 5 años).
+*   **Tiempo:** 1-2 semanas para control inicial, meses para eliminación total de colonia.
+
+---
 
 ## 4. Hormigas (12% de infestaciones)
+Aunque parecen inofensivas, una invasión de hormigas puede contaminar alimentos y ser muy molesta.
 
 ### Identificación
-*   **Tamaño:** 2-5mm
-*   **Ciclo de vida:** 1-3 años
-*   **Reproducción:** Reina produce 1.000+ huevos/día
+*   **Especies:** Hormiga negra de jardín y hormiga de pavimento son las más comunes aquí.
+*   **Comportamiento:** Forman hileras muy definidas hacia fuentes de comida dulce o proteica.
 
 ### Síntomas
-*   Caminos de hormigas
-*   Nidos en grietas
-*   Daños en alimentos
-*   Picaduras
+*   **Hileras:** Caminos visibles de hormigas entrando por ventanas o bajo puertas.
+*   **Montoncitos de tierra:** Pequeños volcanes de tierra o arena en rodapiés o grietas.
 
 ### Solución
-*   **DIY:** €10-30 (50-70% efectividad)
-*   **Profesional:** €100-200 (90-95% efectividad)
-*   **Tiempo:** 1-2 semanas
+*   **DIY:** Trampas de cebo de supermercado. Funcionan si la infestación es leve. Coste: €10-30.
+*   **Profesional:** Gel insecticida de alta apetencia que las obreras llevan a la reina. Coste: €100-200.
+
+---
 
 ## 5. Mosquitos (8% de infestaciones)
+Estacionales pero muy molestos, especialmente cerca de zonas húmedas o jardines con riego.
 
 ### Identificación
-*   **Tamaño:** 3-6mm
-*   **Ciclo de vida:** 7-21 días
-*   **Reproducción:** Rápida en agua estancada
+*   **Especies:** Mosquito común y, cada vez más, presencia de mosquito tigre (agresivo y diurno).
+*   **Ciclo:** Necesitan agua estancada para sus larvas.
 
 ### Síntomas
-*   Picaduras
-*   Zumbidos de noche
-*   Agua estancada
-*   Larvas en agua
+*   **Picaduras:** Ronchas que pican, a menudo múltiples.
+*   **Zumbidos:** El característico sonido agudo al intentar dormir.
 
 ### Solución
-*   **DIY:** €20-50 (30-50% efectividad)
-*   **Profesional:** €100-150 (90-95% efectividad)
-*   **Tiempo:** 1-2 semanas
+*   **DIY:** Mosquiteras y repelentes eléctricos. Coste: €20-50.
+*   **Profesional:** Nebulización de jardines y tratamiento larvicida en imbornales. Coste: €100-150.
 
-## Calendario Estacional de Plagas
+---
 
-| Estación | Plagas Principales | Acción |
+## Calendario Estacional de Plagas en Segovia
+
+| Estación | Plagas Principales | Acción Recomendada |
 | :--- | :--- | :--- |
-| **Primavera** | Cucarachas, hormigas, mosquitos | Comienza prevención |
-| **Verano** | Mosquitos, avispas, hormigas | Máxima vigilancia |
-| **Otoño** | Roedores, cucarachas | Sella grietas |
-| **Invierno** | Roedores, cucarachas (interiores) | Mantenimiento |
+| **Primavera** | Cucarachas, hormigas, procesionaria | Inicio de tratamientos preventivos en perímetro. |
+| **Verano** | Mosquitos, avispas, hormigas | Vigilancia máxima. Instalación de trampas de avispas. |
+| **Otoño** | Roedores, chinches, cucarachas | Sellado de grietas ante la bajada de temperaturas. |
+| **Invierno** | Roedores, xilófagos (termitas) | Mantenimiento interior y revisión de aislamientos. |
 
 ## Conclusión
-Identifica la plaga correctamente y actúa rápido. Usa nuestra calculadora para presupuesto estimado.`,
+
+Identificar la plaga correctamente es solo el primer paso. Si detectas señales de actividad, actuar rápido es crucial para evitar que una pequeña molestia se convierta en una infestación costosa.
+
+¿No estás seguro de qué plaga tienes o cuánto costaría eliminarla?
+Usa nuestra **calculadora de presupuesto online** para obtener una estimación inmediata sin compromiso.`,
     faqs: [
       {
         pregunta: "¿Cuáles son las plagas más comunes en Segovia?",

@@ -231,8 +231,8 @@ export default function BlogArticlePage() {
                                     if (cleanItem.includes('**Resultado:**')) {
                                         if (cleanItem.toLowerCase().includes('eliminación') || cleanItem.toLowerCase().includes('éxito') || cleanItem.toLowerCase().includes('total') || cleanItem.toLowerCase().includes('cero') || cleanItem.toLowerCase().includes('protección')) {
                                             Icon = Target;
-                                            colorClass = "bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-800";
-                                            iconColor = "text-green-600 dark:text-green-400";
+                                            colorClass = "bg-emerald-50 border-emerald-200 dark:bg-emerald-900/20 dark:border-emerald-800";
+                                            iconColor = "text-emerald-600 dark:text-emerald-400";
                                         } else {
                                             Icon = XCircle;
                                             colorClass = "bg-red-50 border-red-200 dark:bg-red-900/20 dark:border-red-800";

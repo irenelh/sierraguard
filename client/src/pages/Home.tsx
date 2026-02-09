@@ -51,60 +51,77 @@ export default function Home() {
 
       {/* ===== HERO SECTION ===== */}
       <section
-        className="relative min-h-[500px] lg:min-h-[600px] flex items-center overflow-hidden py-12 lg:py-0"
+        className="relative min-h-[550px] lg:min-h-[650px] flex items-center overflow-hidden py-12 lg:py-0 group"
         style={{
           backgroundImage: "url('/images/control-de-plagas-en-segovia-imagen.jpeg')",
           backgroundSize: "cover",
           backgroundPosition: "center 20%",
         }}
       >
-        {/* Overlay oscuro para legibilidad */}
-        <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]"></div>
+        {/* Overlay Mejorado: Gradiente para mejor legibilidad del texto sin tapar toda la foto */}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-900/60 to-transparent backdrop-blur-[1px]"></div>
 
         <div className="container relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Texto Hero */}
-            <div className="space-y-5 lg:col-span-2">
-              <h1 className="text-3xl lg:text-7xl font-bold text-white leading-tight">
+            <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-1000">
+              
+              {/* Badge Superior */}
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 backdrop-blur-md">
+                <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span className="text-emerald-400 text-xs font-bold uppercase tracking-wider">Servicio de Urgencia 24h</span>
+              </div>
+
+              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-white leading-tight drop-shadow-lg tracking-tight">
                 Control de plagas en Segovia | Servicio profesional y urgente
               </h1>
-              <p className="text-lg lg:text-xl text-gray-100 leading-relaxed max-w-2xl">
+              
+              <p className="text-lg lg:text-xl text-slate-200 leading-relaxed max-w-xl drop-shadow-md">
                 Eliminamos cucarachas, ratas, chinches y avispas en viviendas y negocios. Atención rápida en Segovia y alrededores.
               </p>
 
               {/* CTA Magnético */}
-              <div className="flex flex-col sm:flex-row gap-4 pt-2">
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button
                   size="lg"
-                  className="bg-destructive hover:bg-destructive/90 text-white font-bold text-base lg:text-lg h-12 px-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
+                  className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-lg h-14 px-8 rounded-xl shadow-xl shadow-emerald-900/20 hover:scale-105 transition-all transform"
                   onClick={() => {
                     const form = document.getElementById("contact-form");
                     form?.scrollIntoView({ behavior: "smooth" });
                   }}
                 >
-                  <Phone className="mr-2" size={18} />
+                  <Phone className="mr-2 h-5 w-5 animate-bounce" />
                   Llamar ahora
                 </Button>
                 <Link href="/calculadora">
                   <Button
                     size="lg"
-                    className="bg-primary hover:bg-primary/90 text-white font-bold text-base lg:text-lg h-12 px-6 rounded-lg w-full shadow-lg"
+                    className="bg-white/10 hover:bg-white/20 border-2 border-white/20 text-white font-bold text-lg h-14 px-8 rounded-xl backdrop-blur-sm transition-all"
                   >
-                    Calcular Presupuesto Online
+                    <Calculator className="mr-2 h-5 w-5" />
+                    Calcular Presupuesto
                   </Button>
                 </Link>
               </div>
 
-              {/* Trust Badges */}
-              <div className="flex flex-wrap gap-4 pt-2">
-                <div className="flex items-center gap-2 text-white">
-                  <Award size={18} className="text-primary" />
-                  <span className="font-semibold text-sm lg:text-base">Certificado CEPA</span>
-                </div>
-                <div className="flex items-center gap-2 text-white">
-                  <Shield size={18} className="text-primary" />
-                  <span className="font-semibold text-sm lg:text-base">Garantía 100%</span>
-                </div>
+              {/* Trust Badges / Social Proof */}
+              <div className="flex items-center gap-6 pt-4 border-t border-white/10">
+                 <div className="flex items-center gap-2">
+                    <div className="flex -space-x-1">
+                      {[1,2,3,4,5].map(i => (
+                        <Star key={i} size={16} className="fill-yellow-400 text-yellow-400" />
+                      ))}
+                    </div>
+                    <div className="flex flex-col">
+                        <span className="text-white font-bold text-sm leading-none">4.9/5</span>
+                        <span className="text-slate-400 text-xs">Google Reviews</span>
+                    </div>
+                 </div>
+                 <div className="h-8 w-px bg-white/10"></div>
+                 <div className="flex items-center gap-2 text-slate-200">
+                    <ShieldCheck size={18} className="text-emerald-500" />
+                    <span className="text-sm font-medium">Garantía Certificada</span>
+                 </div>
               </div>
             </div>
 
@@ -121,12 +138,12 @@ export default function Home() {
         {/* Decorative pattern */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-30 pointer-events-none">
             <div className="absolute -top-24 -right-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
-            <div className="absolute top-1/2 -left-24 w-64 h-64 bg-green-100/40 rounded-full blur-3xl"></div>
+            <div className="absolute top-1/2 -left-24 w-64 h-64 bg-emerald-100/40 rounded-full blur-3xl"></div>
         </div>
 
         <div className="container relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-100 text-green-800 text-xs font-bold uppercase tracking-wider mb-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold uppercase tracking-wider mb-4">
               <Sparkles size={12} />
               <span>Soluciones Integrales</span>
             </div>
@@ -200,7 +217,7 @@ export default function Home() {
               </p>
               
               <div className="mt-auto pt-6 border-t border-gray-50 w-full">
-                <span className="flex items-center justify-between w-full px-5 py-4 bg-gray-50 text-gray-700 font-bold rounded-xl group-hover:bg-primary group-hover:text-white transition-all duration-300 group-hover:shadow-lg group-hover:shadow-primary/25">
+                <span className="flex items-center justify-between w-full px-5 py-4 bg-emerald-50 text-emerald-700 font-bold rounded-xl group-hover:bg-emerald-600 group-hover:text-white transition-all duration-300 group-hover:shadow-lg group-hover:shadow-emerald-600/25">
                   <span>Ver detalles</span>
                   <div className="bg-white/20 p-1 rounded-full">
                     <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
@@ -315,7 +332,7 @@ export default function Home() {
       </section>
 
       {/* ===== ZONAS DE SERVICIO (PREMIUM GRID) ===== */}
-      <section id="zonas-servicio" className="py-8 md:py-12 bg-[#1d4620]">
+      <section id="zonas-servicio" className="py-8 md:py-12 bg-emerald-900">
         <div className="container max-w-[1280px] mx-auto px-4">
           <div className="text-center mb-6 md:mb-8">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-2 md:mb-3 leading-tight">
@@ -359,14 +376,14 @@ export default function Home() {
             })}
           </div>
 
-          <p className="text-center text-green-100/60 text-sm mt-6 italic max-w-2xl mx-auto">
+          <p className="text-center text-emerald-100/60 text-sm mt-6 italic max-w-2xl mx-auto">
             * Los desplazamientos fuera de la zona de cobertura principal pueden requerir tarifa mínima o viaje.
           </p>
 
           <div className="mt-10 text-center">
             <Button
               size="lg"
-              className="bg-white text-[#1d4620] hover:bg-gray-100 font-bold text-lg h-auto py-4 px-6 md:px-10 rounded-lg shadow-lg transition-all hover:scale-105 whitespace-normal"
+              className="bg-white text-emerald-900 hover:bg-gray-100 font-bold text-lg h-auto py-4 px-6 md:px-10 rounded-lg shadow-lg transition-all hover:scale-105 whitespace-normal"
               onClick={() => document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" })}
             >
               ¿No encuentras tu ubicación? Escribenos
@@ -383,10 +400,10 @@ export default function Home() {
             {/* Left Column: Content */}
             <div>
               <div className="mb-10 text-left">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
-                  ¿Por Qué Elegirnos como tu Empresa de <span className="text-primary">Control de Plagas en Segovia</span>?
+                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
+                  ¿Por Qué Elegirnos como tu Empresa de <span className="text-emerald-600">Control de Plagas en Segovia</span>?
                 </h2>
-                <p className="text-lg text-gray-600">
+                <p className="text-lg text-slate-600">
                   No somos una franquicia ni un intermediario. Somos vecinos expertos comprometidos con la protección ambiental de nuestra ciudad.
                 </p>
               </div>
@@ -394,44 +411,44 @@ export default function Home() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-x-12 md:gap-y-10">
                 {/* Item 1: Experiencia Local */}
                 <div className="flex flex-col items-start">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-4">
+                  <div className="w-12 h-12 bg-emerald-50 border border-emerald-100 rounded-lg flex items-center justify-center text-emerald-600 mb-4">
                     <MapPin size={24} />
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">Expertos en Segovia</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <h3 className="text-lg font-bold text-slate-900 mb-2">Expertos en Segovia</h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">
                     Conocemos cada rincón, desde el Acueducto hasta los nuevos barrios. Tratamientos adaptados a la zona.
                   </p>
                 </div>
 
                 {/* Item 2: Rapidez */}
                 <div className="flex flex-col items-start">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-4">
+                  <div className="w-12 h-12 bg-emerald-50 border border-emerald-100 rounded-lg flex items-center justify-center text-emerald-600 mb-4">
                     <Zap size={24} />
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">Respuesta Inmediata</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <h3 className="text-lg font-bold text-slate-900 mb-2">Respuesta Inmediata</h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">
                     Llegamos volando a cualquier punto. Actuamos en menos de 24h y atendemos urgencias.
                   </p>
                 </div>
 
                 {/* Item 3: Seguridad (Eco) */}
                 <div className="flex flex-col items-start">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-4">
+                  <div className="w-12 h-12 bg-emerald-50 border border-emerald-100 rounded-lg flex items-center justify-center text-emerald-600 mb-4">
                     <ShieldCheck size={24} />
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">Seguridad Total</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <h3 className="text-lg font-bold text-slate-900 mb-2">Seguridad Total</h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">
                     Biocidas de última generación seguros para niños y mascotas. Tu salud es prioritaria.
                   </p>
                 </div>
 
                 {/* Item 4: Garantía */}
                 <div className="flex flex-col items-start">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-4">
+                  <div className="w-12 h-12 bg-emerald-50 border border-emerald-100 rounded-lg flex items-center justify-center text-emerald-600 mb-4">
                     <Award size={24} />
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">Garantía por Escrito</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <h3 className="text-lg font-bold text-slate-900 mb-2">Garantía por Escrito</h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">
                     Precio cerrado sin sorpresas. Si la plaga persiste, nosotros también hasta eliminarla.
                   </p>
                 </div>
@@ -440,7 +457,7 @@ export default function Home() {
 
             {/* Right Column: Image */}
             <div className="relative">
-              <div className="relative rounded-[2rem] overflow-hidden shadow-2xl">
+              <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border border-slate-100">
                 <img 
                   src="/images/control-plagas-en-segovia.jpeg" 
                   alt="Técnico experto en control de plagas" 
@@ -452,7 +469,7 @@ export default function Home() {
               </div>
               
               {/* Decorative Background Element */}
-              <div className="absolute -z-10 top-12 -right-12 w-full h-full bg-primary/5 rounded-[2rem] transform rotate-3"></div>
+              <div className="absolute -z-10 top-12 -right-12 w-full h-full bg-emerald-50 rounded-[2rem] transform rotate-3"></div>
             </div>
 
           </div>
@@ -460,61 +477,61 @@ export default function Home() {
       </section>
 
       {/* ===== CÓMO CONTRATAR (PROCESO) ===== */}
-      <section className="py-20 bg-[#1d4620] text-white">
+      <section className="py-20 bg-emerald-900 text-white">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               ¿Cómo contratar nuestro servicio de control de plagas en Segovia?
             </h2>
-            <p className="text-green-100 text-lg">
+            <p className="text-emerald-100 text-lg">
               Un proceso simple, transparente y eficaz en 4 pasos para recuperar tu tranquilidad.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
             {/* Connecting Line (Desktop) */}
-            <div className="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-green-800/50 -z-0 transform translate-y-4"></div>
+            <div className="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-emerald-800/50 -z-0 transform translate-y-4"></div>
 
             {/* Paso 1 */}
             <div className="relative z-10 flex flex-col items-center text-center group">
-              <div className="w-20 h-20 bg-green-900 border-4 border-[#1d4620] rounded-full flex items-center justify-center mb-6 shadow-lg group-hover:bg-white group-hover:text-[#1d4620] transition-all duration-300">
+              <div className="w-20 h-20 bg-emerald-900 border-4 border-emerald-900 rounded-full flex items-center justify-center mb-6 shadow-lg group-hover:bg-white group-hover:text-emerald-900 transition-all duration-300">
                 <PhoneCall size={32} />
               </div>
               <h3 className="text-xl font-bold mb-3">1. Contacto</h3>
-              <p className="text-green-100/80 text-sm leading-relaxed">
+              <p className="text-emerald-100/80 text-sm leading-relaxed">
                 Llámanos o escríbenos. Te atendemos de inmediato para entender tu urgencia.
               </p>
             </div>
 
             {/* Paso 2 */}
             <div className="relative z-10 flex flex-col items-center text-center group">
-              <div className="w-20 h-20 bg-green-900 border-4 border-[#1d4620] rounded-full flex items-center justify-center mb-6 shadow-lg group-hover:bg-white group-hover:text-[#1d4620] transition-all duration-300">
+              <div className="w-20 h-20 bg-emerald-900 border-4 border-emerald-900 rounded-full flex items-center justify-center mb-6 shadow-lg group-hover:bg-white group-hover:text-emerald-900 transition-all duration-300">
                 <ClipboardCheck size={32} />
               </div>
               <h3 className="text-xl font-bold mb-3">2. Diagnóstico</h3>
-              <p className="text-green-100/80 text-sm leading-relaxed">
+              <p className="text-emerald-100/80 text-sm leading-relaxed">
                 Evaluamos la situación y te damos un presupuesto cerrado y sin sorpresas.
               </p>
             </div>
 
             {/* Paso 3 */}
             <div className="relative z-10 flex flex-col items-center text-center group">
-              <div className="w-20 h-20 bg-green-900 border-4 border-[#1d4620] rounded-full flex items-center justify-center mb-6 shadow-lg group-hover:bg-white group-hover:text-[#1d4620] transition-all duration-300">
+              <div className="w-20 h-20 bg-emerald-900 border-4 border-emerald-900 rounded-full flex items-center justify-center mb-6 shadow-lg group-hover:bg-white group-hover:text-emerald-900 transition-all duration-300">
                 <ShieldAlert size={32} />
               </div>
               <h3 className="text-xl font-bold mb-3">3. Tratamiento</h3>
-              <p className="text-green-100/80 text-sm leading-relaxed">
+              <p className="text-emerald-100/80 text-sm leading-relaxed">
                 Nuestros técnicos certificados aplican la solución más segura y efectiva.
               </p>
             </div>
 
             {/* Paso 4 */}
             <div className="relative z-10 flex flex-col items-center text-center group">
-              <div className="w-20 h-20 bg-green-900 border-4 border-[#1d4620] rounded-full flex items-center justify-center mb-6 shadow-lg group-hover:bg-white group-hover:text-[#1d4620] transition-all duration-300">
+              <div className="w-20 h-20 bg-emerald-900 border-4 border-emerald-900 rounded-full flex items-center justify-center mb-6 shadow-lg group-hover:bg-white group-hover:text-emerald-900 transition-all duration-300">
                 <BadgeCheck size={32} />
               </div>
               <h3 className="text-xl font-bold mb-3">4. Garantía</h3>
-              <p className="text-green-100/80 text-sm leading-relaxed">
+              <p className="text-emerald-100/80 text-sm leading-relaxed">
                 Certificamos el servicio y realizamos seguimiento para asegurar el éxito.
               </p>
             </div>
@@ -523,7 +540,7 @@ export default function Home() {
           <div className="mt-16 text-center">
             <Button 
               size="lg" 
-              className="bg-white text-[#1d4620] hover:bg-gray-100 font-bold text-lg h-14 px-10 rounded-lg shadow-lg"
+              className="bg-white text-emerald-900 hover:bg-gray-100 font-bold text-lg h-14 px-10 rounded-lg shadow-lg"
               onClick={() => document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" })}
             >
               Empezar Ahora
@@ -566,14 +583,14 @@ export default function Home() {
                      <div className="overflow-hidden">
                         <span className="block text-lg font-bold text-gray-900 mb-1">Escríbenos</span>
                         <span className="block text-gray-600 truncate mb-1">contacto@controldeplagassegovia.com</span>
-                        <span className="block text-xs font-bold text-green-600 uppercase tracking-wider">Respuesta &lt; 24h</span>
+                        <span className="block text-xs font-bold text-emerald-600 uppercase tracking-wider">Respuesta &lt; 24h</span>
                      </div>
                   </div>
                 </a>
 
                 {/* Card 3: Horario */}
                 <div className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm flex items-start gap-4">
-                    <div className="bg-green-50 p-3 rounded-full text-[#1d4620] mt-1">
+                    <div className="bg-emerald-50 p-3 rounded-full text-emerald-900 mt-1">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
                     </div>
                     <div>

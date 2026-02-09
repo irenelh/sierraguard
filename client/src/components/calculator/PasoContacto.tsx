@@ -30,7 +30,7 @@ export default function PasoContacto({
             value={state.nombre}
             onChange={(e) => onChange({ nombre: e.target.value })}
             placeholder="Tu nombre completo"
-            className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-green-600 focus:outline-none"
+            className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-emerald-600 focus:outline-none"
           />
         </div>
 
@@ -43,7 +43,7 @@ export default function PasoContacto({
             value={state.email}
             onChange={(e) => onChange({ email: e.target.value })}
             placeholder="tu@email.com"
-            className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-green-600 focus:outline-none"
+            className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-emerald-600 focus:outline-none"
           />
         </div>
 
@@ -56,7 +56,7 @@ export default function PasoContacto({
             value={state.telefono}
             onChange={(e) => onChange({ telefono: e.target.value })}
             placeholder="+34 600 000 000"
-            className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-green-600 focus:outline-none"
+            className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-emerald-600 focus:outline-none"
           />
         </div>
 

@@ -34,7 +34,7 @@ export default function PasoAreaAfectada({
             placeholder="Ingresa el área en m²"
             min="10"
             max="10000"
-            className="w-full px-4 py-3 text-lg border-2 border-gray-300 rounded-lg focus:border-green-600 focus:outline-none"
+            className="w-full px-4 py-3 text-lg border-2 border-gray-300 rounded-lg focus:border-emerald-600 focus:outline-none"
           />
           <span className="absolute right-4 top-3 text-lg text-gray-600">m²</span>
         </div>

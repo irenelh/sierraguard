@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Phone, CheckCircle2, ArrowRight } from "lucide-react";
+import { Phone, CheckCircle2, ArrowRight, ShieldCheck, Star } from "lucide-react";
 import Header from "@/components/Header";
 
 /**
@@ -78,15 +78,85 @@ export default function ServicesPage() {
       {/* ===== HEADER ===== */}
       <Header />
 
-      {/* ===== HERO ===== */}
-      <section className="pt-12 pb-20 bg-gradient-to-br from-primary/10 to-primary/5">
-        <div className="container max-w-4xl">
-          <h1 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
-            Nuestros Servicios
-          </h1>
-          <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed">
-            Soluciones profesionales de control de plagas adaptadas a cada necesidad. Desde desinsectación especializada hasta bioseguridad hospitalaria.
-          </p>
+      {/* ===== HERO SECTION (Premium Dark) ===== */}
+      <section className="relative pt-16 pb-8 lg:pt-12 lg:pb-6 overflow-hidden bg-slate-900">
+        {/* Background Gradient & Blobs */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-500/20 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3" />
+          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[100px] translate-y-1/3 -translate-x-1/4" />
+        </div>
+
+        <div className="container relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            {/* Left Column: Text (58% width -> col-span-7) */}
+            <div className="lg:col-span-7 text-left">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium mb-6">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                Control de Plagas en Segovia
+              </div>
+              
+              <h1 className="text-4xl sm:text-5xl lg:text-5xl font-extrabold text-white mb-6 leading-tight tracking-tight">
+                Nuestros Servicios
+              </h1>
+              
+              <p className="text-lg text-slate-300 leading-relaxed mb-8 max-w-2xl">
+                Soluciones profesionales de control de plagas adaptadas a cada necesidad. Desde desinsectación especializada hasta bioseguridad hospitalaria.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button
+                  size="lg"
+                  className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-lg h-14 px-8 rounded-xl shadow-lg shadow-emerald-500/20 transition-all hover:scale-105"
+                  onClick={() => {
+                    const form = document.getElementById("contact-form");
+                    form?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                >
+                  <Phone className="mr-2 h-5 w-5" />
+                  Llama ahora
+                </Button>
+                
+                <div className="flex items-center gap-4 px-6 h-14 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm">
+                   <div className="flex -space-x-1">
+                      {[1,2,3,4,5].map(i => (
+                        <Star key={i} size={18} className="fill-yellow-400 text-yellow-400" />
+                      ))}
+                   </div>
+                   <div className="flex flex-col">
+                     <span className="text-white text-sm font-bold leading-none">4.9/5</span>
+                     <span className="text-slate-400 text-xs font-medium leading-none mt-1">Google Reviews</span>
+                   </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column: Image (42% width -> col-span-5) */}
+            <div className="lg:col-span-5 relative">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-slate-800/50 group">
+                {/* Glass overlay effect */}
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent z-10" />
+                
+                <img 
+                  src="/images/control-plagas-en-segovia.jpeg" 
+                  alt="Servicios de Control de Plagas"
+                  className="w-full h-[350px] lg:h-[400px] object-cover transform transition-transform duration-700 group-hover:scale-105"
+                />
+                
+                {/* Floating Badge */}
+                <div className="absolute bottom-6 left-6 z-20 bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-xl">
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 bg-emerald-500 rounded-lg">
+                      <ShieldCheck className="text-white h-6 w-6" />
+                    </div>
+                    <div>
+                      <p className="text-white font-bold text-sm">Garantía Total</p>
+                      <p className="text-emerald-400 text-xs">Certificado Oficial</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

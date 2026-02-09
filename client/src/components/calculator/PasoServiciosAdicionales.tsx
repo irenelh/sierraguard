@@ -38,20 +38,20 @@ export default function PasoServiciosAdicionales({
             key={extra.id}
             className={`flex items-center p-4 rounded-lg border-2 cursor-pointer transition-all ${
               value.includes(extra.id)
-                ? 'border-green-600 bg-green-50'
-                : 'border-gray-200 bg-white hover:border-green-300'
+                ? 'border-emerald-600 bg-emerald-50'
+                : 'border-gray-200 bg-white hover:border-emerald-300'
             }`}
           >
             <input
               type="checkbox"
               checked={value.includes(extra.id)}
               onChange={() => handleToggle(extra.id)}
-              className="w-4 h-4 text-green-600 rounded"
+              className="w-4 h-4 text-emerald-600 rounded"
             />
             <div className="ml-3 flex-1">
               <p className="font-medium text-gray-900">{extra.nombre}</p>
             </div>
-            <span className="text-sm font-semibold text-green-600">
+            <span className="text-sm font-semibold text-emerald-600">
               +€{extra.precio}
             </span>
           </label>
@@ -59,8 +59,8 @@ export default function PasoServiciosAdicionales({
       </div>
 
       {totalExtras > 0 && (
-        <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-          <p className="text-sm text-green-900">
+        <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-4">
+          <p className="text-sm text-emerald-900">
             <strong>Servicios adicionales seleccionados:</strong> €{totalExtras}
           </p>
         </div>

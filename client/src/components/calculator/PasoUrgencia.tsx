@@ -56,8 +56,8 @@ export default function PasoUrgencia({
             onClick={() => onChange(opcion.id)}
             className={`p-4 rounded-lg border-2 transition-all text-left ${
               value === opcion.id
-                ? 'border-green-600 bg-green-50'
-                : 'border-gray-200 bg-white hover:border-green-300'
+                ? 'border-emerald-600 bg-emerald-50'
+                : 'border-gray-200 bg-white hover:border-emerald-300'
             }`}
           >
             <div className="flex justify-between items-start mb-2">
@@ -65,7 +65,7 @@ export default function PasoUrgencia({
               <span
                 className={`text-xs font-bold px-2 py-1 rounded ${
                   opcion.id === 'estandar'
-                    ? 'bg-green-100 text-green-800'
+                    ? 'bg-emerald-100 text-emerald-800'
                     : 'bg-orange-100 text-orange-800'
                 }`}
               >

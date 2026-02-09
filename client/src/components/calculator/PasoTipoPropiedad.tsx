@@ -23,8 +23,8 @@ export default function PasoTipoPropiedad({
           onClick={() => onChange('vivienda')}
           className={`p-6 rounded-lg border-2 transition-all text-center ${
             value === 'vivienda'
-              ? 'border-green-600 bg-green-50'
-              : 'border-gray-200 bg-white hover:border-green-300'
+              ? 'border-emerald-600 bg-emerald-50'
+              : 'border-gray-200 bg-white hover:border-emerald-300'
           }`}
         >
           <div className="text-5xl mb-4">🏠</div>
@@ -41,8 +41,8 @@ export default function PasoTipoPropiedad({
           onClick={() => onChange('negocio')}
           className={`p-6 rounded-lg border-2 transition-all text-center ${
             value === 'negocio'
-              ? 'border-green-600 bg-green-50'
-              : 'border-gray-200 bg-white hover:border-green-300'
+              ? 'border-emerald-600 bg-emerald-50'
+              : 'border-gray-200 bg-white hover:border-emerald-300'
           }`}
         >
           <div className="text-5xl mb-4">🏢</div>

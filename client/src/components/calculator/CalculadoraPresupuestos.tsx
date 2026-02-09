@@ -122,7 +122,7 @@ export default function CalculadoraPresupuestos() {
               key={num}
               className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm ${
                 num <= paso
-                  ? 'bg-green-600 text-white'
+                  ? 'bg-emerald-600 text-white'
                   : 'bg-gray-200 text-gray-600'
               }`}
             >
@@ -134,7 +134,7 @@ export default function CalculadoraPresupuestos() {
         {/* Barra de progreso (visible siempre) */}
         <div className="w-full bg-gray-200 h-2 rounded mt-2 md:mt-0">
           <div
-            className="bg-green-600 h-2 rounded transition-all"
+            className="bg-emerald-600 h-2 rounded transition-all"
             style={{ width: `${(paso / 7) * 100}%` }}
           />
         </div>
@@ -213,7 +213,7 @@ export default function CalculadoraPresupuestos() {
         </button>
         <button
           onClick={handleNext}
-          className="flex-1 px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors"
+          className="flex-1 px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
         >
           {paso === 7 ? 'Calcular Presupuesto' : 'Siguiente'}
         </button>

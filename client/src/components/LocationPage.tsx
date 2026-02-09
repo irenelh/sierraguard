@@ -99,16 +99,16 @@ export default function LocationPage({
         <Header />
         
         {/* HERO SIMPLE REDISEÑADO - UX OPTIMIZADO */}
-        <section className="relative pt-8 lg:pt-24 pb-20 px-4 overflow-hidden bg-gradient-to-br from-white via-green-50/30 to-white">
+        <section className="relative pt-8 lg:pt-24 pb-20 px-4 overflow-hidden bg-gradient-to-br from-white via-emerald-50/30 to-white">
           {/* Elemento decorativo de fondo */}
-          <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-green-100/50 rounded-full blur-3xl opacity-60 pointer-events-none"></div>
+          <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-emerald-100/50 rounded-full blur-3xl opacity-60 pointer-events-none"></div>
           
           <div className="container max-w-7xl mx-auto relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
               {/* Columna de Texto (7 cols) */}
               <div className="lg:col-span-7 text-left flex flex-col justify-center">
-                <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm font-bold text-green-800 bg-green-100 rounded-full w-fit shadow-sm">
-                  <MapPin size={16} className="text-green-700" />
+                <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm font-bold text-emerald-800 bg-emerald-100 rounded-full w-fit shadow-sm">
+                  <MapPin size={16} className="text-emerald-700" />
                   <span>Servicio Prioritario en {barrio}</span>
                 </div>
                 
@@ -123,25 +123,25 @@ export default function LocationPage({
                 {/* Puntos de dolor / Beneficios Clave - UX Booster */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-10">
                   <div className="flex items-center gap-3">
-                    <div className="p-1 rounded-full bg-green-100 text-green-700">
+                    <div className="p-1 rounded-full bg-emerald-100 text-emerald-700">
                       <CheckCircle2 size={18} />
                     </div>
                     <span className="font-medium text-gray-800">Presupuesto Cerrado sin Sorpresas</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <div className="p-1 rounded-full bg-green-100 text-green-700">
+                    <div className="p-1 rounded-full bg-emerald-100 text-emerald-700">
                       <CheckCircle2 size={18} />
                     </div>
                     <span className="font-medium text-gray-800">Técnicos Certificados en Segovia</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <div className="p-1 rounded-full bg-green-100 text-green-700">
+                    <div className="p-1 rounded-full bg-emerald-100 text-emerald-700">
                       <CheckCircle2 size={18} />
                     </div>
                     <span className="font-medium text-gray-800">Garantía de Eliminación</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <div className="p-1 rounded-full bg-green-100 text-green-700">
+                    <div className="p-1 rounded-full bg-emerald-100 text-emerald-700">
                       <CheckCircle2 size={18} />
                     </div>
                     <span className="font-medium text-gray-800">Urgencias 24h Disponibles</span>
@@ -151,7 +151,7 @@ export default function LocationPage({
                 <div className="flex flex-col sm:flex-row gap-4">
                    <Button 
                       size="lg" 
-                      className="bg-[#1d4620] hover:bg-[#153316] text-white font-bold text-lg lg:text-xl h-14 lg:h-16 px-8 lg:px-10 rounded-xl shadow-lg hover:shadow-green-900/20 w-full sm:w-auto flex items-center justify-center gap-3 transition-all transform hover:-translate-y-1"
+                      className="bg-emerald-900 hover:bg-emerald-950 text-white font-bold text-lg lg:text-xl h-14 lg:h-16 px-8 lg:px-10 rounded-xl shadow-lg hover:shadow-emerald-900/20 w-full sm:w-auto flex items-center justify-center gap-3 transition-all transform hover:-translate-y-1"
                       onClick={() => document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" })}
                    >
                       <Phone size={22} />
@@ -159,7 +159,7 @@ export default function LocationPage({
                    </Button>
                    <a 
                       href="tel:+34921234567"
-                      className="flex items-center justify-center gap-3 px-8 h-14 lg:h-16 rounded-xl border-2 border-gray-200 hover:border-green-700 hover:bg-green-50 text-gray-700 hover:text-green-800 font-bold text-lg transition-all w-full sm:w-auto"
+                      className="flex items-center justify-center gap-3 px-8 h-14 lg:h-16 rounded-xl border-2 border-gray-200 hover:border-emerald-700 hover:bg-emerald-50 text-gray-700 hover:text-emerald-800 font-bold text-lg transition-all w-full sm:w-auto"
                    >
                       <span>Llamar Ahora</span>
                    </a>
@@ -184,7 +184,7 @@ export default function LocationPage({
                   {/* Badge Flotante sobre Imagen */}
                   <div className="absolute bottom-6 left-6 right-6 z-20">
                     <div className="bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-white/50 flex items-center gap-4">
-                      <div className="bg-green-100 p-3 rounded-full text-green-700">
+                      <div className="bg-emerald-100 p-3 rounded-full text-emerald-700">
                          <Shield size={24} />
                       </div>
                       <div>
@@ -196,7 +196,7 @@ export default function LocationPage({
                 </div>
                 
                 {/* Elemento decorativo detrás de la imagen */}
-                <div className="absolute -bottom-6 -right-6 w-full h-full border-2 border-green-200 rounded-3xl -z-10 hidden lg:block"></div>
+                <div className="absolute -bottom-6 -right-6 w-full h-full border-2 border-emerald-200 rounded-3xl -z-10 hidden lg:block"></div>
               </div>
             </div>
           </div>
@@ -209,12 +209,12 @@ export default function LocationPage({
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {serviciosEspecificos.map((servicio, idx) => (
                 <div key={idx} className="bg-white p-8 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 h-full flex flex-col">
-                  <h3 className="text-xl font-bold mb-4 text-[#1d4620] border-b border-gray-100 pb-3">{servicio.titulo}</h3>
+                  <h3 className="text-xl font-bold mb-4 text-emerald-900 border-b border-gray-100 pb-3">{servicio.titulo}</h3>
                   <p className="text-gray-700 mb-6 flex-grow leading-relaxed">{servicio.descripcion}</p>
                   <ul className="grid grid-cols-1 gap-3 mt-auto">
                     {servicio.items.map((item, i) => (
                       <li key={i} className="flex items-start gap-3 text-gray-600 text-sm font-medium">
-                        <CheckCircle2 className="text-green-600 w-5 h-5 flex-shrink-0" />
+                        <CheckCircle2 className="text-emerald-600 w-5 h-5 flex-shrink-0" />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -227,7 +227,7 @@ export default function LocationPage({
               <Link href="/#servicios">
                 <Button 
                   variant="outline" 
-                  className="group relative border-2 border-[#1d4620] text-[#1d4620] hover:bg-[#1d4620] hover:text-white font-bold text-lg lg:text-xl px-10 lg:px-12 py-6 lg:py-8 h-auto rounded-xl transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 flex items-center gap-3 mx-auto"
+                  className="group relative border-2 border-emerald-900 text-emerald-900 hover:bg-emerald-900 hover:text-white font-bold text-lg lg:text-xl px-10 lg:px-12 py-6 lg:py-8 h-auto rounded-xl transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 flex items-center gap-3 mx-auto"
                 >
                   Ver todos los servicios
                   <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
@@ -248,8 +248,8 @@ export default function LocationPage({
                <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                  {trustBadges.map((badge, idx) => (
                    <li key={idx} className="flex items-center gap-3 bg-white p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                     <div className="bg-green-50 p-2 rounded-full">
-                        <CheckCircle2 className="text-green-600 flex-shrink-0" size={20} />
+                     <div className="bg-emerald-50 p-2 rounded-full">
+                        <CheckCircle2 className="text-emerald-600 flex-shrink-0" size={20} />
                      </div>
                      <span className="font-semibold text-gray-800">{badge}</span>
                    </li>
@@ -260,13 +260,13 @@ export default function LocationPage({
         </section>
 
         {/* CTA INTERMEDIO */}
-        <section className="py-16 px-4 bg-[#1d4620] text-white text-center">
+        <section className="py-16 px-4 bg-emerald-900 text-white text-center">
           <div className="container max-w-7xl mx-auto">
             <h2 className="text-3xl lg:text-5xl font-bold mb-6">¿Problemas de plagas en {barrio}?</h2>
-            <p className="text-xl lg:text-2xl mb-8 text-green-50">Actuamos rápido. Presupuesto sin compromiso.</p>
+            <p className="text-xl lg:text-2xl mb-8 text-emerald-50">Actuamos rápido. Presupuesto sin compromiso.</p>
             <Button 
                 size="lg" 
-                className="bg-white text-[#1d4620] hover:bg-gray-100 font-bold text-lg lg:text-xl h-14 lg:h-16 px-8 lg:px-10 rounded shadow-lg w-full sm:w-auto"
+                className="bg-white text-emerald-900 hover:bg-gray-100 font-bold text-lg lg:text-xl h-14 lg:h-16 px-8 lg:px-10 rounded shadow-lg w-full sm:w-auto"
                 onClick={() => document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" })}
              >
                 <Phone className="mr-2" size={20} />
@@ -312,13 +312,13 @@ export default function LocationPage({
 
                   {/* Sección Teléfono */}
                   <a href="tel:+34921234567" className="group block">
-                    <div className="bg-white border-2 border-[#1d4620] rounded-xl p-4 shadow-sm hover:shadow-md transition-all group-hover:-translate-y-1 flex items-center gap-4">
-                      <div className="bg-[#1d4620] p-3 rounded-full text-white">
+                    <div className="bg-white border-2 border-emerald-900 rounded-xl p-4 shadow-sm hover:shadow-md transition-all group-hover:-translate-y-1 flex items-center gap-4">
+                      <div className="bg-emerald-900 p-3 rounded-full text-white">
                         <Phone size={24} />
                       </div>
                       <div className="text-left">
                          <span className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Llámanos Ahora</span>
-                         <span className="block text-xl sm:text-2xl font-bold text-[#1d4620]">+34 921 234 567</span>
+                         <span className="block text-xl sm:text-2xl font-bold text-emerald-900">+34 921 234 567</span>
                       </div>
                     </div>
                   </a>
@@ -326,7 +326,7 @@ export default function LocationPage({
                   {/* Sección Email */}
                   <a href="mailto:contacto@controldeplagassegovia.com" className="group block">
                     <div className="bg-white border border-gray-200 rounded-xl p-4 shadow-sm hover:shadow-md transition-all group-hover:-translate-y-1 flex items-center gap-4">
-                       <div className="bg-gray-100 p-3 rounded-full text-gray-600 group-hover:bg-[#1d4620] group-hover:text-white transition-colors">
+                       <div className="bg-gray-100 p-3 rounded-full text-gray-600 group-hover:bg-emerald-900 group-hover:text-white transition-colors">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                        </div>
                        <div className="text-left overflow-hidden">
@@ -464,7 +464,7 @@ export default function LocationPage({
             <Link href="/#servicios">
               <Button 
                 variant="outline" 
-                className="group relative border-2 border-[#1d4620] text-[#1d4620] hover:bg-[#1d4620] hover:text-white font-bold text-lg lg:text-xl px-10 lg:px-12 py-6 lg:py-8 h-auto rounded-xl transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 flex items-center gap-3 mx-auto"
+                className="group relative border-2 border-emerald-900 text-emerald-900 hover:bg-emerald-900 hover:text-white font-bold text-lg lg:text-xl px-10 lg:px-12 py-6 lg:py-8 h-auto rounded-xl transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 flex items-center gap-3 mx-auto"
               >
                 Ver todos los servicios
                 <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
@@ -558,13 +558,13 @@ export default function LocationPage({
           <div className="flex flex-col gap-6">
             {/* Sección Teléfono */}
             <a href="tel:+34921234567" className="group block">
-              <div className="bg-white border-2 border-[#1d4620] rounded-xl p-4 shadow-sm hover:shadow-md transition-all group-hover:-translate-y-1 flex items-center gap-4">
-                <div className="bg-[#1d4620] p-3 rounded-full text-white">
+              <div className="bg-white border-2 border-emerald-900 rounded-xl p-4 shadow-sm hover:shadow-md transition-all group-hover:-translate-y-1 flex items-center gap-4">
+                <div className="bg-emerald-900 p-3 rounded-full text-white">
                   <Phone size={24} />
                 </div>
                 <div className="text-left">
                     <span className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Llámanos Ahora</span>
-                    <span className="block text-xl sm:text-2xl lg:text-3xl font-bold text-[#1d4620]">+34 921 234 567</span>
+                    <span className="block text-xl sm:text-2xl lg:text-3xl font-bold text-emerald-900">+34 921 234 567</span>
                 </div>
               </div>
             </a>
@@ -572,7 +572,7 @@ export default function LocationPage({
             {/* Sección Email */}
             <a href="mailto:contacto@controldeplagassegovia.com" className="group block">
               <div className="bg-white border border-gray-200 rounded-xl p-4 shadow-sm hover:shadow-md transition-all group-hover:-translate-y-1 flex items-center gap-4">
-                  <div className="bg-gray-100 p-3 rounded-full text-gray-600 group-hover:bg-[#1d4620] group-hover:text-white transition-colors">
+                  <div className="bg-gray-100 p-3 rounded-full text-gray-600 group-hover:bg-emerald-900 group-hover:text-white transition-colors">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                   </div>
                   <div className="text-left overflow-hidden">

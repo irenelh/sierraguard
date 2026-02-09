@@ -8,7 +8,7 @@ export default function CalculadoraPage() {
       <Header />
       
       {/* Hero Style Background for Title */}
-      <div className="bg-[#1d4620] py-16 text-center">
+      <div className="bg-emerald-900 py-16 text-center">
         <div className="container max-w-4xl mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Calcula tu Presupuesto

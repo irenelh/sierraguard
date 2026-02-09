@@ -54,17 +54,17 @@ export default function ResumenPresupuesto({
   if (enviado) {
     return (
       <div className="w-full max-w-2xl mx-auto p-6">
-        <div className="bg-green-50 border-2 border-green-600 rounded-lg p-8 text-center">
+        <div className="bg-emerald-50 border-2 border-emerald-600 rounded-lg p-8 text-center">
           <div className="text-5xl mb-4">✓</div>
-          <h2 className="text-3xl font-bold text-green-900 mb-2">
+          <h2 className="text-3xl font-bold text-emerald-900 mb-2">
             ¡Presupuesto Enviado!
           </h2>
-          <p className="text-green-700 mb-6">
+          <p className="text-emerald-700 mb-6">
             Nos contactaremos pronto para confirmar los detalles del servicio.
           </p>
           <button
             onClick={onVolver}
-            className="px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700"
+            className="px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700"
           >
             Calcular Otro Presupuesto
           </button>
@@ -97,7 +97,7 @@ export default function ResumenPresupuesto({
             <button
               onClick={handleContactar}
               disabled={!state.nombre || !state.email || !state.telefono || enviando}
-              className="flex-1 px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="flex-1 px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {enviando ? 'Enviando...' : 'Confirmar Solicitud'}
             </button>
@@ -110,9 +110,9 @@ export default function ResumenPresupuesto({
   // Vista 1: Resumen de Presupuesto
   return (
     <div className="w-full max-w-2xl mx-auto p-6">
-      <div className="bg-gradient-to-r from-green-600 to-green-700 rounded-lg shadow-lg p-8 text-white mb-6">
+      <div className="bg-gradient-to-r from-emerald-600 to-emerald-700 rounded-lg shadow-lg p-8 text-white mb-6">
         <h2 className="text-3xl font-bold mb-2">Tu Presupuesto Estimado</h2>
-        <p className="text-green-100 mb-6">Basado en los datos proporcionados</p>
+        <p className="text-emerald-100 mb-6">Basado en los datos proporcionados</p>
 
         {/* Precio Principal */}
         <div className="bg-white rounded-lg p-6 mb-6">
@@ -191,7 +191,7 @@ export default function ResumenPresupuesto({
         </button>
         <button
           onClick={() => setMostrarFormulario(true)}
-          className="flex-1 px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 shadow-lg hover:shadow-xl transition-all"
+          className="flex-1 px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 shadow-lg hover:shadow-xl transition-all"
         >
           Solicitar Presupuesto Formal
         </button>

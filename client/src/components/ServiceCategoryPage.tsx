@@ -16,7 +16,8 @@ import {
   Award,
   Clock,
   BadgeCheck,
-  Calculator
+  Calculator,
+  ArrowRight
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
@@ -152,46 +153,89 @@ export default function ServiceCategoryPage({ service }: ServiceCategoryPageProp
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      {/* ===== HERO SECTION ===== */}
-      <section className="py-16 bg-gradient-to-br from-primary/10 to-primary/5 border-b border-border">
-        <div className="container max-w-7xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left Column: Text */}
-            <div className="text-left">
-              <h1 className="text-3xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+      {/* ===== HERO SECTION (Premium Dark) ===== */}
+      <section className="relative pt-16 pb-8 lg:pt-12 lg:pb-6 overflow-hidden bg-slate-900">
+        {/* Background Gradient & Blobs */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-500/20 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3" />
+          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[100px] translate-y-1/3 -translate-x-1/4" />
+        </div>
+
+        <div className="container relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            {/* Left Column: Text (58% width -> col-span-7) */}
+            <div className="lg:col-span-7 text-left">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium mb-6">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                Servicio Profesional en Segovia
+              </div>
+              
+              <h1 className="text-4xl sm:text-5xl lg:text-5xl font-extrabold text-white mb-6 leading-tight tracking-tight">
                 {service.h1}
               </h1>
-              <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed mb-8">
+              
+              <p className="text-lg text-slate-300 leading-relaxed mb-8 max-w-2xl">
                 {service.intro}
               </p>
+              
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
                   size="lg"
-                  className="bg-primary hover:bg-primary/90 text-white font-bold text-lg lg:text-xl h-14 lg:h-16 px-8 lg:px-10 rounded-lg"
+                  className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-lg h-14 px-8 rounded-xl shadow-lg shadow-emerald-500/20 transition-all hover:scale-105"
                   onClick={() => {
                     const form = document.getElementById("contact-form");
                     form?.scrollIntoView({ behavior: "smooth" });
                   }}
                 >
-                  <Phone className="mr-2" size={20} />
+                  <Phone className="mr-2 h-5 w-5" />
                   {service.cta}
                 </Button>
+                
+                <div className="flex items-center gap-4 px-6 h-14 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm">
+                   <div className="flex -space-x-1">
+                      {[1,2,3,4,5].map(i => (
+                        <Star key={i} size={18} className="fill-yellow-400 text-yellow-400" />
+                      ))}
+                   </div>
+                   <div className="flex flex-col">
+                     <span className="text-white text-sm font-bold leading-none">4.9/5</span>
+                     <span className="text-slate-400 text-xs font-medium leading-none mt-1">Google Reviews</span>
+                   </div>
+                </div>
               </div>
             </div>
 
-            {/* Right Column: Image */}
-            <div className="relative h-[300px] lg:h-[400px] w-full rounded-2xl overflow-hidden shadow-xl">
-              {service.image ? (
-                <img 
-                  src={service.image} 
-                  alt={service.h1}
-                  className="w-full h-full object-cover"
-                />
-              ) : (
-                <div className="w-full h-full bg-primary/10 flex items-center justify-center">
-                  <ShieldCheck className="w-32 h-32 text-primary/20" />
+            {/* Right Column: Image (42% width -> col-span-5) */}
+            <div className="lg:col-span-5 relative">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-slate-800/50 group">
+                {/* Glass overlay effect */}
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent z-10" />
+                
+                {service.image ? (
+                  <img 
+                    src={service.image} 
+                    alt={service.h1}
+                    className="w-full h-[350px] lg:h-[400px] object-cover transform transition-transform duration-700 group-hover:scale-105"
+                  />
+                ) : (
+                  <div className="w-full h-[350px] lg:h-[400px] bg-slate-800 flex items-center justify-center">
+                    <ShieldCheck className="w-32 h-32 text-slate-700" />
+                  </div>
+                )}
+                
+                {/* Floating Badge */}
+                <div className="absolute bottom-6 left-6 z-20 bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-xl">
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 bg-emerald-500 rounded-lg">
+                      <ShieldCheck className="text-white h-6 w-6" />
+                    </div>
+                    <div>
+                      <p className="text-white font-bold text-sm">Garantía Total</p>
+                      <p className="text-emerald-400 text-xs">Certificado Oficial</p>
+                    </div>
+                  </div>
                 </div>
-              )}
+              </div>
             </div>
           </div>
         </div>
@@ -201,7 +245,7 @@ export default function ServiceCategoryPage({ service }: ServiceCategoryPageProp
       <section className="py-20 bg-gray-50/50">
         <div className="container max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">Soluciones Específicas para Cada Plaga</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">Soluciones Específicas de {service.nombre} para Cada Plaga</h2>
             <p className="text-lg lg:text-xl text-muted-foreground">
               Identificamos y tratamos cada tipo de infestación con protocolos específicos y productos certificados.
             </p>
@@ -209,34 +253,39 @@ export default function ServiceCategoryPage({ service }: ServiceCategoryPageProp
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {service.servicios.map((servicio, index) => (
-              <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/50 overflow-hidden relative h-full flex flex-col">
-                <div className="absolute top-0 left-0 w-1 h-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity" />
-                <CardHeader className="pb-4">
-                  <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+              <Card key={index} className="group bg-white hover:bg-gradient-to-b hover:from-white hover:to-emerald-50/30 transition-all duration-500 border-slate-100 hover:border-emerald-200 hover:shadow-xl hover:shadow-emerald-900/5 overflow-hidden relative h-full flex flex-col hover:-translate-y-1">
+                
+                {/* Decorative top accent */}
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-400 to-emerald-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                
+                <CardHeader className="pb-4 relative">
+                  {/* Icon Container with Glass/Gradient feel */}
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-50 to-white border border-emerald-100 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-emerald-500/10 transition-all duration-500">
                      {getServiceIcon(servicio.titulo)}
                   </div>
-                  <CardTitle className="text-xl lg:text-2xl font-bold mb-2 group-hover:text-primary transition-colors">
+                  
+                  <CardTitle className="text-xl lg:text-2xl font-bold mb-3 text-slate-800 group-hover:text-emerald-700 transition-colors">
                     {servicio.titulo}
                   </CardTitle>
-                  <CardDescription className="text-base lg:text-lg line-clamp-2">
+                  
+                  <CardDescription className="text-base lg:text-lg line-clamp-2 text-slate-600 group-hover:text-slate-700">
                     {servicio.descripcion}
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="flex-1">
-                  <ul className="space-y-3">
+
+                <CardContent className="flex-1 relative">
+                  <ul className="space-y-3 mb-6">
                     {servicio.items.slice(0, 3).map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-start gap-3 text-sm lg:text-base text-muted-foreground">
-                        <CheckCircle2 size={16} className="text-primary mt-0.5 flex-shrink-0" />
+                      <li key={itemIndex} className="flex items-start gap-3 text-sm lg:text-base text-slate-500 group-hover:text-slate-600 transition-colors">
+                        <div className="mt-0.5 min-w-[18px] h-[18px] rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0">
+                          <CheckCircle2 size={12} className="text-emerald-600" />
+                        </div>
                         <span>{item}</span>
                       </li>
                     ))}
-                    {servicio.items.length > 3 && (
-                      <li className="text-xs text-primary font-medium pt-2 pl-7 flex items-center gap-1">
-                        <Star size={12} className="fill-current" />
-                        <span>{servicio.items.length - 3} características más</span>
-                      </li>
-                    )}
                   </ul>
+                  
+
                 </CardContent>
               </Card>
             ))}
@@ -276,7 +325,7 @@ export default function ServiceCategoryPage({ service }: ServiceCategoryPageProp
             <span className="font-semibold tracking-wide uppercase text-xs">Garantía Sierra Guard</span>
           </div>
           <h2 className="text-xl md:text-2xl font-bold mb-4 leading-tight">
-            Más que un servicio, <span className="text-green-200">tranquilidad garantizada</span>
+            Más que un servicio, <span className="text-emerald-200">tranquilidad garantizada</span>
           </h2>
           <p className="text-sm md:text-base font-light leading-relaxed text-white">
             "{service.bloqueConfianza}"
@@ -431,7 +480,7 @@ export default function ServiceCategoryPage({ service }: ServiceCategoryPageProp
         
         <div className="container max-w-4xl text-center relative z-10">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">¿Listo para Resolver tu Problema?</h2>
-          <p className="text-lg md:text-xl text-green-100 mb-6 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-emerald-100 mb-6 max-w-2xl mx-auto leading-relaxed">
             Llámanos ahora y recibe una consulta gratis. <br/>Respuesta garantizada en 24 horas.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

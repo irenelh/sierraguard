@@ -26,8 +26,8 @@ export default function PasoUbicacion({
             key={ubicacion.id}
             className={`flex items-center p-4 rounded-lg border-2 cursor-pointer transition-all ${
               value === ubicacion.id
-                ? 'border-green-600 bg-green-50'
-                : 'border-gray-200 bg-white hover:border-green-300'
+                ? 'border-emerald-600 bg-emerald-50'
+                : 'border-gray-200 bg-white hover:border-emerald-300'
             }`}
           >
             <input
@@ -36,13 +36,13 @@ export default function PasoUbicacion({
               value={ubicacion.id}
               checked={value === ubicacion.id}
               onChange={(e) => onChange(e.target.value)}
-              className="w-4 h-4 text-green-600"
+              className="w-4 h-4 text-emerald-600"
             />
             <span className="ml-3 font-medium text-gray-900">
               {ubicacion.nombre}
             </span>
             {ubicacion.id === 'segovia-capital' && (
-              <span className="ml-auto text-xs bg-green-100 text-green-800 px-2 py-1 rounded">
+              <span className="ml-auto text-xs bg-emerald-100 text-emerald-800 px-2 py-1 rounded">
                 Precio base
               </span>
             )}

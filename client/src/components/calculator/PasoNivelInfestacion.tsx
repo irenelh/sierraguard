@@ -46,8 +46,8 @@ export default function PasoNivelInfestacion({
             onClick={() => onChange(nivel.id)}
             className={`p-4 rounded-lg border-2 transition-all text-left ${
               value === nivel.id
-                ? 'border-green-600 bg-green-50'
-                : 'border-gray-200 bg-white hover:border-green-300'
+                ? 'border-emerald-600 bg-emerald-50'
+                : 'border-gray-200 bg-white hover:border-emerald-300'
             }`}
           >
             <div className="text-3xl mb-2">{nivel.icono}</div>

@@ -245,7 +245,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="flex items-center gap-4">
-            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
             <span className="text-xs text-gray-500 font-medium tracking-wider uppercase">Sistemas Operativos</span>
           </div>
 

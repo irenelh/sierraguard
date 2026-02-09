@@ -27,8 +27,8 @@ export default function PasoSeleccionPlaga({
             onClick={() => onChange(plaga.id)}
             className={`p-4 rounded-lg border-2 transition-all text-left ${
               value === plaga.id
-                ? 'border-green-600 bg-green-50'
-                : 'border-gray-200 bg-white hover:border-green-300'
+                ? 'border-emerald-600 bg-emerald-50'
+                : 'border-gray-200 bg-white hover:border-emerald-300'
             }`}
           >
             <h3 className="font-semibold text-gray-900 mb-1">{plaga.nombre}</h3>

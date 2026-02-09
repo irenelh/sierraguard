@@ -19,8 +19,8 @@ export const blogArticles: BlogArticle[] = [
   {
     id: "1",
     slug: "plagas-comunes-segovia",
-    title: "Plagas Comunes en Segovia 2026 | Guía Completa de Identificación",
-    metaDescription: "Descubre las plagas más comunes en Segovia. Identificación, síntomas y soluciones. Guía completa 2026. ✓ Certificado ROESB.",
+    title: "Plagas Comunes en Segovia | Guía Completa 2026",
+    metaDescription: "Descubre las plagas más comunes en Segovia. Identificación, síntomas, soluciones profesionales.",
     excerpt: "Segovia, con su clima continental y patrimonio histórico, es un lugar donde ciertas plagas encuentran condiciones ideales para proliferar.",
     schema: {
       "@context": "https://schema.org",

@@ -600,7 +600,7 @@ export default function Home() {
       <section className="py-20 bg-gray-50">
         <div className="container max-w-3xl">
           <h2 className="text-4xl font-bold text-center mb-4 text-foreground">
-            Preguntas Frecuentes
+            Preguntas frecuentes sobre Control de plagas en Segovia
           </h2>
           <p className="text-center text-muted-foreground mb-12">
             Resolvemos tus dudas sobre nuestros servicios de control de plagas.

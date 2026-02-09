@@ -36,7 +36,7 @@ export default function BlogArticlePage() {
       <Header />
 
       {/* ===== BREADCRUMBS ===== */}
-      <div className="bg-gray-50 border-b border-border pt-24">
+      <div className="bg-gray-50 border-b border-border">
         <div className="container py-4">
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
             <a href="/" className="hover:text-primary">Inicio</a>
@@ -53,6 +53,17 @@ export default function BlogArticlePage() {
         <div className="container max-w-3xl">
           {/* Metadata */}
           <div className="mb-8">
+            {/* Imagen Principal */}
+            {article.image && (
+              <div className="mb-8 rounded-xl overflow-hidden shadow-lg">
+                <img 
+                  src={article.image} 
+                  alt={article.title} 
+                  className="w-full h-auto object-cover max-h-[300px]"
+                />
+              </div>
+            )}
+
             <div className="flex items-center gap-4 mb-4 text-sm text-muted-foreground">
               <div className="flex items-center gap-1">
                 <Calendar size={16} />
@@ -78,24 +89,97 @@ export default function BlogArticlePage() {
 
           {/* Contenido */}
           <div className="prose prose-lg max-w-none mb-12">
-            {article.content.split('\n\n').map((paragraph, index) => (
-              <p key={index} className="text-foreground leading-relaxed mb-6">
-                {paragraph}
-              </p>
-            ))}
+            {article.content.split('\n\n').map((block, index) => {
+              // Helper para renderizar negritas
+              const renderTextWithBold = (text: string) => {
+                const parts = text.split(/(\*\*.*?\*\*)/g);
+                return parts.map((part, i) => {
+                  if (part.startsWith('**') && part.endsWith('**')) {
+                    return <strong key={i} className="font-bold">{part.slice(2, -2)}</strong>;
+                  }
+                  return part;
+                });
+              };
+
+              // H2/H3 (## ) -> Renderizado como h3
+              if (block.startsWith('## ')) {
+                const parts = block.split('\n');
+                const headerText = parts[0].replace('## ', '');
+                const restContent = parts.slice(1).join('\n').trim();
+                
+                return (
+                  <div key={index}>
+                    <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">
+                      {headerText}
+                    </h3>
+                    {restContent && (
+                      <p className="text-foreground leading-relaxed mb-6">
+                        {renderTextWithBold(restContent)}
+                      </p>
+                    )}
+                  </div>
+                );
+              }
+              
+              // H3/H4 (### ) -> Renderizado como h4
+              if (block.startsWith('### ')) {
+                const parts = block.split('\n');
+                const headerText = parts[0].replace('### ', '');
+                const restContent = parts.slice(1).join('\n').trim();
+                
+                return (
+                  <div key={index}>
+                    <h4 className="text-xl font-semibold text-foreground mt-6 mb-3">
+                      {headerText}
+                    </h4>
+                    {restContent && (
+                      <p className="text-foreground leading-relaxed mb-6">
+                        {renderTextWithBold(restContent)}
+                      </p>
+                    )}
+                  </div>
+                );
+              }
+
+              // Listas no ordenadas (* )
+              if (block.trim().startsWith('* ')) {
+                const items = block.split('\n').filter(line => line.trim().startsWith('*'));
+                return (
+                  <ul key={index} className="list-disc pl-6 mb-6 space-y-2">
+                    {items.map((item, i) => (
+                      <li key={i} className="text-foreground pl-1">
+                        {renderTextWithBold(item.replace(/^\*\s+/, ''))}
+                      </li>
+                    ))}
+                  </ul>
+                );
+              }
+
+              // Listas ordenadas (1. )
+              if (block.trim().match(/^\d+\.\s/)) {
+                 const items = block.split('\n').filter(line => line.trim().match(/^\d+\.\s/));
+                 return (
+                  <ol key={index} className="list-decimal pl-6 mb-6 space-y-2">
+                    {items.map((item, i) => (
+                      <li key={i} className="text-foreground pl-1">
+                        {renderTextWithBold(item.replace(/^\d+\.\s+/, ''))}
+                      </li>
+                    ))}
+                  </ol>
+                );
+              }
+
+              // Párrafo normal
+              return (
+                <p key={index} className="text-foreground leading-relaxed mb-6">
+                  {renderTextWithBold(block)}
+                </p>
+              );
+            })}
           </div>
 
-          {/* Tags */}
-          <div className="mb-12 pb-12 border-b border-border">
-            <div className="flex flex-wrap gap-2">
-              {article.tags.map(tag => (
-                <span key={tag} className="px-3 py-1 bg-gray-100 text-foreground rounded-full text-sm">
-                  #{tag}
-                </span>
-              ))}
-            </div>
-          </div>
-
+          {/* Tags - ELIMINADO */}
+          
           {/* CTA */}
           <div className="bg-primary/10 p-8 rounded-lg mb-12 border border-primary/20">
             <h3 className="text-2xl font-bold text-foreground mb-4">
@@ -104,9 +188,30 @@ export default function BlogArticlePage() {
             <p className="text-foreground mb-6">
               Contacta con Sierra Guard para una consulta gratis. Nuestros técnicos certificados están disponibles 24/7.
             </p>
-            <a href="tel:+34921234567" className="inline-block bg-primary hover:bg-primary/90 text-white font-bold py-3 px-6 rounded-lg transition">
-              Llamar Ahora
-            </a>
+            <div className="flex flex-wrap gap-4">
+              <a href="tel:+34921234567" className="inline-block bg-primary hover:bg-primary/90 text-white font-bold py-3 px-6 rounded-lg transition">
+                Llamar Ahora
+              </a>
+              <Link href="/calculadora" className="inline-block bg-white border-2 border-primary text-primary hover:bg-primary/10 font-bold py-3 px-6 rounded-lg transition text-center">
+                Calculadora de Presupuesto
+              </Link>
+            </div>
+          </div>
+
+          {/* Secondary CTA - All Services */}
+          <div className="text-center mb-12 pb-12 border-b border-border">
+             <p className="text-muted-foreground mb-4">
+               ¿Buscas soluciones para otra plaga?
+             </p>
+             <a 
+               href="/#servicios" 
+               className="inline-flex items-center gap-3 px-8 py-4 bg-white border-2 border-primary/20 text-foreground text-lg font-bold rounded-full shadow-sm hover:border-primary hover:text-primary hover:shadow-md transition-all duration-300 group"
+             >
+               Ver todos nuestros servicios
+               <span className="bg-primary/10 p-1 rounded-full group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                 <ArrowLeft size={20} className="rotate-180" />
+               </span>
+             </a>
           </div>
 
           {/* Artículos relacionados */}

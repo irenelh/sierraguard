@@ -17,19 +17,91 @@ export const blogArticles: BlogArticle[] = [
   {
     id: "1",
     slug: "plagas-comunes-segovia",
-    title: "Plagas Comunes en Segovia - Guía Completa 2026",
-    metaDescription: "Descubre las plagas más comunes en Segovia: cucarachas, ratas, termitas y avispas. Guía completa con síntomas y prevención.",
+    title: "Plagas Comunes en Segovia 2026 | Guía Completa de Identificación",
+    metaDescription: "Descubre las plagas más comunes en Segovia. Identificación, síntomas y soluciones. Guía completa 2026. ✓ Certificado ROESB.",
     excerpt: "Segovia, con su clima continental y patrimonio histórico, es un lugar donde ciertas plagas encuentran condiciones ideales para proliferar.",
-    content: `Las cucarachas son probablemente la plaga más común, especialmente en cocinas y áreas de almacenamiento de alimentos. Estas plagas son nocturnas y se reproducen rápidamente, lo que hace que una infestación pequeña pueda convertirse en un problema grave en pocas semanas.
+    content: `Segovia es una ciudad con un encanto único, pero su clima continental extremo y su rica arquitectura histórica también crean el hábitat perfecto para diversas plagas. En esta guía completa 2026, analizamos en profundidad los enemigos silenciosos que amenazan hogares y negocios en nuestra provincia, y cómo combatirlos eficazmente.
 
-Las ratas y ratones son especialmente problemáticos en zonas residenciales y comerciales. Durante los meses más fríos (octubre a marzo), estas plagas buscan refugio en edificios, causando daños en estructuras, cables eléctricos y dejando un rastro de contaminación bacteriológica.
+## El Factor Segovia: ¿Por qué tenemos plagas?
 
-Las termitas, aunque menos visibles, representan una amenaza silenciosa para estructuras de madera. Segovia, con su patrimonio medieval y muchas viviendas con elementos de madera, es vulnerable a infestaciones de termitas que pueden causar daños estructurales significativos si no se detectan a tiempo.
+El clima de Segovia, caracterizado por inviernos fríos y veranos calurosos y secos, influye directamente en el comportamiento de las plagas. Durante los meses fríos, roedores e insectos buscan desesperadamente el calor de nuestros hogares. Además, la abundancia de edificios históricos con estructuras de madera antigua hace que la ciudad sea especialmente vulnerable a xilófagos como las termitas.
 
-Las avispas, especialmente la avispa velutina, son un problema creciente en primavera y verano. En zonas residenciales, los nidos de avispas en áticos y árboles representan un riesgo para familias y mascotas.`,
+## 1. Cucarachas: Más que una molestia
+
+Las cucarachas son, sin duda, la plaga más frecuente en entornos urbanos. En Segovia, predominan dos especies:
+
+*   **Cucaracha Alemana (Blattella germanica):** Pequeña y de color marrón claro. Prefiere cocinas y baños, escondiéndose cerca de motores de electrodomésticos y tuberías. Es famosa por su rápida reproducción.
+*   **Cucaracha Oriental (Blatta orientalis):** Más grande y oscura, a menudo llamada "cucaracha negra". Suele habitar en alcantarillados, sótanos y zonas húmedas, emergiendo por desagües.
+
+**Riesgos:** No solo son desagradables; portan bacterias como E. coli y Salmonella, y sus desechos son potentes alérgenos que pueden desencadenar asma, especialmente en niños.
+
+## 2. Roedores: Invasores de Invierno
+
+Cuando las temperaturas en la sierra bajan, ratas y ratones migran hacia el interior.
+
+*   **Ratas:** Capaces de roer hormigón y plomo, pueden causar daños estructurales graves y provocar incendios al morder cables eléctricos.
+*   **Ratones:** Se cuelan por agujeros del tamaño de un bolígrafo. Son vectores de enfermedades y contaminan diez veces más comida de la que consumen.
+
+## 3. Termitas y Carcoma: El Enemigo del Patrimonio
+
+Segovia tiene un tesoro en sus vigas y artesonados de madera, pero estos están bajo amenaza constante.
+
+*   **Termitas:** Operan desde el subsuelo, devorando la madera desde dentro sin dejar rastro externo hasta que es tarde. Son "invisibles" hasta que se ve el enjambre nupcial en primavera.
+*   **Carcoma:** Se detecta por los pequeños agujeros en muebles y vigas y el serrín fino que dejan caer. Afecta tanto a estructuras como a mobiliario antiguo.
+
+## 4. Avispas: Un Peligro Creciente
+
+Con la llegada de la primavera, las avispas reinas comienzan a construir nidos. La **Avispa Asiática (Vespa velutina)** es una preocupación creciente en la región, siendo más agresiva y dañina para el ecosistema local que la avispa común. Retirar un nido sin equipo profesional es extremadamente peligroso.
+
+## 5. Chinches de Cama: El Polizón del Viajero
+
+Debido al turismo, Segovia ha visto un repunte en casos de chinches. No tienen nada que ver con la suciedad; viajan en maletas y ropa. Sus picaduras causan gran irritación y ansiedad, y erradicarlas requiere tratamientos térmicos o químicos profesionales muy específicos.
+
+## Estrategias de Prevención para 2026
+
+Para mantener tu hogar seguro, recomendamos la regla de las 3 B:
+
+1.  **Bloquear:** Sella grietas en fachadas, instala burletes bajo las puertas y coloca mallas en rejillas de ventilación.
+2.  **Barreras:** Mantén la vegetación podada y alejada de la fachada. Evita acumular leña o escombros pegados a la casa.
+3.  **Buen Saneamiento:** La basura debe estar siempre en cubos cerrados. No dejes comida de mascotas fuera por la noche y elimina fuentes de humedad reparando fugas inmediatamente.
+
+## 6. Iluminación Estratégica
+Los insectos se sienten atraídos por la luz.
+
+*   **Luces Amarillas:** Sustituye las bombillas blancas de las entradas exteriores por luces amarillas (vapor de sodio) o LEDs cálidos. Atraen significativamente menos insectos voladores que la luz blanca brillante.
+*   **Sensores de Movimiento:** Instala sensores para que las luces no estén encendidas toda la noche, reduciendo el "efecto faro" para polillas y mosquitos.
+
+## 7. Inspecciona lo "Invisible"
+Áticos, sótanos y falsos techos son el paraíso de las plagas porque nadie los molesta.
+
+*   **Revisión Trimestral:** Sube al ático o baja al sótano cada cambio de estación. Busca excrementos, madera roída o nidos de avispas.
+*   **Cajas de Cartón:** Si almacenas cosas aquí, usa cajas de plástico duro. El cartón en zonas húmedas y oscuras es comida para pececillos de plata y termitas.
+
+## 8. Cuidado con lo que Traes a Casa
+A veces, invitamos a las plagas sin querer.
+
+*   **Maletas:** Al volver de viaje, no dejes la maleta sobre la cama. Revisa las costuras en busca de chinches antes de guardar la ropa.
+*   **Paquetes y Compra:** Las cucarachas a menudo entran escondidas en cajas de cartón de supermercados o almacenes. Desecha los embalajes externos inmediatamente en el contenedor de reciclaje fuera de casa.
+
+## 9. Plantas de Interior: Naturaleza Bajo Control
+Tus plantas pueden albergar inquilinos indeseados.
+
+*   **Riego Moderado:** El exceso de agua en las macetas crea el ambiente perfecto para la mosca del sustrato. Deja que la tierra se seque entre riegos.
+*   **Inspección:** Revisa el envés de las hojas regularmente en busca de pulgones o cochinillas antes de que se conviertan en una plaga mayor.
+
+## 10. Mantenimiento Profesional: La Mejor Inversión
+La prevención proactiva es más barata que la curación reactiva.
+
+*   **Inspección Anual:** Al igual que revisas tu coche o tu caldera, una inspección anual de plagas por expertos como Sierra Guard puede detectar problemas incipientes (como termitas en los cimientos) antes de que causen daños estructurales costosos.
+
+## ¿Cuándo llamar a un profesional?
+
+Los remedios caseros pueden funcionar para un insecto aislado, pero ante una plaga establecida, suelen ser ineficaces y pueden dispersar el problema. Si escuchas ruidos en falsos techos, ves excrementos recurrentes o detectas daños en madera, es hora de actuar.
+
+En **Sierra Guard**, conocemos Segovia y sus plagas. Utilizamos técnicas avanzadas de Control Integrado de Plagas que priorizan la seguridad de tu familia y la eficacia a largo plazo. No dejes que los invasores tomen el control de tu propiedad.`,
     author: "Sierra Guard",
     date: "2026-02-06",
-    readTime: 5,
+    readTime: 12,
     category: "Plagas",
     tags: ["cucarachas", "ratas", "termitas", "avispas", "segovia"],
     image: "https://loremflickr.com/800/600/insect,pest?lock=1"
@@ -37,30 +109,77 @@ Las avispas, especialmente la avispa velutina, son un problema creciente en prim
   {
     id: "2",
     slug: "prevenir-plagas-hogar",
-    title: "Cómo Prevenir Plagas en Tu Hogar - 10 Consejos Prácticos",
-    metaDescription: "10 consejos prácticos para prevenir plagas en tu hogar en Segovia. Evita cucarachas, ratas y otros insectos.",
+    title: "Cómo Prevenir Plagas en Casa | 10 Consejos Efectivos 2026",
+    metaDescription: "10 consejos prácticos para prevenir plagas en tu hogar. Métodos efectivos, económicos y seguros. Guía completa de prevención.",
     excerpt: "La prevención es la estrategia más efectiva y económica para evitar infestaciones de plagas.",
-    content: `La prevención es la estrategia más efectiva y económica para evitar infestaciones de plagas. En Sierra Guard, recomendamos estos diez pasos esenciales para mantener tu hogar libre de plagas.
+    content: `Mantener tu hogar libre de plagas no tiene por qué ser una batalla constante. La prevención es la herramienta más poderosa (y económica) que tienes a tu disposición. En Segovia, donde los cambios de estación impulsan a insectos y roedores a buscar refugio en el interior, aplicar unas sencillas rutinas puede marcar la diferencia entre un hogar sano y una infestación.
 
-Primero, mantén la cocina impecable. Las migas de comida y derrames atraen cucarachas y hormigas. Limpia regularmente bajo electrodomésticos y en grietas donde se acumula la suciedad.
+Aquí tienes los 10 consejos de oro de Sierra Guard para blindar tu casa este 2026:
 
-Segundo, almacena alimentos en recipientes herméticos. Los cereales, harinas y otros productos secos deben guardarse en contenedores cerrados que las plagas no puedan penetrar.
+## 1. La Cocina: El "Restaurante" de las Plagas
+La mayoría de las infestaciones empiezan aquí.
 
-Tercero, sella grietas y fisuras en paredes, pisos y alrededor de tuberías. Estos espacios son vías de entrada para insectos y roedores.
+*   **Limpieza Profunda:** No basta con barrer. Limpia regularmente detrás y debajo de electrodomésticos (nevera, horno) donde se acumulan migas y grasa.
+*   **Almacenamiento Hermético:** Olvida las cajas de cartón y las bolsas abiertas. Guarda cereales, harinas, pastas y azúcar en recipientes de vidrio o plástico duro con cierre hermético. Las polillas y gorgojos no podrán entrar (ni salir).
+*   **Gestión de Residuos:** La basura orgánica debe estar siempre en un cubo con tapa ajustada. Sácala a diario, especialmente en verano.
 
-Cuarto, elimina fuentes de humedad. Las plagas requieren agua para sobrevivir, así que repara grifos que gotean y asegura una ventilación adecuada en baños y sótanos.
+## 2. Bloquea el Acceso: Tu Casa es una Fortaleza
+Si no pueden entrar, no pueden molestar.
 
-Quinto, no dejes comida para mascotas durante la noche. El alimento de perros y gatos atrae plagas.
+*   **Sellado de Grietas:** Revisa los rodapiés, los marcos de las ventanas y los puntos donde las tuberías entran en la pared. Usa silicona o masilla para sellar cualquier hueco mayor de 3 milímetros.
+*   **Puertas y Ventanas:** Instala burletes bajo las puertas de entrada y asegúrate de que las mosquiteras no tengan agujeros. Un ratón puede colarse por el espacio que hay debajo de una puerta mal ajustada.
 
-Sexto, gestiona adecuadamente la basura. Usa contenedores cerrados y saca la basura regularmente.
+## 3. Control de Humedad: El Oasis que Debes Secar
+El agua atrae más plagas que la comida.
 
-Séptimo, inspecciona regularmente áticos, sótanos y espacios de difícil acceso donde las plagas pueden establecer colonias.
+*   **Repara Fugas:** Un grifo que gotea o una tubería con condensación son un imán para cucarachas, hormigas y lepismas (pececillos de plata).
+*   **Ventilación:** Ventila bien baños y sótanos para evitar la acumulación de humedad y moho, que sirve de alimento a pequeños insectos.
 
-Octavo, mantén el jardín limpio. Retira hojas caídas, ramas muertas y maleza donde plagas pueden anidar.
+## 4. Exteriores y Jardín: La Primera Línea de Defensa
+El perímetro de tu casa es crucial.
 
-Noveno, revisa regularmente plantas de interior en busca de plagas comunes como ácaros y moscas blancas.
+*   **Poda la Vegetación:** Mantén ramas y arbustos recortados y separados al menos 50 cm de la fachada. Las ramas que tocan la casa actúan como "puentes" para hormigas y roedores.
+*   **Leña y Escombros:** Nunca apiles leña directamente contra la pared de la casa. Mantenla elevada y alejada para evitar que aniden roedores o termitas.
 
-Décimo, considera un programa de prevención profesional con Sierra Guard para inspecciones regulares y tratamientos preventivos.`,
+## 5. Hábitos Inteligentes
+Pequeños cambios en tu rutina diaria.
+
+*   **Mascotas:** No dejes el comedero de tu perro o gato con comida toda la noche. Recoge lo que sobre y limpia el cuenco.
+*   **Orden General:** Evita acumular cajas de cartón y periódicos viejos en trasteros o garajes. Son el escondite y material de anidación perfecto para cucarachas y roedores.
+
+## 6. Iluminación Estratégica
+Los insectos se sienten atraídos por la luz.
+
+*   **Luces Amarillas:** Sustituye las bombillas blancas de las entradas exteriores por luces amarillas (vapor de sodio) o LEDs cálidos. Atraen significativamente menos insectos voladores que la luz blanca brillante.
+*   **Sensores de Movimiento:** Instala sensores para que las luces no estén encendidas toda la noche, reduciendo el "efecto faro" para polillas y mosquitos.
+
+## 7. Inspecciona lo "Invisible"
+Áticos, sótanos y falsos techos son el paraíso de las plagas porque nadie los molesta.
+
+*   **Revisión Trimestral:** Sube al ático o baja al sótano cada cambio de estación. Busca excrementos, madera roída o nidos de avispas.
+*   **Cajas de Cartón:** Si almacenas cosas aquí, usa cajas de plástico duro. El cartón en zonas húmedas y oscuras es comida para pececillos de plata y termitas.
+
+## 8. Cuidado con lo que Traes a Casa
+A veces, invitamos a las plagas sin querer.
+
+*   **Maletas:** Al volver de viaje, no dejes la maleta sobre la cama. Revisa las costuras en busca de chinches antes de guardar la ropa.
+*   **Paquetes y Compra:** Las cucarachas a menudo entran escondidas en cajas de cartón de supermercados o almacenes. Desecha los embalajes externos inmediatamente en el contenedor de reciclaje fuera de casa.
+
+## 9. Plantas de Interior: Naturaleza Bajo Control
+Tus plantas pueden albergar inquilinos indeseados.
+
+*   **Riego Moderado:** El exceso de agua en las macetas crea el ambiente perfecto para la mosca del sustrato. Deja que la tierra se seque entre riegos.
+*   **Inspección:** Revisa el envés de las hojas regularmente en busca de pulgones o cochinillas antes de que se conviertan en una plaga mayor.
+
+## 10. Mantenimiento Profesional: La Mejor Inversión
+La prevención proactiva es más barata que la curación reactiva.
+
+*   **Inspección Anual:** Al igual que revisas tu coche o tu caldera, una inspección anual de plagas por expertos como Sierra Guard puede detectar problemas incipientes (como termitas en los cimientos) antes de que causen daños estructurales costosos.
+
+## ¿Cuándo llamar a un profesional?
+Estos consejos son excelentes para prevenir, pero si ya ves señales de actividad (excrementos, ruidos nocturnos, o insectos vivos durante el día), los remedios caseros pueden no ser suficientes.
+
+En **Sierra Guard**, ofrecemos inspecciones preventivas para identificar puntos débiles en tu hogar que quizás hayas pasado por alto. La tranquilidad de saber que tu casa está protegida no tiene precio.`,
     author: "Sierra Guard",
     date: "2026-02-05",
     readTime: 6,
@@ -171,42 +290,6 @@ Nuestros sistemas de monitoreo remoto permiten detectar actividad de roedores en
     category: "Negocios",
     tags: ["desratización", "restaurantes", "comercios", "higiene"],
     image: "https://loremflickr.com/800/600/restaurant,kitchen?lock=7"
-  },
-  {
-    id: "8",
-    slug: "legionella-segovia",
-    title: "Legionella en Segovia - Riesgo en Torres de Refrigeración",
-    metaDescription: "Legionella en Segovia: riesgos en torres de refrigeración y sistemas HVAC. Auditoría y desinfección profesional.",
-    excerpt: "La legionella es una bacteria que crece en sistemas de agua cálida, especialmente en torres de refrigeración y sistemas HVAC.",
-    content: `La legionella es una bacteria que crece en sistemas de agua cálida, especialmente en torres de refrigeración y sistemas HVAC. En Segovia, donde muchos edificios comerciales tienen estos sistemas, el riesgo de legionelosis es real.
-
-La enfermedad del legionario es una neumonía grave causada por la inhalación de agua contaminada con legionella. Los síntomas incluyen fiebre alta, tos, dolor muscular y dificultad respiratoria. En casos graves, puede ser fatal, especialmente en personas mayores o inmunodeprimidas.
-
-La prevención requiere mantenimiento regular y desinfección de sistemas de agua. Sierra Guard ofrece auditorías completas de riesgo de legionella, identificando sistemas vulnerables y realizando tratamientos de desinfección. Nuestros técnicos certificados aseguran que los sistemas cumplan con regulaciones de salud pública.`,
-    author: "Sierra Guard",
-    date: "2026-01-30",
-    readTime: 4,
-    category: "Desinfección",
-    tags: ["legionella", "torres", "HVAC", "salud"],
-    image: "https://loremflickr.com/800/600/water,pipe?lock=8"
-  },
-  {
-    id: "9",
-    slug: "chinches-segovia",
-    title: "Chinches - Detección Temprana y Tratamiento Efectivo",
-    metaDescription: "Chinches en Segovia: cómo detectarlas, prevención y tratamiento. Soluciones profesionales de Sierra Guard.",
-    excerpt: "Los chinches son plagas que se alimentan de sangre humana, típicamente durante la noche.",
-    content: `Los chinches son plagas que se alimentan de sangre humana, típicamente durante la noche. Aunque no transmiten enfermedades, sus picaduras causan picazón intensa y pueden resultar en infecciones por rascado. En Segovia, especialmente en hoteles y viviendas del Centro Histórico, los chinches son un problema creciente.
-
-La detección temprana es crucial. Los signos de infestación incluyen manchas de sangre en sábanas, pequeñas manchas negras (heces) en colchones, y picaduras en patrón de línea en la piel. Los chinches se esconden en grietas de colchones, marcos de cama, y muebles durante el día.
-
-El tratamiento profesional es más efectivo que los intentos DIY. Sierra Guard utiliza tratamiento térmico sin químicos, que es altamente efectivo contra chinches en todas las etapas de vida. Este método es seguro para familias y mascotas, y no deja residuos químicos.`,
-    author: "Sierra Guard",
-    date: "2026-01-29",
-    readTime: 4,
-    category: "Plagas",
-    tags: ["chinches", "detección", "tratamiento", "hogar"],
-    image: "https://loremflickr.com/800/600/bed,bedroom?lock=9"
   },
   {
     id: "10",

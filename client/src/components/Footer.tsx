@@ -16,7 +16,7 @@ export default function Footer() {
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
               Control profesional de plagas en Segovia. Expertos en desinsectación, desratización y tratamientos de madera. 
               <br/><br/>
-              <span className="text-primary font-semibold">Certificados CEPA.</span>
+              <span className="text-white font-semibold">Certificados CEPA.</span>
             </p>
 
             {/* Contacto rápido */}
@@ -37,7 +37,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-bold mb-4 text-primary">Servicios</h4>
+            <h4 className="font-bold mb-4 text-white">Servicios</h4>
             <ul className="space-y-2 text-sm text-white">
               <li>
                 <a href="/desinsectacion" className="text-white hover:text-primary transition-colors duration-200">
@@ -88,16 +88,11 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-bold mb-4 text-primary">Cobertura en Segovia</h4>
+            <h4 className="font-bold mb-4 text-white">Cobertura en Segovia</h4>
             <ul className="grid grid-cols-2 gap-x-2 gap-y-2 text-sm text-white">
               <li>
-                <a href="/control-de-plagas-coca" className="text-white hover:text-primary transition-colors duration-200 flex items-center">
-                  <span className="mr-1">•</span> Coca
-                </a>
-              </li>
-              <li>
-                <a href="/control-de-plagas-cuéllar" className="text-white hover:text-primary transition-colors duration-200 flex items-center">
-                  <span className="mr-1">•</span> Cuéllar
+                <a href="/control-de-plagas-la-lastrilla" className="text-white hover:text-primary transition-colors duration-200 flex items-center">
+                  <span className="mr-1">•</span> La Lastrilla
                 </a>
               </li>
               <li>
@@ -106,9 +101,39 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/control-de-plagas-la-lastrilla" className="text-white hover:text-primary transition-colors duration-200 flex items-center">
-                  <span className="mr-1">•</span> La Lastrilla
-                </a>
+                <span className="flex items-center text-white cursor-default">
+                  <span className="mr-1">•</span> San Rafael
+                </span>
+              </li>
+              <li>
+                <span className="flex items-center text-white cursor-default">
+                  <span className="mr-1">•</span> Villacastín
+                </span>
+              </li>
+              <li>
+                <span className="flex items-center text-white cursor-default">
+                  <span className="mr-1">•</span> Ituero y Lama
+                </span>
+              </li>
+              <li>
+                <span className="flex items-center text-white cursor-default">
+                  <span className="mr-1">•</span> Otero de Herreros
+                </span>
+              </li>
+              <li>
+                <span className="flex items-center text-white cursor-default">
+                  <span className="mr-1">•</span> Navas de San Antonio
+                </span>
+              </li>
+              <li>
+                <span className="flex items-center text-white cursor-default">
+                  <span className="mr-1">•</span> Prádena
+                </span>
+              </li>
+              <li>
+                <span className="flex items-center text-white cursor-default">
+                  <span className="mr-1">•</span> Turégano
+                </span>
               </li>
               <li>
                 <a href="/control-de-plagas-pedraza" className="text-white hover:text-primary transition-colors duration-200 flex items-center">
@@ -122,74 +147,74 @@ export default function Footer() {
               </li>
               <li>
                 <span className="flex items-center text-white cursor-default">
-                  <span className="mr-1">•</span> Azoguejo
-                </span>
-              </li>
-              <li>
-                <span className="flex items-center text-white cursor-default">
                   <span className="mr-1">•</span> Boceguillas
                 </span>
               </li>
               <li>
+                <a href="/control-de-plagas-cuéllar" className="text-white hover:text-primary transition-colors duration-200 flex items-center">
+                  <span className="mr-1">•</span> Cuéllar
+                </a>
+              </li>
+              <li>
+                <a href="/control-de-plagas-palazuelos-de-eresma" className="text-white hover:text-primary transition-colors duration-200 flex items-center">
+                  <span className="mr-1">•</span> Palazuelos de Eresma
+                </a>
+              </li>
+              <li>
                 <span className="flex items-center text-white cursor-default">
-                  <span className="mr-1">•</span> Canonjía
+                  <span className="mr-1">•</span> Trescasas
                 </span>
               </li>
               <li>
                 <span className="flex items-center text-white cursor-default">
-                  <span className="mr-1">•</span> Centro Histórico
+                  <span className="mr-1">•</span> Torrecaballeros
                 </span>
               </li>
               <li>
                 <span className="flex items-center text-white cursor-default">
-                  <span className="mr-1">•</span> Clamores
+                  <span className="mr-1">•</span> Hontoria
+                </span>
+              </li>
+              <li>
+                <a href="/control-de-plagas-coca" className="text-white hover:text-primary transition-colors duration-200 flex items-center">
+                  <span className="mr-1">•</span> Coca
+                </a>
+              </li>
+              <li>
+                <span className="flex items-center text-white cursor-default">
+                  <span className="mr-1">•</span> San Cristobal
+                </span>
+              </li>
+              <li>
+                <a href="/control-de-plagas-la-granja-san-ildefonso" className="text-white hover:text-primary transition-colors duration-200 flex items-center">
+                  <span className="mr-1">•</span> La Granja
+                </a>
+              </li>
+              <li>
+                <span className="flex items-center text-white cursor-default">
+                  <span className="mr-1">•</span> Hontanares
                 </span>
               </li>
               <li>
                 <span className="flex items-center text-white cursor-default">
-                  <span className="mr-1">•</span> Ituero y Lama
+                  <span className="mr-1">•</span> Revenga
                 </span>
               </li>
               <li>
                 <span className="flex items-center text-white cursor-default">
-                  <span className="mr-1">•</span> Peñuelas
+                  <span className="mr-1">•</span> Valseca
                 </span>
               </li>
               <li>
                 <span className="flex items-center text-white cursor-default">
-                  <span className="mr-1">•</span> Pozuelo
-                </span>
-              </li>
-              <li>
-                <span className="flex items-center text-white cursor-default">
-                  <span className="mr-1">•</span> Prádena
-                </span>
-              </li>
-              <li>
-                <span className="flex items-center text-white cursor-default">
-                  <span className="mr-1">•</span> San Marcos
-                </span>
-              </li>
-              <li>
-                <span className="flex items-center text-white cursor-default">
-                  <span className="mr-1">•</span> Turégano
-                </span>
-              </li>
-              <li>
-                <span className="flex items-center text-white cursor-default">
-                  <span className="mr-1">•</span> Vera Cruz
-                </span>
-              </li>
-              <li>
-                <span className="flex items-center text-white cursor-default">
-                  <span className="mr-1">•</span> Villacastín
+                  <span className="mr-1">•</span> Ortigosa
                 </span>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-bold mb-4 text-primary">Empresa</h4>
+            <h4 className="font-bold mb-4 text-white">Empresa</h4>
             <ul className="space-y-2 text-sm text-white">
               <li>
                 <a href="/blog" className="text-white hover:text-primary transition-colors duration-200">

@@ -81,10 +81,10 @@ export default function ServicesPage() {
       {/* ===== HERO ===== */}
       <section className="pt-12 pb-20 bg-gradient-to-br from-primary/10 to-primary/5">
         <div className="container max-w-4xl">
-          <h1 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
+          <h1 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
             Nuestros Servicios
           </h1>
-          <p className="text-lg text-muted-foreground leading-relaxed">
+          <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed">
             Soluciones profesionales de control de plagas adaptadas a cada necesidad. Desde desinsectación especializada hasta bioseguridad hospitalaria.
           </p>
         </div>
@@ -92,7 +92,7 @@ export default function ServicesPage() {
 
       {/* ===== SERVICIOS GRID ===== */}
       <section className="py-20 bg-white">
-        <div className="container max-w-5xl">
+        <div className="container max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {servicios.map((servicio, idx) => (
               <a
@@ -105,7 +105,7 @@ export default function ServicesPage() {
                 }`}
               >
                 <div className="flex items-start justify-between mb-4">
-                  <h3 className="text-2xl font-bold text-foreground group-hover:text-primary transition">
+                  <h3 className="text-2xl lg:text-3xl font-bold text-foreground group-hover:text-primary transition">
                     {servicio.titulo}
                   </h3>
                   <ArrowRight
@@ -116,13 +116,13 @@ export default function ServicesPage() {
                   />
                 </div>
 
-                <p className="text-muted-foreground mb-6 leading-relaxed">
+                <p className="text-muted-foreground lg:text-lg mb-6 leading-relaxed">
                   {servicio.descripcion}
                 </p>
 
                 <ul className="space-y-2 mb-6">
                   {servicio.beneficios.map((beneficio, bidx) => (
-                    <li key={bidx} className="flex items-start gap-2 text-sm text-muted-foreground">
+                    <li key={bidx} className="flex items-start gap-2 text-sm lg:text-base text-muted-foreground">
                       <CheckCircle2
                         size={16}
                         className={`mt-0.5 flex-shrink-0 ${
@@ -134,7 +134,7 @@ export default function ServicesPage() {
                   ))}
                 </ul>
 
-                <span className={`font-semibold text-sm ${
+                <span className={`font-semibold text-sm lg:text-base ${
                   servicio.urgente ? "text-red-600" : "text-primary"
                 }`}>
                   Ver detalles →
@@ -148,15 +148,15 @@ export default function ServicesPage() {
       {/* ===== CTA SECTION ===== */}
       <section className="py-20 bg-primary text-white">
         <div className="container max-w-3xl text-center">
-          <h2 className="text-4xl font-bold mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
             ¿Necesitas un servicio urgente?
           </h2>
-          <p className="text-lg mb-8 text-primary/90">
+          <p className="text-lg lg:text-xl mb-8 text-primary/90">
             Disponibles 24/7. Respuesta garantizada en menos de 24 horas.
           </p>
           <Button
             size="lg"
-            className="bg-white text-primary hover:bg-gray-100 font-bold text-lg h-14 px-8"
+            className="bg-white text-primary hover:bg-gray-100 font-bold text-lg lg:text-xl h-14 lg:h-16 px-8 lg:px-10"
             onClick={() => window.location.href = "tel:+34921234567"}
           >
             <Phone className="mr-2" size={20} />
@@ -189,7 +189,7 @@ export default function ServicesPage() {
               <h4 className="font-bold mb-4">Contacto</h4>
               <ul className="space-y-2 text-sm text-gray-300">
                 <li><a href="tel:+34921234567" className="hover:text-white transition">+34 921 234 567</a></li>
-                <li><a href="mailto:info@sierraguard.es" className="hover:text-white transition">info@sierraguard.es</a></li>
+                <li><a href="mailto:contacto@controldeplagassegovia.com" className="hover:text-white transition">contacto@controldeplagassegovia.com</a></li>
               </ul>
             </div>
           </div>

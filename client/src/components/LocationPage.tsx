@@ -98,34 +98,115 @@ export default function LocationPage({
       <div className="min-h-screen bg-white font-sans text-gray-900">
         <Header />
         
-        {/* HERO SIMPLE */}
-        <section className="pt-24 pb-16 px-4 container max-w-4xl mx-auto text-left">
-          <div className="inline-block px-3 py-1 mb-6 text-sm font-semibold text-green-800 bg-green-100 rounded-full">
-            Servicio en {barrio}
-          </div>
-          <h1 className="text-3xl md:text-4xl font-extrabold mb-6 text-gray-900 leading-tight tracking-tight">
-            {h1}
-          </h1>
-          <p className="text-lg text-gray-600 mb-10 leading-relaxed max-w-3xl">
-            {introParrafo}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-             <Button 
-                size="lg" 
-                className="bg-[#1d4620] hover:bg-[#153316] text-white font-bold text-lg h-14 px-8 rounded shadow-md w-full sm:w-auto flex items-center justify-center gap-2"
-                onClick={() => document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" })}
-             >
-                <Phone size={20} />
-                {ctaText}
-             </Button>
+        {/* HERO SIMPLE REDISEÑADO - UX OPTIMIZADO */}
+        <section className="relative pt-8 lg:pt-24 pb-20 px-4 overflow-hidden bg-gradient-to-br from-white via-green-50/30 to-white">
+          {/* Elemento decorativo de fondo */}
+          <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-green-100/50 rounded-full blur-3xl opacity-60 pointer-events-none"></div>
+          
+          <div className="container max-w-7xl mx-auto relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+              {/* Columna de Texto (7 cols) */}
+              <div className="lg:col-span-7 text-left flex flex-col justify-center">
+                <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm font-bold text-green-800 bg-green-100 rounded-full w-fit shadow-sm">
+                  <MapPin size={16} className="text-green-700" />
+                  <span>Servicio Prioritario en {barrio}</span>
+                </div>
+                
+                <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold mb-6 text-gray-900 leading-[1.1] tracking-tight">
+                  {h1}
+                </h1>
+                
+                <p className="text-lg lg:text-xl text-gray-600 mb-8 leading-relaxed max-w-2xl">
+                  {introParrafo}
+                </p>
+
+                {/* Puntos de dolor / Beneficios Clave - UX Booster */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-10">
+                  <div className="flex items-center gap-3">
+                    <div className="p-1 rounded-full bg-green-100 text-green-700">
+                      <CheckCircle2 size={18} />
+                    </div>
+                    <span className="font-medium text-gray-800">Presupuesto Cerrado sin Sorpresas</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="p-1 rounded-full bg-green-100 text-green-700">
+                      <CheckCircle2 size={18} />
+                    </div>
+                    <span className="font-medium text-gray-800">Técnicos Certificados en Segovia</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="p-1 rounded-full bg-green-100 text-green-700">
+                      <CheckCircle2 size={18} />
+                    </div>
+                    <span className="font-medium text-gray-800">Garantía de Eliminación</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="p-1 rounded-full bg-green-100 text-green-700">
+                      <CheckCircle2 size={18} />
+                    </div>
+                    <span className="font-medium text-gray-800">Urgencias 24h Disponibles</span>
+                  </div>
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-4">
+                   <Button 
+                      size="lg" 
+                      className="bg-[#1d4620] hover:bg-[#153316] text-white font-bold text-lg lg:text-xl h-14 lg:h-16 px-8 lg:px-10 rounded-xl shadow-lg hover:shadow-green-900/20 w-full sm:w-auto flex items-center justify-center gap-3 transition-all transform hover:-translate-y-1"
+                      onClick={() => document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" })}
+                   >
+                      <Phone size={22} />
+                      {ctaText}
+                   </Button>
+                   <a 
+                      href="tel:+34921234567"
+                      className="flex items-center justify-center gap-3 px-8 h-14 lg:h-16 rounded-xl border-2 border-gray-200 hover:border-green-700 hover:bg-green-50 text-gray-700 hover:text-green-800 font-bold text-lg transition-all w-full sm:w-auto"
+                   >
+                      <span>Llamar Ahora</span>
+                   </a>
+                </div>
+                
+                <p className="mt-4 text-sm text-gray-500 flex items-center gap-2">
+                  <span className="flex text-yellow-500">★★★★★</span>
+                  <span className="font-medium">4.9/5</span> valorado por clientes en Segovia
+                </p>
+              </div>
+              
+              {/* Columna de Imagen (5 cols) */}
+              <div className="lg:col-span-5 relative mt-10 lg:mt-0">
+                <div className="relative h-[400px] lg:h-[500px] w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white transform lg:rotate-2 hover:rotate-0 transition-transform duration-500">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10"></div>
+                  <img 
+                    src="/images/como-prevenir-plagas-en-casa-segovia.jpeg" 
+                    alt={`Control de Plagas en ${barrio}`}
+                    className="w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-700"
+                  />
+                  
+                  {/* Badge Flotante sobre Imagen */}
+                  <div className="absolute bottom-6 left-6 right-6 z-20">
+                    <div className="bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-white/50 flex items-center gap-4">
+                      <div className="bg-green-100 p-3 rounded-full text-green-700">
+                         <Shield size={24} />
+                      </div>
+                      <div>
+                        <p className="font-bold text-gray-900 text-lg">Protección Total</p>
+                        <p className="text-sm text-gray-600">Servicio activo en {barrio}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Elemento decorativo detrás de la imagen */}
+                <div className="absolute -bottom-6 -right-6 w-full h-full border-2 border-green-200 rounded-3xl -z-10 hidden lg:block"></div>
+              </div>
+            </div>
           </div>
         </section>
 
         {/* SERVICIOS LISTA */}
         <section className="py-12 px-4 bg-gray-50 border-y border-gray-200">
-          <div className="container max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-gray-900 text-center">Servicios de Control de Plagas en {barrio}</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="container max-w-7xl mx-auto">
+            <h2 className="text-3xl lg:text-5xl font-bold mb-8 text-gray-900 text-center">Servicios de Control de Plagas en {barrio}</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {serviciosEspecificos.map((servicio, idx) => (
                 <div key={idx} className="bg-white p-8 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 h-full flex flex-col">
                   <h3 className="text-xl font-bold mb-4 text-[#1d4620] border-b border-gray-100 pb-3">{servicio.titulo}</h3>
@@ -146,7 +227,7 @@ export default function LocationPage({
               <Link href="/#servicios">
                 <Button 
                   variant="outline" 
-                  className="group relative border-2 border-[#1d4620] text-[#1d4620] hover:bg-[#1d4620] hover:text-white font-bold text-lg px-10 py-6 h-auto rounded-xl transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 flex items-center gap-3 mx-auto"
+                  className="group relative border-2 border-[#1d4620] text-[#1d4620] hover:bg-[#1d4620] hover:text-white font-bold text-lg lg:text-xl px-10 lg:px-12 py-6 lg:py-8 h-auto rounded-xl transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 flex items-center gap-3 mx-auto"
                 >
                   Ver todos los servicios
                   <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
@@ -160,11 +241,11 @@ export default function LocationPage({
 
         {/* POR QUÉ ELEGIRNOS */}
         <section className="py-16 px-4 bg-gray-100">
-          <div className="container max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-gray-900">¿Por qué elegir Sierra Guard en {barrio}?</h2>
+          <div className="container max-w-7xl mx-auto">
+            <h2 className="text-3xl lg:text-5xl font-bold mb-8 text-gray-900">¿Por qué elegir nuestra empresa de control de plagas en {barrio}?</h2>
             <div className="space-y-8">
-               <p className="text-lg text-gray-700 leading-relaxed">{bloqueConfianza}</p>
-               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+               <p className="text-lg lg:text-xl text-gray-700 leading-relaxed">{bloqueConfianza}</p>
+               <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                  {trustBadges.map((badge, idx) => (
                    <li key={idx} className="flex items-center gap-3 bg-white p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                      <div className="bg-green-50 p-2 rounded-full">
@@ -180,12 +261,12 @@ export default function LocationPage({
 
         {/* CTA INTERMEDIO */}
         <section className="py-16 px-4 bg-[#1d4620] text-white text-center">
-          <div className="container max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6">¿Problemas de plagas en {barrio}?</h2>
-            <p className="text-xl mb-8 text-green-50">Actuamos rápido. Presupuesto sin compromiso.</p>
+          <div className="container max-w-7xl mx-auto">
+            <h2 className="text-3xl lg:text-5xl font-bold mb-6">¿Problemas de plagas en {barrio}?</h2>
+            <p className="text-xl lg:text-2xl mb-8 text-green-50">Actuamos rápido. Presupuesto sin compromiso.</p>
             <Button 
                 size="lg" 
-                className="bg-white text-[#1d4620] hover:bg-gray-100 font-bold text-lg h-14 px-8 rounded shadow-lg w-full sm:w-auto"
+                className="bg-white text-[#1d4620] hover:bg-gray-100 font-bold text-lg lg:text-xl h-14 lg:h-16 px-8 lg:px-10 rounded shadow-lg w-full sm:w-auto"
                 onClick={() => document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" })}
              >
                 <Phone className="mr-2" size={20} />
@@ -196,13 +277,13 @@ export default function LocationPage({
 
         {/* FAQ */}
         {faqs && faqs.length > 0 && (
-          <section className="py-12 px-4 container max-w-4xl mx-auto">
-            <h2 className="text-2xl font-bold mb-8 text-gray-900">Preguntas Frecuentes</h2>
+          <section className="py-12 px-4 container max-w-7xl mx-auto">
+            <h2 className="text-2xl lg:text-4xl font-bold mb-8 text-gray-900">Preguntas Frecuentes</h2>
             <div className="space-y-4">
               {faqs.map((faq, idx) => (
                 <details key={idx} className="group bg-white border border-gray-200 rounded-sm">
                   <summary className="flex justify-between items-center font-medium cursor-pointer list-none p-4 bg-gray-50 hover:bg-gray-100 transition-colors">
-                    <span className="text-lg text-gray-900">{faq.question}</span>
+                    <span className="text-lg lg:text-xl text-gray-900">{faq.question}</span>
                     <span className="transition group-open:rotate-180">
                       <ChevronDown size={20} />
                     </span>
@@ -220,13 +301,13 @@ export default function LocationPage({
         
         {/* CONTACT FORM SIMPLE */}
         <section id="contact-form" className="py-12 px-4 bg-white">
-           <div className={`container mx-auto border border-gray-200 p-6 sm:p-8 rounded-sm shadow-sm bg-gray-50 ${mapEmbedUrl ? 'max-w-6xl' : 'max-w-2xl'}`}>
+           <div className={`container mx-auto border border-gray-200 p-6 sm:p-8 rounded-sm shadow-sm bg-gray-50 ${mapEmbedUrl ? 'max-w-7xl' : 'max-w-4xl'}`}>
               <div className={mapEmbedUrl ? 'grid grid-cols-1 md:grid-cols-2 gap-8 items-start' : ''}>
                 {/* Columna Izquierda: Contacto Directo */}
                 <div className="flex flex-col gap-6">
                   <div className="text-center md:text-left mb-2">
-                    <h2 className="text-2xl font-bold text-gray-900 mb-2">Contactar con Sierra Guard</h2>
-                    <p className="text-gray-600">Estamos disponibles para atenderte.</p>
+                    <h2 className="text-2xl lg:text-4xl font-bold text-gray-900 mb-2">Contactar con Sierra Guard</h2>
+                    <p className="text-gray-600 lg:text-lg">Estamos disponibles para atenderte.</p>
                   </div>
 
                   {/* Sección Teléfono */}
@@ -286,18 +367,18 @@ export default function LocationPage({
 
       {/* ===== HERO SECTION ===== */}
       <section className="relative min-h-[500px] flex items-center pt-20 overflow-hidden bg-gradient-to-br from-primary/10 to-primary/5">
-        <div className="container relative z-10">
-          <div className="max-w-3xl">
+        <div className="container max-w-7xl relative z-10">
+          <div className="max-w-4xl">
             <div className="mb-6 flex items-center gap-2">
               <MapPin className="text-primary" size={24} />
-              <span className="text-lg font-semibold text-primary">{barrio}, Segovia</span>
+              <span className="text-lg lg:text-xl font-semibold text-primary">{barrio}, Segovia</span>
             </div>
 
-            <h1 className="text-3xl lg:text-4xl font-bold text-foreground leading-tight mb-6">
+            <h1 className="text-3xl lg:text-6xl font-bold text-foreground leading-tight mb-6">
               {h1}
             </h1>
 
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+            <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed mb-8">
               {introParrafo}
             </p>
 
@@ -309,7 +390,7 @@ export default function LocationPage({
                   ctaUrgencia
                     ? "bg-red-600 hover:bg-red-700"
                     : "bg-primary hover:bg-primary/90"
-                } text-white font-bold text-lg h-14 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all`}
+                } text-white font-bold text-lg lg:text-xl h-14 lg:h-16 px-8 lg:px-10 rounded-lg shadow-lg hover:shadow-xl transition-all`}
                 onClick={() => {
                   const form = document.getElementById("contact-form");
                   form?.scrollIntoView({ behavior: "smooth" });
@@ -335,11 +416,11 @@ export default function LocationPage({
 
       {/* ===== BLOQUE DE CONFIANZA ===== */}
       <section className="py-16 bg-primary/5 border-t-4 border-primary/20">
-        <div className="container max-w-3xl">
-          <h2 className="text-3xl font-bold text-foreground mb-6">
-            ¿Por qué Sierra Guard en {barrio}?
+        <div className="container max-w-7xl">
+          <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
+            ¿Por qué elegir nuestra empresa de control de plagas en {barrio}?
           </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
+          <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed">
             {bloqueConfianza}
           </p>
         </div>
@@ -347,29 +428,29 @@ export default function LocationPage({
 
       {/* ===== SERVICIOS ESPECÍFICOS ===== */}
       <section className="py-20 bg-white">
-        <div className="container max-w-4xl">
-          <h2 className="text-4xl font-bold text-center mb-4 text-foreground">
+        <div className="container max-w-7xl">
+          <h2 className="text-4xl lg:text-5xl font-bold text-center mb-4 text-foreground">
             Servicios de Control de Plagas en {barrio}
           </h2>
-          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+          <p className="text-center text-muted-foreground lg:text-xl mb-12 max-w-2xl mx-auto">
             Soluciones adaptadas a las necesidades específicas de {barrio}
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {serviciosEspecificos.map((servicio, idx) => (
               <div
                 key={idx}
                 className="p-8 border-l-4 border-primary hover:shadow-lg transition-shadow"
               >
-                <h3 className="text-2xl font-bold text-foreground mb-4">
+                <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
                   {servicio.titulo}
                 </h3>
-                <p className="text-muted-foreground mb-4 leading-relaxed">
+                <p className="text-muted-foreground lg:text-lg mb-4 leading-relaxed">
                   {servicio.descripcion}
                 </p>
                 <ul className="space-y-2">
                   {servicio.items.map((item, itemIdx) => (
-                    <li key={itemIdx} className="flex items-start gap-2 text-sm text-muted-foreground">
+                    <li key={itemIdx} className="flex items-start gap-2 text-sm lg:text-base text-muted-foreground">
                       <CheckCircle2 size={16} className="text-primary mt-0.5 flex-shrink-0" />
                       <span>{item}</span>
                     </li>
@@ -383,7 +464,7 @@ export default function LocationPage({
             <Link href="/#servicios">
               <Button 
                 variant="outline" 
-                className="group relative border-2 border-[#1d4620] text-[#1d4620] hover:bg-[#1d4620] hover:text-white font-bold text-lg px-10 py-6 h-auto rounded-xl transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 flex items-center gap-3 mx-auto"
+                className="group relative border-2 border-[#1d4620] text-[#1d4620] hover:bg-[#1d4620] hover:text-white font-bold text-lg lg:text-xl px-10 lg:px-12 py-6 lg:py-8 h-auto rounded-xl transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 flex items-center gap-3 mx-auto"
               >
                 Ver todos los servicios
                 <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
@@ -395,15 +476,15 @@ export default function LocationPage({
 
       {/* ===== TESTIMONIOS LOCALES ===== */}
       <section className="py-20 bg-white">
-        <div className="container max-w-4xl">
-          <h2 className="text-4xl font-bold text-center mb-4 text-foreground">
+        <div className="container max-w-7xl">
+          <h2 className="text-4xl lg:text-5xl font-bold text-center mb-4 text-foreground">
             Lo que dicen nuestros clientes en {barrio}
           </h2>
-          <p className="text-center text-muted-foreground mb-12">
+          <p className="text-center text-muted-foreground lg:text-xl mb-12">
             Testimonios reales de clientes satisfechos en tu barrio.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 nombre: "María García",
@@ -436,7 +517,7 @@ export default function LocationPage({
                     <span key={i} className="text-yellow-400">★</span>
                   ))}
                 </div>
-                <p className="text-muted-foreground mb-4 italic">"{item.testimonio}"</p>
+                <p className="text-muted-foreground lg:text-lg mb-4 italic">"{item.testimonio}"</p>
                 <div className="flex items-center justify-between">
                   <span className="font-semibold text-foreground">{item.nombre}</span>
                   <span className="text-sm text-muted-foreground">{item.ubicacion}</span>
@@ -449,15 +530,15 @@ export default function LocationPage({
 
       {/* ===== TRUST BADGES COMPLETO ===== */}
       <section className="py-16 bg-gray-50">
-        <div className="container max-w-3xl">
-          <h3 className="text-2xl font-bold text-foreground mb-8">
+        <div className="container max-w-7xl">
+          <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-8">
             Garantías y Certificaciones
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {trustBadges.map((badge, idx) => (
               <div key={idx} className="flex items-start gap-3 p-4 bg-white rounded-lg border border-gray-200">
                 <Award className="text-primary mt-1 flex-shrink-0" size={20} />
-                <span className="font-semibold text-foreground">{badge}</span>
+                <span className="font-semibold text-foreground lg:text-lg">{badge}</span>
               </div>
             ))}
           </div>
@@ -466,11 +547,11 @@ export default function LocationPage({
 
       {/* ===== CONTACTO DIRECTO ===== */}
       <section id="contact-form" className="py-20 bg-white">
-        <div className="container max-w-2xl">
-          <h2 className="text-4xl font-bold text-center mb-4 text-foreground">
+        <div className="container max-w-4xl">
+          <h2 className="text-4xl lg:text-5xl font-bold text-center mb-4 text-foreground">
             Contactar con Sierra Guard
           </h2>
-          <p className="text-center text-muted-foreground mb-12">
+          <p className="text-center text-muted-foreground lg:text-xl mb-12">
             Estamos disponibles para atenderte.
           </p>
 
@@ -483,7 +564,7 @@ export default function LocationPage({
                 </div>
                 <div className="text-left">
                     <span className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Llámanos Ahora</span>
-                    <span className="block text-xl sm:text-2xl font-bold text-[#1d4620]">+34 921 234 567</span>
+                    <span className="block text-xl sm:text-2xl lg:text-3xl font-bold text-[#1d4620]">+34 921 234 567</span>
                 </div>
               </div>
             </a>
@@ -496,7 +577,7 @@ export default function LocationPage({
                   </div>
                   <div className="text-left overflow-hidden">
                     <span className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Escríbenos un Email</span>
-                    <span className="block text-base sm:text-lg font-bold text-gray-800 truncate">contacto@controldeplagassegovia.com</span>
+                    <span className="block text-base sm:text-lg lg:text-xl font-bold text-gray-800 truncate">contacto@controldeplagassegovia.com</span>
                   </div>
               </div>
             </a>

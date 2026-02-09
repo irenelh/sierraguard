@@ -51,45 +51,44 @@ export default function Home() {
 
       {/* ===== HERO SECTION ===== */}
       <section
-        className="relative min-h-[calc(100vh-140px)] flex items-center overflow-hidden"
+        className="relative min-h-[500px] lg:min-h-[600px] flex items-center overflow-hidden py-12 lg:py-0"
         style={{
-          backgroundImage: "url('/images/control-plagas-segovia-imagen.png')",
+          backgroundImage: "url('/images/control-de-plagas-en-segovia-imagen.jpeg')",
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: "center 20%",
         }}
       >
         {/* Overlay oscuro para legibilidad */}
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]"></div>
 
         <div className="container relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
             {/* Texto Hero */}
-            <div className="space-y-6 lg:col-span-2">
-              <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight">
+            <div className="space-y-5 lg:col-span-2">
+              <h1 className="text-3xl lg:text-7xl font-bold text-white leading-tight">
                 Control de plagas en Segovia | Servicio profesional y urgente
               </h1>
-              <p className="text-xl text-gray-100 leading-relaxed">
+              <p className="text-lg lg:text-xl text-gray-100 leading-relaxed max-w-2xl">
                 Eliminamos cucarachas, ratas, chinches y avispas en viviendas y negocios. Atención rápida en Segovia y alrededores.
               </p>
 
               {/* CTA Magnético */}
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <div className="flex flex-col sm:flex-row gap-4 pt-2">
                 <Button
                   size="lg"
-                  className="bg-primary hover:bg-primary/90 text-white font-bold text-lg h-14 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all"
+                  className="bg-destructive hover:bg-destructive/90 text-white font-bold text-base lg:text-lg h-12 px-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
                   onClick={() => {
                     const form = document.getElementById("contact-form");
                     form?.scrollIntoView({ behavior: "smooth" });
                   }}
                 >
-                  <Phone className="mr-2" size={20} />
+                  <Phone className="mr-2" size={18} />
                   Llamar ahora
                 </Button>
                 <Link href="/calculadora">
                   <Button
                     size="lg"
-                    variant="outline"
-                    className="border-white text-white hover:bg-white/10 font-bold text-lg h-14 px-8 rounded-lg w-full"
+                    className="bg-primary hover:bg-primary/90 text-white font-bold text-base lg:text-lg h-12 px-6 rounded-lg w-full shadow-lg"
                   >
                     Calcular Presupuesto Online
                   </Button>
@@ -97,14 +96,14 @@ export default function Home() {
               </div>
 
               {/* Trust Badges */}
-              <div className="flex flex-wrap gap-4 pt-4">
+              <div className="flex flex-wrap gap-4 pt-2">
                 <div className="flex items-center gap-2 text-white">
-                  <Award size={20} className="text-primary" />
-                  <span className="font-semibold">Certificado CEPA</span>
+                  <Award size={18} className="text-primary" />
+                  <span className="font-semibold text-sm lg:text-base">Certificado CEPA</span>
                 </div>
                 <div className="flex items-center gap-2 text-white">
-                  <Shield size={20} className="text-primary" />
-                  <span className="font-semibold">Garantía 100%</span>
+                  <Shield size={18} className="text-primary" />
+                  <span className="font-semibold text-sm lg:text-base">Garantía 100%</span>
                 </div>
               </div>
             </div>
@@ -117,27 +116,37 @@ export default function Home() {
 
 
 
-      {/* ===== SERVICIOS PRINCIPALES ===== */}
-      <section id="servicios" className="py-24 bg-gray-50 scroll-mt-32">
-        <div className="container">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+      {/* ===== SERVICIOS PRINCIPALES - REDISEÑADO ===== */}
+      <section id="servicios" className="py-24 bg-gradient-to-b from-gray-50 to-white scroll-mt-32 relative overflow-hidden">
+        {/* Decorative pattern */}
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-30 pointer-events-none">
+            <div className="absolute -top-24 -right-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+            <div className="absolute top-1/2 -left-24 w-64 h-64 bg-green-100/40 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="container relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-100 text-green-800 text-xs font-bold uppercase tracking-wider mb-4">
+              <Sparkles size={12} />
+              <span>Soluciones Integrales</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">
               Servicios de control de plagas en Segovia
             </h2>
-            <p className="text-lg text-gray-600">
-              Soluciones profesionales y rápidas para cada problema de plagas en Segovia.
+            <p className="text-xl text-gray-600 leading-relaxed">
+              Soluciones profesionales, rápidas y garantizadas para proteger tu hogar o negocio.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
             {serviceCategoriesData.map((service) => {
               // Icon mapping
               const icons: any = {
-                "desinsectacion": <Bug className="w-6 h-6 text-primary" />,
-                "desratizacion": <ShieldAlert className="w-6 h-6 text-primary" />,
-                "desinfeccion": <Sparkles className="w-6 h-6 text-primary" />,
-                "control-de-aves": <Feather className="w-6 h-6 text-primary" />,
-                "tratamientos-de-madera": <Hammer className="w-6 h-6 text-primary" />,
+                "desinsectacion": <Bug className="w-7 h-7 text-primary" />,
+                "desratizacion": <ShieldAlert className="w-7 h-7 text-primary" />,
+                "desinfeccion": <Sparkles className="w-7 h-7 text-primary" />,
+                "control-de-aves": <Feather className="w-7 h-7 text-primary" />,
+                "tratamientos-de-madera": <Hammer className="w-7 h-7 text-primary" />,
               };
 
               // Short descriptions mapping
@@ -155,40 +164,48 @@ export default function Home() {
                 <a
             key={service.id}
             href={`/${service.slug}`}
-            className="group bg-white p-0 rounded-2xl shadow-sm hover:shadow-md transition-all border border-gray-100 hover:border-primary/20 flex flex-col items-start h-full overflow-hidden"
+            className="group bg-white rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100 hover:border-primary/20 flex flex-col h-full overflow-hidden hover:-translate-y-2"
           >
             {service.image && (
-              <div className="w-full h-32 relative">
-                <img 
-                  src={service.image} 
-                  alt={service.nombre}
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute -bottom-6 left-6 bg-white p-3 rounded-xl shadow-md border border-gray-100 z-10">
-                  {icons[service.id] || <Shield className="w-6 h-6 text-primary" />}
+              <div className="relative">
+                <div className="w-full h-48 relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 opacity-60 group-hover:opacity-40 transition-opacity duration-500"></div>
+                  <img 
+                    src={service.image} 
+                    alt={service.nombre}
+                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                    loading="lazy"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+                <div className="absolute -bottom-6 left-8 bg-white p-4 rounded-2xl shadow-lg border border-gray-50 z-20 group-hover:scale-110 transition-transform duration-300">
+                  {icons[service.id] || <Shield className="w-7 h-7 text-primary" />}
                 </div>
               </div>
             )}
 
-            <div className={`flex flex-col items-start h-full w-full ${service.image ? 'pt-10 px-8 pb-8' : 'p-8'}`}>
+            <div className={`flex flex-col flex-grow w-full ${service.image ? 'pt-12 px-8 pb-8' : 'p-8'}`}>
               {!service.image && (
-                <div className="bg-primary/5 p-3 rounded-xl mb-6 group-hover:bg-primary/10 transition-colors">
-                  {icons[service.id] || <Shield className="w-6 h-6 text-primary" />}
+                <div className="bg-primary/5 p-4 rounded-2xl mb-6 w-fit group-hover:bg-primary/10 transition-colors">
+                  {icons[service.id] || <Shield className="w-7 h-7 text-primary" />}
                 </div>
               )}
               
-              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors">
                 {service.nombre}
               </h3>
               
-              <p className="text-gray-600 mb-8 leading-relaxed flex-grow">
+              <p className="text-gray-600 mb-8 leading-relaxed flex-grow text-[17px]">
                 {shortDescs[service.id] || service.metaDescription.split('.')[0] + '.'}
               </p>
               
-              <div className="flex items-center text-primary font-bold text-sm group-hover:translate-x-1 transition-transform mt-auto">
-                Ver servicio <ArrowRight className="ml-2 w-4 h-4" />
+              <div className="mt-auto pt-6 border-t border-gray-50 w-full">
+                <span className="flex items-center justify-between w-full px-5 py-4 bg-gray-50 text-gray-700 font-bold rounded-xl group-hover:bg-primary group-hover:text-white transition-all duration-300 group-hover:shadow-lg group-hover:shadow-primary/25">
+                  <span>Ver detalles</span>
+                  <div className="bg-white/20 p-1 rounded-full">
+                    <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                  </div>
+                </span>
               </div>
             </div>
           </a>
@@ -210,7 +227,7 @@ export default function Home() {
             </p>
           </div>
           <Link href="/calculadora">
-            <Button size="lg" variant="secondary" className="font-bold text-primary hover:text-primary/90 min-w-[200px] h-14 text-lg shadow-lg">
+            <Button size="lg" variant="secondary" className="font-bold text-white hover:text-white/90 min-w-[200px] h-14 text-lg shadow-lg">
               <Calculator className="mr-2 h-6 w-6" />
               Calcular Presupuesto
             </Button>

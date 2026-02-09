@@ -154,20 +154,20 @@ export default function ServiceCategoryPage({ service }: ServiceCategoryPageProp
       <Header />
       {/* ===== HERO SECTION ===== */}
       <section className="py-16 bg-gradient-to-br from-primary/10 to-primary/5 border-b border-border">
-        <div className="container max-w-6xl">
+        <div className="container max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Column: Text */}
             <div className="text-left">
-              <h1 className="text-3xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
+              <h1 className="text-3xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
                 {service.h1}
               </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+              <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed mb-8">
                 {service.intro}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
                   size="lg"
-                  className="bg-primary hover:bg-primary/90 text-white font-bold text-lg h-14 px-8 rounded-lg"
+                  className="bg-primary hover:bg-primary/90 text-white font-bold text-lg lg:text-xl h-14 lg:h-16 px-8 lg:px-10 rounded-lg"
                   onClick={() => {
                     const form = document.getElementById("contact-form");
                     form?.scrollIntoView({ behavior: "smooth" });
@@ -199,10 +199,10 @@ export default function ServiceCategoryPage({ service }: ServiceCategoryPageProp
 
       {/* ===== SERVICIOS ESPECÍFICOS ===== */}
       <section className="py-20 bg-gray-50/50">
-        <div className="container max-w-6xl">
+        <div className="container max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Soluciones Específicas para Cada Plaga</h2>
-            <p className="text-lg text-muted-foreground">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">Soluciones Específicas para Cada Plaga</h2>
+            <p className="text-lg lg:text-xl text-muted-foreground">
               Identificamos y tratamos cada tipo de infestación con protocolos específicos y productos certificados.
             </p>
           </div>
@@ -215,17 +215,17 @@ export default function ServiceCategoryPage({ service }: ServiceCategoryPageProp
                   <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                      {getServiceIcon(servicio.titulo)}
                   </div>
-                  <CardTitle className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                  <CardTitle className="text-xl lg:text-2xl font-bold mb-2 group-hover:text-primary transition-colors">
                     {servicio.titulo}
                   </CardTitle>
-                  <CardDescription className="text-base line-clamp-2">
+                  <CardDescription className="text-base lg:text-lg line-clamp-2">
                     {servicio.descripcion}
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="flex-1">
                   <ul className="space-y-3">
                     {servicio.items.slice(0, 3).map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-start gap-3 text-sm text-muted-foreground">
+                      <li key={itemIndex} className="flex items-start gap-3 text-sm lg:text-base text-muted-foreground">
                         <CheckCircle2 size={16} className="text-primary mt-0.5 flex-shrink-0" />
                         <span>{item}</span>
                       </li>
@@ -246,15 +246,15 @@ export default function ServiceCategoryPage({ service }: ServiceCategoryPageProp
 
       {/* ===== CALCULADORA CTA ===== */}
       <section className="py-12 bg-primary text-white">
-        <div className="container max-w-6xl flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="container max-w-7xl flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex-1 text-center md:text-left">
-            <h2 className="text-2xl font-bold mb-2">¿Quieres saber cuánto cuesta tu tratamiento de {service.nombre.toLowerCase()}?</h2>
-            <p className="text-white/90 text-lg">
+            <h2 className="text-2xl lg:text-3xl font-bold mb-2">¿Quieres saber cuánto cuesta tu tratamiento de {service.nombre.toLowerCase()}?</h2>
+            <p className="text-white/90 text-lg lg:text-xl">
               Obtén un presupuesto estimado en menos de 1 minuto con nuestra calculadora online.
             </p>
           </div>
           <Link href="/calculadora">
-            <Button size="lg" variant="secondary" className="font-bold text-primary hover:text-primary/90 min-w-[200px] h-14 text-lg shadow-lg">
+            <Button size="lg" variant="secondary" className="font-bold text-white hover:text-white/90 min-w-[200px] h-14 lg:h-16 text-lg lg:text-xl shadow-lg">
               <Calculator className="mr-2 h-6 w-6" />
               Calcular Presupuesto
             </Button>
@@ -287,12 +287,12 @@ export default function ServiceCategoryPage({ service }: ServiceCategoryPageProp
 
     {/* ===== BENEFICIOS / POR QUÉ ELEGIRNOS ===== */}
       <section className="py-16 bg-primary/5">
-        <div className="container max-w-6xl">
+        <div className="container max-w-7xl">
           <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
               ¿Por qué elegir nuestro servicio de {service.nombre} en Segovia?
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto">
               Nos diferenciamos por ofrecer un servicio integral que prioriza tu seguridad y resultados duraderos.
             </p>
           </div>
@@ -310,7 +310,7 @@ export default function ServiceCategoryPage({ service }: ServiceCategoryPageProp
                 <div className="w-12 h-12 bg-primary/10 rounded-full shadow-sm flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
                   <item.icon className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-base font-semibold text-foreground group-hover:text-primary transition-colors">
+                <h3 className="text-base lg:text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
                   {item.text}
                 </h3>
               </div>
@@ -321,10 +321,10 @@ export default function ServiceCategoryPage({ service }: ServiceCategoryPageProp
 
       {/* ===== CÓMO LO HACEMOS ===== */}
       <section className="py-24 bg-gray-50/50 border-y border-border overflow-hidden">
-        <div className="container max-w-6xl">
+        <div className="container max-w-7xl">
           <div className="text-center mb-20">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Nuestro Proceso de Trabajo</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">Nuestro Proceso de Trabajo</h2>
+            <p className="text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto">
               Un sistema probado y eficaz para eliminar tu problema de raíz y prevenir futuras reapariciones.
             </p>
           </div>
@@ -337,12 +337,12 @@ export default function ServiceCategoryPage({ service }: ServiceCategoryPageProp
               {service.proceso.map((paso, index) => (
                 <div key={paso.paso} className="relative z-10 flex flex-col items-center text-center group">
                   <div className="w-24 h-24 bg-white border-4 border-gray-100 rounded-full flex items-center justify-center mb-6 shadow-sm group-hover:border-primary/30 group-hover:shadow-lg transition-all duration-300">
-                    <span className="text-3xl font-bold text-primary">{paso.paso}</span>
+                    <span className="text-3xl lg:text-4xl font-bold text-primary">{paso.paso}</span>
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+                  <h3 className="text-xl lg:text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
                     {paso.titulo}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed text-sm">
+                  <p className="text-muted-foreground leading-relaxed text-sm lg:text-base">
                     {paso.descripcion}
                   </p>
                 </div>
@@ -355,7 +355,7 @@ export default function ServiceCategoryPage({ service }: ServiceCategoryPageProp
       {/* ===== TESTIMONIOS ===== */}
       {service.testimonios.length > 0 && (
         <section className="py-24 bg-white">
-          <div className="container max-w-6xl">
+          <div className="container max-w-7xl">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Lo Que Dicen Nuestros Clientes</h2>
               <p className="text-lg text-muted-foreground">La satisfacción de nuestros clientes es nuestra mejor garantía.</p>

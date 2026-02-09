@@ -10,7 +10,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
             <h4 className="font-bold text-xl mb-6 text-primary-foreground flex items-center gap-2">
-              <span className="bg-primary/20 p-2 rounded-lg text-primary">SG</span>
+              <img 
+                src="/images/logo control de plagas.jpg" 
+                alt="Sierra Guard Logo" 
+                className="h-10 w-auto object-contain rounded-lg"
+              />
               Sierra Guard
             </h4>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
@@ -27,11 +31,11 @@ export default function Footer() {
                 </div>
                 <span className="font-medium">+34 921 234 567</span>
               </a>
-              <a href="mailto:info@sierraguard.es" className="flex items-center gap-3 text-white hover:text-primary transition-colors group">
+              <a href="mailto:contacto@controldeplagassegovia.com" className="flex items-center gap-3 text-white hover:text-primary transition-colors group">
                 <div className="bg-white/10 p-2 rounded-full group-hover:bg-primary/20 transition-colors">
                   <Mail size={16} className="text-primary" />
                 </div>
-                <span className="font-medium">info@sierraguard.es</span>
+                <span className="font-medium">contacto@controldeplagassegovia.com</span>
               </a>
             </div>
           </div>
@@ -258,7 +262,7 @@ export default function Footer() {
                 description:
                   "Control profesional de plagas en Segovia. Certificados CEPA. Desinsectación, desratización y desinfección.",
                 telephone: "+34921234567",
-                email: "info@sierraguard.es",
+                email: "contacto@controldeplagassegovia.com",
                 address: {
                   "@type": "PostalAddress",
                   addressLocality: "Segovia",

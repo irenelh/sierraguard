@@ -10,7 +10,8 @@ export default function Header() {
     { href: "/", label: "Inicio" },
     { href: "/#servicios", label: "Servicios" },
     { href: "/#zonas-servicio", label: "Zonas donde trabajamos" },
-    { href: "/blog", label: "Blog" }
+    { href: "/blog", label: "Blog" },
+    { href: "/contacto", label: "Contacto" }
   ];
 
   const isActive = (path: string) => location === path;
@@ -49,11 +50,11 @@ export default function Header() {
           {/* Izquierda: Email y Horario */}
           <div className="flex items-center gap-4 sm:gap-6 w-full sm:w-auto justify-center sm:justify-start">
             <a 
-              href="mailto:info@sierraguard.es" 
-              className="flex items-center gap-2 hover:text-white/90 transition-colors"
+              href="mailto:contacto@controldeplagassegovia.com" 
+              className="hidden sm:flex items-center gap-2 hover:text-white/90 transition-colors"
             >
               <Mail size={14} />
-              <span className="hidden xs:inline">info@sierraguard.es</span>
+              <span className="hidden xs:inline">contacto@controldeplagassegovia.com</span>
             </a>
             <div className="flex items-center gap-2 text-primary-foreground/90">
               <Clock size={14} />
@@ -64,7 +65,7 @@ export default function Header() {
           {/* Derecha: Teléfono destacado */}
           <a 
             href="tel:+34921234567" 
-            className="flex items-center gap-2 bg-white text-primary hover:bg-white/90 px-3 py-1 rounded-full transition-colors font-bold shadow-sm"
+            className="flex items-center gap-2 bg-white text-destructive hover:bg-white/90 px-3 py-1 rounded-full transition-colors font-bold shadow-sm"
           >
             <Phone size={14} />
             <span className="tracking-wide">+34 921 234 567</span>
@@ -78,12 +79,13 @@ export default function Header() {
           {/* Logo */}
           <Link href="/">
             <div className="flex items-center gap-2 group cursor-pointer">
-              <div className="bg-primary p-1.5 rounded-lg group-hover:bg-primary/90 transition-colors">
-                 {/* Icono simplificado o logo SVG aquí si existiera */}
-                 <span className="font-bold text-white text-xl leading-none tracking-tighter">SG</span>
-              </div>
+              <img 
+                 src="/images/logo control de plagas.jpg" 
+                 alt="Sierra Guard Logo" 
+                 className="h-12 w-auto object-contain rounded-lg"
+              />
               <div className="flex flex-col">
-                <span className="text-xl font-bold text-gray-900 leading-none tracking-tight group-hover:text-primary transition-colors">
+                <span className="text-xl font-bold text-primary leading-none tracking-tight transition-colors">
                   Sierra Guard
                 </span>
                 <span className="text-[10px] text-gray-500 font-medium tracking-widest uppercase">
@@ -97,7 +99,7 @@ export default function Header() {
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map(link => (
               <Link key={link.href} href={link.href} onClick={(e) => handleNavClick(e, link.href)}>
-                <span className={`text-sm font-semibold transition-colors hover:text-primary cursor-pointer ${
+                <span className={`text-lg font-semibold transition-colors hover:text-primary cursor-pointer ${
                   isActive(link.href) ? "text-primary" : "text-gray-600"
                 }`}>
                   {link.label}

@@ -269,7 +269,7 @@ export default function BarriosPage() {
               <h4 className="font-bold mb-4">Contacto</h4>
               <ul className="space-y-2 text-sm text-gray-300">
                 <li><a href="tel:+34921234567" className="hover:text-white transition">+34 921 234 567</a></li>
-                <li><a href="mailto:info@sierraguard.es" className="hover:text-white transition">info@sierraguard.es</a></li>
+                <li><a href="mailto:contacto@controldeplagassegovia.com" className="hover:text-white transition">contacto@controldeplagassegovia.com</a></li>
               </ul>
             </div>
           </div>

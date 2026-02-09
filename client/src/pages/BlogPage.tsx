@@ -17,21 +17,10 @@ export default function BlogPage() {
     <div className="min-h-screen bg-white">
       <Header />
       
-      {/* ===== BREADCRUMBS ===== */}
-      <div className="bg-gray-50 border-b border-border pt-8">
-        <div className="container py-4">
-          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <a href="/" className="hover:text-primary">Inicio</a>
-            <span>/</span>
-            <span className="text-foreground font-medium">Blog</span>
-          </div>
-        </div>
-      </div>
-
       {/* ===== HERO SECTION ===== */}
-      <section className="py-16 bg-gradient-to-br from-primary/10 to-primary/5 border-b border-border">
+      <section className="py-8 bg-gradient-to-br from-primary/10 to-primary/5 border-b border-border">
         <div className="container max-w-4xl">
-          <h1 className="text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+          <h1 className="text-5xl lg:text-6xl font-bold text-foreground mb-4 leading-tight">
             Blog de Control de Plagas
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
@@ -41,32 +30,36 @@ export default function BlogPage() {
       </section>
 
       {/* ===== CATEGORÍAS ===== */}
-      <section className="py-12 border-b border-border">
-        <div className="container max-w-4xl">
-          <div className="flex flex-wrap gap-3">
-            <button
-              onClick={() => setSelectedCategory(null)}
-              className={`px-4 py-2 rounded-full font-medium transition ${
-                selectedCategory === null
-                  ? "bg-primary text-white"
-                  : "bg-gray-100 text-foreground hover:bg-gray-200"
-              }`}
-            >
-              Todos
-            </button>
-            {categories.map(category => (
+      <section className="py-6 border-b border-border bg-gray-50/50">
+        <div className="container max-w-5xl">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+            <span className="text-xs font-semibold text-muted-foreground uppercase tracking-widest">Temas</span>
+            <div className="h-4 w-px bg-gray-300 hidden md:block"></div>
+            <div className="flex flex-wrap justify-center gap-2">
               <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-4 py-2 rounded-full font-medium transition ${
-                  selectedCategory === category
-                    ? "bg-primary text-white"
-                    : "bg-gray-100 text-foreground hover:bg-gray-200"
+                onClick={() => setSelectedCategory(null)}
+                className={`px-4 py-1.5 text-sm rounded-full font-medium transition-all duration-200 border ${
+                  selectedCategory === null
+                    ? "bg-primary text-white border-primary shadow-md transform scale-105"
+                    : "bg-white text-gray-600 border-gray-200 hover:border-primary/50 hover:text-primary hover:bg-white"
                 }`}
               >
-                {category}
+                Todos
               </button>
-            ))}
+              {categories.map(category => (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  className={`px-4 py-1.5 text-sm rounded-full font-medium transition-all duration-200 border ${
+                    selectedCategory === category
+                      ? "bg-primary text-white border-primary shadow-md transform scale-105"
+                      : "bg-white text-gray-600 border-gray-200 hover:border-primary/50 hover:text-primary hover:bg-white"
+                  }`}
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </section>

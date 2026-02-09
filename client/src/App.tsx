@@ -1,7 +1,7 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
+import { Route, Switch, Router } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import WhatsAppWidget from "./components/WhatsAppWidget";
@@ -10,23 +10,29 @@ import CatchAllRoute from "./pages/CatchAllRoute";
 import BarriosPage from "./pages/BarriosPage";
 import BlogPage from "./pages/BlogPage";
 import BlogArticlePage from "./pages/BlogArticlePage";
+import ContactPage from "./pages/ContactPage";
 import Calculadora from "./pages/Calculadora";
+import ScrollToTop from "./components/ScrollToTop";
 
 
-function Router() {
+function AppRoutes() {
   return (
-    <Switch>
-      <Route path={"/"} component={Home} />
-      {/* <Route path="/barrios" component={BarriosPage} /> */}
-      <Route path="/calculadora" component={Calculadora} />
-      <Route path="/blog/:slug" component={BlogArticlePage} />
-      <Route path="/blog" component={BlogPage} />
-      {/* Ruta catch-all para Categorías de Servicio y Location Pages */}
-      <Route path="/:slug" component={CatchAllRoute} />
-      <Route path="{/404}" component={NotFound} />
-      {/* Final fallback route */}
-      <Route component={NotFound} />
-    </Switch>
+    <>
+      <ScrollToTop />
+      <Switch>
+        <Route path={"/"} component={Home} />
+        {/* <Route path="/barrios" component={BarriosPage} /> */}
+        <Route path="/calculadora" component={Calculadora} />
+        <Route path="/contacto" component={ContactPage} />
+        <Route path="/blog/:slug" component={BlogArticlePage} />
+        <Route path="/blog" component={BlogPage} />
+        {/* Ruta catch-all para Categorías de Servicio y Location Pages */}
+        <Route path="/:slug" component={CatchAllRoute} />
+        <Route path="{/404}" component={NotFound} />
+        {/* Final fallback route */}
+        <Route component={NotFound} />
+      </Switch>
+    </>
   );
 }
 
@@ -44,7 +50,9 @@ function App() {
       >
         <TooltipProvider>
           <Toaster />
-          <Router />
+          <Router>
+            <AppRoutes />
+          </Router>
           <WhatsAppWidget />
         </TooltipProvider>
       </ThemeProvider>

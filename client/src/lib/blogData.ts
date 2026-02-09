@@ -1,3 +1,5 @@
+import { Button } from "@/components/ui/button";
+
 export interface BlogArticle {
   id: string;
   slug: string;

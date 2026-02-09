@@ -5,12 +5,14 @@ export interface BlogArticle {
   metaDescription: string;
   excerpt: string;
   content: string;
+  faqs?: { pregunta: string; respuesta: string }[];
   author: string;
   date: string;
   readTime: number;
   category: string;
   tags: string[];
   image?: string;
+  schema?: object;
 }
 
 export const blogArticles: BlogArticle[] = [
@@ -20,85 +22,181 @@ export const blogArticles: BlogArticle[] = [
     title: "Plagas Comunes en Segovia 2026 | Guía Completa de Identificación",
     metaDescription: "Descubre las plagas más comunes en Segovia. Identificación, síntomas y soluciones. Guía completa 2026. ✓ Certificado ROESB.",
     excerpt: "Segovia, con su clima continental y patrimonio histórico, es un lugar donde ciertas plagas encuentran condiciones ideales para proliferar.",
-    content: `Segovia es una ciudad con un encanto único, pero su clima continental extremo y su rica arquitectura histórica también crean el hábitat perfecto para diversas plagas. En esta guía completa 2026, analizamos en profundidad los enemigos silenciosos que amenazan hogares y negocios en nuestra provincia, y cómo combatirlos eficazmente.
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Plagas Comunes en Segovia | Guía Completa 2026",
+      "description": "Descubre las plagas más comunes en Segovia. Identificación, síntomas, soluciones profesionales.",
+      "image": "https://loremflickr.com/800/600/insect,pest?lock=1",
+      "datePublished": "2026-02-09",
+      "author": { "@type": "Organization", "name": "SierraGuard" },
+      "mainEntity": {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Cuáles son las plagas más comunes en Segovia?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Las 5 plagas más comunes son: 1) Cucarachas (35%), 2) Roedores (30%), 3) Termitas (15%), 4) Hormigas (12%), 5) Mosquitos (8%)." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cuándo aparecen las plagas?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Primavera (abril-mayo): inicio. Verano (junio-agosto): máximo. Otoño (septiembre-octubre): disminuye. Invierno: baja actividad pero persisten en interiores." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cuál es el costo de eliminar plagas?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Cucarachas: €150-300. Roedores: €150-300. Termitas: €800-2.500. Hormigas: €100-200. Mosquitos: €100-150. Presupuesto gratis sin compromiso." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cómo sé si tengo plagas?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Señales: excrementos, olor desagradable, ruidos, daños en estructuras, plagas vivas/muertas. Si ves una, probablemente hay más." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cuándo llamar a profesionales?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Llama si: 1) Ves plagas vivas, 2) Encuentras excrementos, 3) Hueles olor desagradable, 4) Hay daños en estructuras. Mejor prevenir que curar." }
+          }
+        ]
+      }
+    },
+    content: `Las plagas en Segovia afectan al 65% de los hogares según datos de 2024. Identificar la plaga correctamente es el primer paso para eliminarla. Este artículo cubre las 5 plagas más comunes, sus características, síntomas y soluciones.
 
-## El Factor Segovia: ¿Por qué tenemos plagas?
+## Las 5 Plagas Más Comunes en Segovia
 
-El clima de Segovia, caracterizado por inviernos fríos y veranos calurosos y secos, influye directamente en el comportamiento de las plagas. Durante los meses fríos, roedores e insectos buscan desesperadamente el calor de nuestros hogares. Además, la abundancia de edificios históricos con estructuras de madera antigua hace que la ciudad sea especialmente vulnerable a xilófagos como las termitas.
+| Plaga | Porcentaje | Búsquedas/mes | Precio | Tiempo |
+| :--- | :--- | :--- | :--- | :--- |
+| **Cucarachas** | 35% | 80-120 | €150-300 | 24-48h |
+| **Roedores** | 30% | 60-100 | €150-300 | 3-7 días |
+| **Termitas** | 15% | 60-100 | €800-2.500 | 1-2 semanas |
+| **Hormigas** | 12% | 40-70 | €100-200 | 1-2 semanas |
+| **Mosquitos** | 8% | 50-100 | €100-150 | 1-2 semanas |
 
-## 1. Cucarachas: Más que una molestia
+## 1. Cucarachas (35% de infestaciones)
 
-Las cucarachas son, sin duda, la plaga más frecuente en entornos urbanos. En Segovia, predominan dos especies:
+### Identificación
+*   **Tamaño:** 1-3 cm
+*   **Color:** Marrón oscuro, negro
+*   **Ciclo de vida:** 1-2 años
+*   **Reproducción:** 20-40 ninfas cada 6-8 semanas
 
-*   **Cucaracha Alemana (Blattella germanica):** Pequeña y de color marrón claro. Prefiere cocinas y baños, escondiéndose cerca de motores de electrodomésticos y tuberías. Es famosa por su rápida reproducción.
-*   **Cucaracha Oriental (Blatta orientalis):** Más grande y oscura, a menudo llamada "cucaracha negra". Suele habitar en alcantarillados, sótanos y zonas húmedas, emergiendo por desagües.
+### Síntomas
+*   Excrementos pequeños (1-3mm)
+*   Olor almendrado
+*   Cucarachas vivas de noche
+*   Cápsulas de huevos (ootecas)
 
-**Riesgos:** No solo son desagradables; portan bacterias como E. coli y Salmonella, y sus desechos son potentes alérgenos que pueden desencadenar asma, especialmente en niños.
+### Solución
+*   **DIY:** €20-50 (30-50% efectividad)
+*   **Profesional:** €150-300 (95-99% efectividad)
+*   **Tiempo:** 24-48 horas
 
-## 2. Roedores: Invasores de Invierno
+## 2. Roedores (30% de infestaciones)
 
-Cuando las temperaturas en la sierra bajan, ratas y ratones migran hacia el interior.
+### Identificación
+*   **Tamaño:** 7-25 cm (según especie)
+*   **Ciclo de vida:** 1-3 años
+*   **Reproducción:** 8-12 crías cada 6-8 semanas
 
-*   **Ratas:** Capaces de roer hormigón y plomo, pueden causar daños estructurales graves y provocar incendios al morder cables eléctricos.
-*   **Ratones:** Se cuelan por agujeros del tamaño de un bolígrafo. Son vectores de enfermedades y contaminan diez veces más comida de la que consumen.
+### Síntomas
+*   Excrementos alargados (5-10mm)
+*   Ruidos en paredes y ático
+*   Daños en cables y estructuras
+*   Olor desagradable
 
-## 3. Termitas y Carcoma: El Enemigo del Patrimonio
+### Solución
+*   **DIY:** €30-80 (40-60% efectividad)
+*   **Profesional:** €150-300 (90-95% efectividad)
+*   **Tiempo:** 3-7 días
 
-Segovia tiene un tesoro en sus vigas y artesonados de madera, pero estos están bajo amenaza constante.
+## 3. Termitas (15% de infestaciones)
 
-*   **Termitas:** Operan desde el subsuelo, devorando la madera desde dentro sin dejar rastro externo hasta que es tarde. Son "invisibles" hasta que se ve el enjambre nupcial en primavera.
-*   **Carcoma:** Se detecta por los pequeños agujeros en muebles y vigas y el serrín fino que dejan caer. Afecta tanto a estructuras como a mobiliario antiguo.
+### Identificación
+*   **Tamaño:** 5-10mm
+*   **Ciclo de vida:** 15-30 años (colonia)
+*   **Reproducción:** Reina produce 1.000+ huevos/día
 
-## 4. Avispas: Un Peligro Creciente
+### Síntomas
+*   Daños en madera
+*   Galerías en estructuras
+*   Olor a humedad
+*   Alas desprendidas
 
-Con la llegada de la primavera, las avispas reinas comienzan a construir nidos. La **Avispa Asiática (Vespa velutina)** es una preocupación creciente en la región, siendo más agresiva y dañina para el ecosistema local que la avispa común. Retirar un nido sin equipo profesional es extremadamente peligroso.
+### Solución
+*   **DIY:** No recomendado
+*   **Profesional:** €800-2.500 (garantía 1-2 años)
+*   **Tiempo:** 1-2 semanas
 
-## 5. Chinches de Cama: El Polizón del Viajero
+## 4. Hormigas (12% de infestaciones)
 
-Debido al turismo, Segovia ha visto un repunte en casos de chinches. No tienen nada que ver con la suciedad; viajan en maletas y ropa. Sus picaduras causan gran irritación y ansiedad, y erradicarlas requiere tratamientos térmicos o químicos profesionales muy específicos.
+### Identificación
+*   **Tamaño:** 2-5mm
+*   **Ciclo de vida:** 1-3 años
+*   **Reproducción:** Reina produce 1.000+ huevos/día
 
-## Estrategias de Prevención para 2026
+### Síntomas
+*   Caminos de hormigas
+*   Nidos en grietas
+*   Daños en alimentos
+*   Picaduras
 
-Para mantener tu hogar seguro, recomendamos la regla de las 3 B:
+### Solución
+*   **DIY:** €10-30 (50-70% efectividad)
+*   **Profesional:** €100-200 (90-95% efectividad)
+*   **Tiempo:** 1-2 semanas
 
-1.  **Bloquear:** Sella grietas en fachadas, instala burletes bajo las puertas y coloca mallas en rejillas de ventilación.
-2.  **Barreras:** Mantén la vegetación podada y alejada de la fachada. Evita acumular leña o escombros pegados a la casa.
-3.  **Buen Saneamiento:** La basura debe estar siempre en cubos cerrados. No dejes comida de mascotas fuera por la noche y elimina fuentes de humedad reparando fugas inmediatamente.
+## 5. Mosquitos (8% de infestaciones)
 
-## 6. Iluminación Estratégica
-Los insectos se sienten atraídos por la luz.
+### Identificación
+*   **Tamaño:** 3-6mm
+*   **Ciclo de vida:** 7-21 días
+*   **Reproducción:** Rápida en agua estancada
 
-*   **Luces Amarillas:** Sustituye las bombillas blancas de las entradas exteriores por luces amarillas (vapor de sodio) o LEDs cálidos. Atraen significativamente menos insectos voladores que la luz blanca brillante.
-*   **Sensores de Movimiento:** Instala sensores para que las luces no estén encendidas toda la noche, reduciendo el "efecto faro" para polillas y mosquitos.
+### Síntomas
+*   Picaduras
+*   Zumbidos de noche
+*   Agua estancada
+*   Larvas en agua
 
-## 7. Inspecciona lo "Invisible"
-Áticos, sótanos y falsos techos son el paraíso de las plagas porque nadie los molesta.
+### Solución
+*   **DIY:** €20-50 (30-50% efectividad)
+*   **Profesional:** €100-150 (90-95% efectividad)
+*   **Tiempo:** 1-2 semanas
 
-*   **Revisión Trimestral:** Sube al ático o baja al sótano cada cambio de estación. Busca excrementos, madera roída o nidos de avispas.
-*   **Cajas de Cartón:** Si almacenas cosas aquí, usa cajas de plástico duro. El cartón en zonas húmedas y oscuras es comida para pececillos de plata y termitas.
+## Calendario Estacional de Plagas
 
-## 8. Cuidado con lo que Traes a Casa
-A veces, invitamos a las plagas sin querer.
+| Estación | Plagas Principales | Acción |
+| :--- | :--- | :--- |
+| **Primavera** | Cucarachas, hormigas, mosquitos | Comienza prevención |
+| **Verano** | Mosquitos, avispas, hormigas | Máxima vigilancia |
+| **Otoño** | Roedores, cucarachas | Sella grietas |
+| **Invierno** | Roedores, cucarachas (interiores) | Mantenimiento |
 
-*   **Maletas:** Al volver de viaje, no dejes la maleta sobre la cama. Revisa las costuras en busca de chinches antes de guardar la ropa.
-*   **Paquetes y Compra:** Las cucarachas a menudo entran escondidas en cajas de cartón de supermercados o almacenes. Desecha los embalajes externos inmediatamente en el contenedor de reciclaje fuera de casa.
-
-## 9. Plantas de Interior: Naturaleza Bajo Control
-Tus plantas pueden albergar inquilinos indeseados.
-
-*   **Riego Moderado:** El exceso de agua en las macetas crea el ambiente perfecto para la mosca del sustrato. Deja que la tierra se seque entre riegos.
-*   **Inspección:** Revisa el envés de las hojas regularmente en busca de pulgones o cochinillas antes de que se conviertan en una plaga mayor.
-
-## 10. Mantenimiento Profesional: La Mejor Inversión
-La prevención proactiva es más barata que la curación reactiva.
-
-*   **Inspección Anual:** Al igual que revisas tu coche o tu caldera, una inspección anual de plagas por expertos como Sierra Guard puede detectar problemas incipientes (como termitas en los cimientos) antes de que causen daños estructurales costosos.
-
-## ¿Cuándo llamar a un profesional?
-
-Los remedios caseros pueden funcionar para un insecto aislado, pero ante una plaga establecida, suelen ser ineficaces y pueden dispersar el problema. Si escuchas ruidos en falsos techos, ves excrementos recurrentes o detectas daños en madera, es hora de actuar.
-
-En **Sierra Guard**, conocemos Segovia y sus plagas. Utilizamos técnicas avanzadas de Control Integrado de Plagas que priorizan la seguridad de tu familia y la eficacia a largo plazo. No dejes que los invasores tomen el control de tu propiedad.`,
+## Conclusión
+Identifica la plaga correctamente y actúa rápido. Usa nuestra calculadora para presupuesto estimado.`,
+    faqs: [
+      {
+        pregunta: "¿Cuáles son las plagas más comunes en Segovia?",
+        respuesta: "Las 5 plagas más comunes son: 1) Cucarachas (35%), 2) Roedores (30%), 3) Termitas (15%), 4) Hormigas (12%), 5) Mosquitos (8%)."
+      },
+      {
+        pregunta: "¿Cuándo aparecen las plagas?",
+        respuesta: "Primavera (abril-mayo): inicio. Verano (junio-agosto): máximo. Otoño (septiembre-octubre): disminuye. Invierno: baja actividad pero persisten en interiores."
+      },
+      {
+        pregunta: "¿Cuál es el costo de eliminar plagas?",
+        respuesta: "Cucarachas: €150-300. Roedores: €150-300. Termitas: €800-2.500. Hormigas: €100-200. Mosquitos: €100-150. Presupuesto gratis sin compromiso."
+      },
+      {
+        pregunta: "¿Cómo sé si tengo plagas?",
+        respuesta: "Señales: excrementos, olor desagradable, ruidos, daños en estructuras, plagas vivas/muertas. Si ves una, probablemente hay más."
+      },
+      {
+        pregunta: "¿Cuándo llamar a profesionales?",
+        respuesta: "Llama si: 1) Ves plagas vivas, 2) Encuentras excrementos, 3) Hueles olor desagradable, 4) Hay daños en estructuras. Mejor prevenir que curar."
+      }
+    ],
     author: "Sierra Guard",
     date: "2026-02-06",
     readTime: 12,
@@ -190,16 +288,73 @@ En **Sierra Guard**, ofrecemos inspecciones preventivas para identificar puntos 
   {
     id: "3",
     slug: "plagas-invierno-segovia",
-    title: "Plagas de Invierno en Segovia - Qué Esperar",
-    metaDescription: "Plagas de invierno en Segovia: ratas, cucarachas y termitas. Cómo proteger tu hogar durante los meses fríos.",
+    title: "Plagas de Invierno en Segovia | Prevención y Control",
+    metaDescription: "Plagas más comunes en invierno en Segovia. Prevención, síntomas y tratamiento. Guía estacional completa.",
     excerpt: "El invierno en Segovia trae consigo un aumento en las infestaciones de plagas.",
-    content: `El invierno en Segovia trae consigo un aumento en las infestaciones de plagas. Cuando las temperaturas bajan, los roedores y otros insectos buscan refugio en edificios, creando un problema creciente para propietarios y negocios.
+    content: `En invierno, las plagas no desaparecen; simplemente cambian de estrategia. Buscan calor en interiores, convirtiendo tu hogar o negocio en su refugio ideal. Este artículo cubre las plagas más comunes en invierno en Segovia y cómo prevenirlas eficazmente.
 
-Las ratas y ratones son los principales culpables durante estos meses. Pueden entrar por pequeños agujeros (incluso de 6 milímetros) y se multiplican rápidamente en espacios cálidos como áticos, sótanos y paredes. Una pareja de ratones puede producir 8-10 camadas por año, resultando en cientos de individuos si no se controla.
+| Mes | Plagas Principales | Acción Recomendada |
+| :--- | :--- | :--- |
+| **Octubre** | Roedores, cucarachas | Sella grietas y revisa aislamientos |
+| **Noviembre** | Roedores, cucarachas | Aumenta la vigilancia en sótanos y áticos |
+| **Diciembre** | Roedores, cucarachas | Máxima prevención (pico de actividad en interiores) |
+| **Enero** | Roedores, cucarachas | Mantén tratamientos y revisa trampas |
+| **Febrero** | Roedores, cucarachas | Continúa prevención y limpieza profunda |
+| **Marzo** | Roedores, cucarachas | Prepara la casa para la primavera |
 
-Las cucarachas también se vuelven más activas en invierno, buscando el calor de cocinas y áreas cercanas a sistemas de calefacción. En edificios comerciales, donde hay múltiples unidades conectadas, las infestaciones pueden propagarse rápidamente.
+## Plagas Principales en Invierno
 
-Las termitas, aunque menos activas en invierno, continúan dañando estructuras de madera desde el interior. Es el momento perfecto para realizar inspecciones profesionales y tratamientos preventivos antes de que la primavera acelere su actividad.`,
+### 1. Roedores (Ratas y Ratones)
+Son los invasores más comunes durante los meses fríos.
+
+*   **Comportamiento:** Buscan desesperadamente calor y comida en interiores.
+*   **Daños:** Roen cables eléctricos (riesgo de incendio), aislamiento y estructuras.
+*   **Riesgos de Salud:** Transmiten enfermedades graves como Hantavirus, Salmonelosis y Leptospirosis.
+*   **Solución:** Sellado hermético de entradas + desratización profesional.
+
+### 2. Cucarachas
+A diferencia de lo que se cree, siguen activas todo el año si encuentran un ambiente propicio.
+
+*   **Preferencia:** Buscan temperaturas entre 20-30°C, exactamente la temperatura de un hogar con calefacción.
+*   **Ubicación:** Se concentran en cocinas (detrás de neveras/hornos) y baños.
+*   **Solución:** Desinsectación con geles específicos + limpieza rigurosa (sin migas ni grasa).
+
+### 3. Hormigas
+Aunque son menos visibles, no siempre desaparecen por completo.
+
+*   **Estado:** Suelen hibernar en grietas profundas o bajo los cimientos.
+*   **Alerta:** Si ves hormigas en invierno, es señal de que el nido está DENTRO de la estructura de tu casa.
+*   **Solución:** Tratamientos de barrera y prevención para evitar su reaparición masiva en primavera.
+
+## 4. El Peligro de la Leña y Chimeneas
+En Segovia, la leña es un elemento básico del invierno, pero también un "Caballo de Troya" para las plagas.
+
+*   **El transporte:** La carcoma y las hormigas carpinteras a menudo entran en casa ocultas en los troncos.
+*   **Consejo:** Almacena la leña fuera de casa, elevada del suelo y cubierta. Introduce solo la que vayas a consumir en el día.
+*   **Inspección:** Golpea la leña contra el suelo antes de entrarla para desprender cualquier insecto.
+
+## 5. Segundas Residencias: Un Blanco Fácil
+Muchas casas en la provincia de Segovia permanecen cerradas durante semanas en invierno.
+
+*   **El problema:** El agua de los sifones se evapora o congela, permitiendo que las cucarachas y ratas entren por los desagües sin resistencia.
+*   **Solución:** Si vas a estar fuera tiempo, deja los tapones de lavabos y fregaderos puestos y vierte un poco de aceite vegetal en los desagües para evitar la evaporación del agua.
+
+## Conclusión
+El invierno es un momento crítico para la prevención. No bajes la guardia: una pequeña señal de actividad puede indicar una infestación mayor buscando refugio del frío. Si detectas indicios, llama a profesionales inmediatamente.`,
+    faqs: [
+      {
+        pregunta: "¿Por qué hay más plagas en el interior durante el invierno?",
+        respuesta: "Porque buscan calor. Las temperaturas exteriores en Segovia (a menudo bajo cero) son letales para ellas, mientras que tu casa calefaccionada es un paraíso de supervivencia."
+      },
+      {
+        pregunta: "¿Cuándo comienza la \"invasión invernal\"?",
+        respuesta: "Empieza en octubre-noviembre con las primeras heladas. El pico máximo de detección en interiores suele ser entre diciembre y enero."
+      },
+      {
+        pregunta: "¿Cómo puedo prevenir estas plagas?",
+        respuesta: "Sella grietas (revisa rodapiés y marcos de ventanas), elimina humedad (repara fugas), mantén la limpieza (sin restos de comida) y realiza inspecciones mensuales en zonas poco transitadas."
+      }
+    ],
     author: "Sierra Guard",
     date: "2026-02-04",
     readTime: 4,

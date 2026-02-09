@@ -50,6 +50,14 @@ export default function BlogArticlePage() {
 
       {/* ===== ARTÍCULO ===== */}
       <article className="py-16">
+        {/* Schema.org JSON-LD */}
+        {article.schema && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(article.schema) }}
+          />
+        )}
+
         <div className="container max-w-3xl">
           {/* Metadata */}
           <div className="mb-8">
@@ -169,6 +177,45 @@ export default function BlogArticlePage() {
                 );
               }
 
+              // Tablas Markdown (| ...)
+              if (block.trim().startsWith('|')) {
+                const rows = block.split('\n').filter(row => row.trim());
+                const headers = rows[0].split('|').filter(cell => cell.trim()).map(cell => cell.trim());
+                const alignments = rows[1].split('|').filter(cell => cell.trim()).map(cell => {
+                  if (cell.includes(':-') && cell.includes('-:')) return 'text-center';
+                  if (cell.includes('-:')) return 'text-right';
+                  return 'text-left';
+                });
+                const bodyRows = rows.slice(2).map(row => row.split('|').filter(cell => cell.trim() !== '').map(cell => cell.trim()));
+
+                return (
+                  <div key={index} className="overflow-x-auto mb-8">
+                    <table className="w-full border-collapse border border-border rounded-lg overflow-hidden">
+                      <thead className="bg-muted/50">
+                        <tr>
+                          {headers.map((header, i) => (
+                            <th key={i} className={`p-4 border-b border-border font-bold text-foreground ${alignments[i] || 'text-left'}`}>
+                              {renderTextWithBold(header)}
+                            </th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {bodyRows.map((row, i) => (
+                          <tr key={i} className="hover:bg-muted/20 transition-colors">
+                            {row.map((cell, j) => (
+                              <td key={j} className={`p-4 border-b border-border text-foreground ${alignments[j] || 'text-left'}`}>
+                                {renderTextWithBold(cell)}
+                              </td>
+                            ))}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                );
+              }
+
               // Párrafo normal
               return (
                 <p key={index} className="text-foreground leading-relaxed mb-6">
@@ -177,6 +224,21 @@ export default function BlogArticlePage() {
               );
             })}
           </div>
+
+          {/* FAQs Section */}
+          {article.faqs && article.faqs.length > 0 && (
+            <div className="mb-12">
+              <h2 className="text-3xl font-bold text-foreground mb-8">Preguntas Frecuentes</h2>
+              <div className="space-y-6">
+                {article.faqs.map((faq, idx) => (
+                  <div key={idx} className="p-6 bg-white rounded-lg border border-gray-200 hover:shadow-md transition-shadow">
+                    <h3 className="text-lg font-bold text-foreground mb-3">{faq.pregunta}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{faq.respuesta}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Tags - ELIMINADO */}
           

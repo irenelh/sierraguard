@@ -216,6 +216,9 @@ export default function ServiceCategoryPage({ service }: ServiceCategoryPageProp
                   <img 
                     src={service.image} 
                     alt={service.h1}
+                    width="600"
+                    height="400"
+                    fetchPriority="high"
                     className="w-full h-[350px] lg:h-[400px] object-cover transform transition-transform duration-700 group-hover:scale-105"
                   />
                 ) : (

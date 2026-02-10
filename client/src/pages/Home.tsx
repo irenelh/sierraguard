@@ -191,6 +191,8 @@ export default function Home() {
                   <img 
                     src={service.image} 
                     alt={service.nombre}
+                    width="400"
+                    height="300"
                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                     loading="lazy"
                     referrerPolicy="no-referrer"

@@ -83,6 +83,8 @@ export default function Header() {
                  src="/images/logo control de plagas.jpg" 
                  alt="Sierra Guard Logo" 
                  className="h-12 w-auto object-contain rounded-lg"
+                 width="120"
+                 height="48"
               />
               <div className="flex flex-col">
                 <span className="text-xl font-bold text-primary leading-none tracking-tight transition-colors">

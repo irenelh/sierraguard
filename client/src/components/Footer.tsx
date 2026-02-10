@@ -19,6 +19,8 @@ export default function Footer() {
                   src="/images/logo control de plagas.jpg" 
                   alt="Sierra Guard Logo" 
                   className="h-14 w-auto object-contain rounded-xl shadow-lg border border-slate-800/80"
+                  width="140"
+                  height="56"
                 />
                 <div className="flex flex-col">
                   <span className="text-xl font-bold text-white tracking-tight leading-none">Sierra Guard</span>

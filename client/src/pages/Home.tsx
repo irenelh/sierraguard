@@ -49,16 +49,22 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
+      <main>
 
       {/* ===== HERO SECTION ===== */}
       <section
         className="relative min-h-[550px] lg:min-h-[650px] flex items-center overflow-hidden py-12 lg:py-0 group"
-        style={{
-          backgroundImage: "url('/images/control-de-plagas-en-segovia-imagen.jpeg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center 20%",
-        }}
       >
+        <img
+          src="/images/control-de-plagas-en-segovia-imagen.jpeg"
+          alt="Control de plagas en Segovia"
+          className="absolute inset-0 w-full h-full object-cover -z-10 object-[center_20%]"
+          fetchPriority="high"
+          loading="eager"
+          decoding="async"
+          width="1920"
+          height="1080"
+        />
         {/* Overlay Mejorado: Gradiente para mejor legibilidad del texto sin tapar toda la foto */}
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-900/60 to-transparent backdrop-blur-[1px]"></div>
 
@@ -467,6 +473,8 @@ export default function Home() {
                   className="w-full h-full object-cover aspect-[4/5] md:aspect-square lg:aspect-[4/5]"
                   loading="lazy"
                   referrerPolicy="no-referrer"
+                  width="800"
+                  height="1000"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-60"></div>
               </div>
@@ -667,6 +675,7 @@ export default function Home() {
       />
 
 
+      </main>
       <Footer />
     </div>
   );

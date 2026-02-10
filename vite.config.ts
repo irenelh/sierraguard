@@ -26,7 +26,8 @@ export default defineConfig({
       output: {
         manualChunks: {
           vendor: ["react", "react-dom", "wouter"],
-          ui: ["lucide-react", "framer-motion", "sonner", "zod", "react-hook-form"],
+          framer: ["framer-motion"],
+          ui: ["lucide-react", "sonner", "zod", "react-hook-form"],
           radix: [
             "@radix-ui/react-accordion",
             "@radix-ui/react-alert-dialog",

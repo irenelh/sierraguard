@@ -2,251 +2,181 @@ import { Phone, Mail } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-b from-gray-900 to-black text-white py-16 border-t border-gray-800 shadow-2xl relative overflow-hidden">
-      {/* Decorative top highlight */}
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/50 to-transparent opacity-50"></div>
+    <footer className="bg-slate-950 text-slate-300 py-16 border-t border-slate-900 relative overflow-hidden font-sans">
+      {/* Decorative background elements */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] h-[1px] bg-gradient-to-r from-transparent via-emerald-500/40 to-transparent"></div>
+      <div className="absolute -top-24 -right-24 w-96 h-96 bg-emerald-900/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-slate-900/40 rounded-full blur-3xl pointer-events-none"></div>
       
-      <div className="container relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          <div>
-            <h4 className="font-bold text-xl mb-6 text-primary-foreground flex items-center gap-2">
-              <img 
-                src="/images/logo control de plagas.jpg" 
-                alt="Sierra Guard Logo" 
-                className="h-10 w-auto object-contain rounded-lg"
-              />
-              Sierra Guard
-            </h4>
-            <p className="text-gray-400 text-sm leading-relaxed mb-6">
-              Control profesional de plagas en Segovia. Expertos en desinsectación, desratización y tratamientos de madera. 
-              <br/><br/>
-              <span className="text-white font-semibold">Certificados CEPA.</span>
-            </p>
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
+          
+          {/* Columna 1: Brand & Contact (4 cols) */}
+          <div className="lg:col-span-4 space-y-8 pr-0 lg:pr-8">
+            <div className="flex flex-col items-start">
+              <div className="flex items-center gap-3 mb-5">
+                <img 
+                  src="/images/logo control de plagas.jpg" 
+                  alt="Sierra Guard Logo" 
+                  className="h-14 w-auto object-contain rounded-xl shadow-lg border border-slate-800/80"
+                />
+                <div className="flex flex-col">
+                  <span className="text-xl font-bold text-white tracking-tight leading-none">Sierra Guard</span>
+                  <span className="text-xs text-emerald-500 font-medium tracking-wide uppercase mt-1">Control de Plagas</span>
+                </div>
+              </div>
+              <p className="text-slate-400 text-sm leading-relaxed max-w-sm mb-6">
+                Expertos en protección ambiental y control de plagas en Segovia. Soluciones certificadas, seguras y eficaces para su hogar o negocio.
+              </p>
+              <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-emerald-950/40 border border-emerald-900/60 text-emerald-400 text-xs font-bold tracking-wide shadow-sm backdrop-blur-sm">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                Certificados CEPA
+              </div>
+            </div>
 
-            {/* Contacto rápido */}
-            <div className="flex flex-col gap-3 mt-6">
-              <a href="tel:+34921234567" className="flex items-center gap-3 text-white hover:text-primary transition-colors group">
-                <div className="bg-white/10 p-2 rounded-full group-hover:bg-primary/20 transition-colors">
-                  <Phone size={16} className="text-primary" />
+            {/* Contacto rápido - Rediseñado */}
+            <div className="space-y-3">
+              <a href="tel:+34921234567" className="flex items-center gap-4 p-3 rounded-xl bg-slate-900/40 border border-slate-800 hover:border-emerald-500/30 hover:bg-slate-900/80 transition-all group">
+                <div className="w-10 h-10 rounded-lg bg-slate-800/50 flex items-center justify-center text-emerald-500 group-hover:scale-110 transition-transform duration-300">
+                  <Phone size={18} />
                 </div>
-                <span className="font-medium">+34 921 234 567</span>
+                <div className="flex flex-col">
+                  <span className="text-[10px] text-slate-500 uppercase tracking-wider font-bold group-hover:text-emerald-400 transition-colors">Atención 24h</span>
+                  <span className="font-bold text-lg text-slate-200 group-hover:text-white tracking-tight">+34 921 234 567</span>
+                </div>
               </a>
-              <a href="mailto:contacto@controldeplagassegovia.com" className="flex items-center gap-3 text-white hover:text-primary transition-colors group">
-                <div className="bg-white/10 p-2 rounded-full group-hover:bg-primary/20 transition-colors">
-                  <Mail size={16} className="text-primary" />
+              
+              <a href="mailto:contacto@controldeplagassegovia.com" className="flex items-center gap-4 p-3 rounded-xl bg-slate-900/40 border border-slate-800 hover:border-emerald-500/30 hover:bg-slate-900/80 transition-all group">
+                <div className="w-10 h-10 rounded-lg bg-slate-800/50 flex items-center justify-center text-emerald-500 group-hover:scale-110 transition-transform duration-300">
+                  <Mail size={18} />
                 </div>
-                <span className="font-medium">contacto@controldeplagassegovia.com</span>
+                <div className="flex flex-col">
+                  <span className="text-[10px] text-slate-500 uppercase tracking-wider font-bold group-hover:text-emerald-400 transition-colors">Correo Electrónico</span>
+                  <span className="font-medium text-sm text-slate-300 group-hover:text-white break-all">contacto@controldeplagassegovia.com</span>
+                </div>
               </a>
             </div>
           </div>
 
-          <div>
-            <h4 className="font-bold mb-4 text-white">Servicios</h4>
-            <ul className="space-y-2 text-sm text-white">
-              <li>
-                <a href="/desinsectacion" className="text-white hover:text-primary transition-colors duration-200">
-                  Desinsectación en Segovia
-                </a>
-              </li>
-              <li>
-                <a href="/desinsectacion" className="text-white hover:text-primary transition-colors duration-200">
-                  Eliminar cucarachas Segovia
-                </a>
-              </li>
-              <li>
-                <a href="/desratizacion" className="text-white hover:text-primary transition-colors duration-200">
-                  Desratización en Segovia
-                </a>
-              </li>
-              <li>
-                <a href="/desinfeccion" className="text-white hover:text-primary transition-colors duration-200">
-                  Desinfección en Segovia
-                </a>
-              </li>
-              <li>
-                <a href="/control-de-aves" className="text-white hover:text-primary transition-colors duration-200">
-                  Control de palomas en Segovia
-                </a>
-              </li>
-              <li>
-                <a href="/tratamientos-de-madera" className="text-white hover:text-primary transition-colors duration-200">
-                  Tratamientos de Madera
-                </a>
-              </li>
-              <li>
-                <a href="/higiene-ambiental" className="text-white hover:text-primary transition-colors duration-200">
-                  Higiene Ambiental Segovia
-                </a>
-              </li>
-              <li>
-                <a href="/inspeccion-y-prevencion" className="text-white hover:text-primary transition-colors duration-200">
-                  Inspección de plagas en Segovia
-                </a>
-              </li>
-              <li>
-                <a href="/inspeccion-y-prevencion" className="text-white hover:text-primary transition-colors duration-200">
-                  Prevención de plagas de Segovia
-                </a>
-              </li>
+          {/* Columna 2: Servicios (3 cols) */}
+          <div className="lg:col-span-3 lg:pl-4">
+            <h4 className="text-white font-bold uppercase tracking-wider text-xs mb-6 pb-2 border-b border-slate-800 inline-block min-w-[60px]">
+              Servicios
+            </h4>
+            <ul className="space-y-2.5">
+              {[
+                { label: "Desinsectación", href: "/desinsectacion" },
+                { label: "Eliminar cucarachas", href: "/desinsectacion" },
+                { label: "Desratización", href: "/desratizacion" },
+                { label: "Desinfección", href: "/desinfeccion" },
+                { label: "Control de palomas", href: "/control-de-aves" },
+                { label: "Tratamientos de Madera", href: "/tratamientos-de-madera" },
+                { label: "Higiene Ambiental", href: "/higiene-ambiental" },
+                { label: "Inspección de plagas", href: "/inspeccion-y-prevencion" },
+                { label: "Prevención", href: "/inspeccion-y-prevencion" },
+              ].map((item, idx) => (
+                <li key={idx}>
+                  <a href={item.href} className="text-slate-400 hover:text-emerald-400 text-sm transition-all duration-300 flex items-center gap-2 group w-fit">
+                    <span className="w-1.5 h-1.5 rounded-full bg-slate-800 group-hover:bg-emerald-500 transition-colors"></span>
+                    <span className="group-hover:translate-x-1 transition-transform">{item.label}</span>
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
-          <div>
-            <h4 className="font-bold mb-4 text-white">Cobertura en Segovia</h4>
-            <ul className="grid grid-cols-2 gap-x-2 gap-y-2 text-sm text-white">
-              <li>
-                <a href="/control-de-plagas-la-lastrilla" className="text-white hover:text-primary transition-colors duration-200 flex items-center">
-                  <span className="mr-1">•</span> La Lastrilla
-                </a>
-              </li>
-              <li>
-                <a href="/control-de-plagas-el-espinar" className="text-white hover:text-primary transition-colors duration-200 flex items-center">
-                  <span className="mr-1">•</span> El Espinar
-                </a>
-              </li>
-              <li>
-                <span className="flex items-center text-white cursor-default">
-                  <span className="mr-1">•</span> San Rafael
-                </span>
-              </li>
-              <li>
-                <span className="flex items-center text-white cursor-default">
-                  <span className="mr-1">•</span> Villacastín
-                </span>
-              </li>
-              <li>
-                <span className="flex items-center text-white cursor-default">
-                  <span className="mr-1">•</span> Ituero y Lama
-                </span>
-              </li>
-              <li>
-                <span className="flex items-center text-white cursor-default">
-                  <span className="mr-1">•</span> Otero de Herreros
-                </span>
-              </li>
-              <li>
-                <span className="flex items-center text-white cursor-default">
-                  <span className="mr-1">•</span> Navas de San Antonio
-                </span>
-              </li>
-              <li>
-                <span className="flex items-center text-white cursor-default">
-                  <span className="mr-1">•</span> Prádena
-                </span>
-              </li>
-              <li>
-                <span className="flex items-center text-white cursor-default">
-                  <span className="mr-1">•</span> Turégano
-                </span>
-              </li>
-              <li>
-                <a href="/control-de-plagas-pedraza" className="text-white hover:text-primary transition-colors duration-200 flex items-center">
-                  <span className="mr-1">•</span> Pedraza
-                </a>
-              </li>
-              <li>
-                <a href="/control-de-plagas-sepulveda" className="text-white hover:text-primary transition-colors duration-200 flex items-center">
-                  <span className="mr-1">•</span> Sepúlveda
-                </a>
-              </li>
-              <li>
-                <span className="flex items-center text-white cursor-default">
-                  <span className="mr-1">•</span> Boceguillas
-                </span>
-              </li>
-              <li>
-                <a href="/control-de-plagas-cuéllar" className="text-white hover:text-primary transition-colors duration-200 flex items-center">
-                  <span className="mr-1">•</span> Cuéllar
-                </a>
-              </li>
-              <li>
-                <a href="/control-de-plagas-palazuelos-de-eresma" className="text-white hover:text-primary transition-colors duration-200 flex items-center">
-                  <span className="mr-1">•</span> Palazuelos de Eresma
-                </a>
-              </li>
-              <li>
-                <span className="flex items-center text-white cursor-default">
-                  <span className="mr-1">•</span> Trescasas
-                </span>
-              </li>
-              <li>
-                <span className="flex items-center text-white cursor-default">
-                  <span className="mr-1">•</span> Torrecaballeros
-                </span>
-              </li>
-              <li>
-                <span className="flex items-center text-white cursor-default">
-                  <span className="mr-1">•</span> Hontoria
-                </span>
-              </li>
-              <li>
-                <a href="/control-de-plagas-coca" className="text-white hover:text-primary transition-colors duration-200 flex items-center">
-                  <span className="mr-1">•</span> Coca
-                </a>
-              </li>
-              <li>
-                <span className="flex items-center text-white cursor-default">
-                  <span className="mr-1">•</span> San Cristobal
-                </span>
-              </li>
-              <li>
-                <a href="/control-de-plagas-la-granja-san-ildefonso" className="text-white hover:text-primary transition-colors duration-200 flex items-center">
-                  <span className="mr-1">•</span> La Granja
-                </a>
-              </li>
-              <li>
-                <span className="flex items-center text-white cursor-default">
-                  <span className="mr-1">•</span> Hontanares
-                </span>
-              </li>
-              <li>
-                <span className="flex items-center text-white cursor-default">
-                  <span className="mr-1">•</span> Revenga
-                </span>
-              </li>
-              <li>
-                <span className="flex items-center text-white cursor-default">
-                  <span className="mr-1">•</span> Valseca
-                </span>
-              </li>
-              <li>
-                <span className="flex items-center text-white cursor-default">
-                  <span className="mr-1">•</span> Ortigosa
-                </span>
-              </li>
+          {/* Columna 3: Cobertura (3 cols) */}
+          <div className="lg:col-span-3">
+            <h4 className="text-white font-bold uppercase tracking-wider text-xs mb-6 pb-2 border-b border-slate-800 inline-block min-w-[60px]">
+              Cobertura en Segovia
+            </h4>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-2 gap-y-2.5 text-xs">
+              {[
+                { name: "La Lastrilla", href: "/control-de-plagas-la-lastrilla" },
+                { name: "El Espinar", href: "/control-de-plagas-el-espinar" },
+                { name: "San Rafael", href: null },
+                { name: "Villacastín", href: null },
+                { name: "Ituero y Lama", href: null },
+                { name: "Otero de Herreros", href: null },
+                { name: "Navas de San Antonio", href: null },
+                { name: "Prádena", href: null },
+                { name: "Turégano", href: null },
+                { name: "Pedraza", href: "/control-de-plagas-pedraza" },
+                { name: "Sepúlveda", href: "/control-de-plagas-sepulveda" },
+                { name: "Boceguillas", href: null },
+                { name: "Cuéllar", href: "/control-de-plagas-cuéllar" },
+                { name: "Palazuelos de Eresma", href: "/control-de-plagas-palazuelos-de-eresma" },
+                { name: "Trescasas", href: null },
+                { name: "Torrecaballeros", href: null },
+                { name: "Hontoria", href: null },
+                { name: "Coca", href: "/control-de-plagas-coca" },
+                { name: "San Cristobal", href: null },
+                { name: "La Granja", href: "/control-de-plagas-la-granja-san-ildefonso" },
+                { name: "Hontanares", href: null },
+                { name: "Revenga", href: null },
+                { name: "Valseca", href: null },
+                { name: "Ortigosa", href: null },
+              ].map((loc, idx) => (
+                <li key={idx}>
+                  {loc.href ? (
+                    <a href={loc.href} className="text-slate-400 hover:text-emerald-400 transition-colors flex items-center gap-1.5 group">
+                      <span className="text-emerald-500/40 group-hover:text-emerald-400 text-[10px]">●</span>
+                      {loc.name}
+                    </a>
+                  ) : (
+                    <span className="text-slate-600 cursor-default flex items-center gap-1.5">
+                      <span className="text-slate-800 text-[10px]">●</span>
+                      {loc.name}
+                    </span>
+                  )}
+                </li>
+              ))}
             </ul>
           </div>
 
-          <div>
-            <h4 className="font-bold mb-4 text-white">Empresa</h4>
-            <ul className="space-y-2 text-sm text-white">
+          {/* Columna 4: Empresa (2 cols) */}
+          <div className="lg:col-span-2">
+            <h4 className="text-white font-bold uppercase tracking-wider text-xs mb-6 pb-2 border-b border-slate-800 inline-block min-w-[60px]">
+              Empresa
+            </h4>
+            <ul className="space-y-3">
               <li>
-                <a href="/blog" className="text-white hover:text-primary transition-colors duration-200">
-                  Blog
+                <a href="/blog" className="text-slate-400 hover:text-emerald-400 text-sm transition-all duration-300 flex items-center gap-2 group w-fit">
+                   <span className="w-1.5 h-1.5 rounded-full bg-slate-800 group-hover:bg-emerald-500 transition-colors"></span>
+                   <span className="group-hover:translate-x-1 transition-transform">Blog</span>
                 </a>
               </li>
               <li>
-                <a href="/calculadora" className="text-white hover:text-primary transition-colors duration-200">
-                  Calculadora de Presupuesto
+                <a href="/calculadora" className="text-slate-400 hover:text-emerald-400 text-sm transition-all duration-300 flex items-center gap-2 group w-fit">
+                   <span className="w-1.5 h-1.5 rounded-full bg-slate-800 group-hover:bg-emerald-500 transition-colors"></span>
+                   <span className="group-hover:translate-x-1 transition-transform">Calculadora</span>
                 </a>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
-            <p className="text-center md:text-left text-sm text-gray-500">
-              © 2026 Sierra Guard. Todos los derechos reservados. | Segovia, España
+        <div className="border-t border-slate-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
+            <p className="text-center md:text-left text-xs text-slate-600 font-medium">
+              © 2026 Sierra Guard. Todos los derechos reservados.
             </p>
-            <div className="flex gap-4 text-sm text-gray-500">
-              <a href="#" className="hover:text-primary transition-colors">Política de Privacidad</a>
-              <a href="#" className="hover:text-primary transition-colors">Términos de Servicio</a>
+            <div className="flex gap-6 text-xs text-slate-500">
+              <a href="/politica-privacidad" className="hover:text-emerald-400 transition-colors">Privacidad</a>
+              <a href="/aviso-legal" className="hover:text-emerald-400 transition-colors">Aviso Legal</a>
+              <a href="/politica-cookies" className="hover:text-emerald-400 transition-colors">Cookies</a>
             </div>
           </div>
-          <div className="flex items-center gap-4">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span className="text-xs text-gray-500 font-medium tracking-wider uppercase">Sistemas Operativos</span>
+          
+          <div className="flex items-center gap-3 bg-slate-900/30 px-3 py-1.5 rounded-lg border border-slate-800/50">
+            <span className="relative flex h-1.5 w-1.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
+            </span>
+            <span className="text-[10px] text-slate-500 font-bold tracking-widest uppercase">Sistemas Operativos</span>
           </div>
 
           {/* Schema Markup JSON-LD */}
@@ -265,6 +195,8 @@ export default function Footer() {
                 email: "contacto@controldeplagassegovia.com",
                 address: {
                   "@type": "PostalAddress",
+                  streetAddress: "C. de José Zorrilla, 132",
+                  postalCode: "40002",
                   addressLocality: "Segovia",
                   addressCountry: "ES",
                 },

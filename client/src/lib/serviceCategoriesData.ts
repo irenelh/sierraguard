@@ -21,9 +21,9 @@ export interface ServiceCategory {
   cta: string;
   testimonios: {
     nombre: string;
-    empresa: string;
     texto: string;
     rating: number;
+    tipo: string;
   }[];
   faqs?: {
     question: string;
@@ -122,27 +122,27 @@ export const serviceCategoriesData: ServiceCategory[] = [
     cta: "Llama ahora",
     testimonios: [
       {
-        nombre: "María García",
-        empresa: "Hotel Segovia Plaza",
-        texto: "Sierra Guard eliminó el problema de chinches en 2 semanas. El tratamiento térmico fue profesional y sin daños. Nuestros huéspedes están satisfechos.",
+        nombre: "Laura M.",
+        tipo: "Hostal en Segovia",
+        texto: "Tuvimos un susto con chinches en la habitación 3. Me agobié muchísimo pensando en las reseñas negativas. Vinieron el mismo día con el tratamiento térmico y en 24h estaba solucionado. Lo mejor es que no tuvimos que tirar los colchones.",
         rating: 5
       },
       {
-        nombre: "Juan López",
-        empresa: "Restaurante El Mesón",
-        texto: "Llevábamos meses con cucarachas. Sierra Guard identificó los puntos de entrada, selló todo y ahora no tenemos problemas. Muy recomendable.",
+        nombre: "Carlos Sanz",
+        tipo: "Restaurante en Segovia",
+        texto: "Llevábamos meses viendo alguna cucaracha pequeña en la cocina, echábamos spray pero volvían. El técnico desmontó los paneles del lavavajillas y encontró el nido. Desde que sellaron las grietas no hemos visto ni una.",
         rating: 5
       },
       {
-        nombre: "Carmen Rodríguez",
-        empresa: "Vivienda Azoguejo",
-        texto: "Avispas en el balcón. Llamé a Sierra Guard y en 2 horas estaban aquí. Profesionales, rápidos y seguros. Excelente servicio.",
+        nombre: "Elena R.",
+        tipo: "Vivienda en Cuéllar",
+        texto: "Tenía un avispero enorme en el cajón de la persiana y me daba miedo abrir la ventana. El chico vino super protegido, lo quitó en 20 minutos y me explicó por qué anidaban ahí. Muy majos y eficaces.",
         rating: 5
       },
       {
         nombre: "Pedro Martínez",
-        empresa: "Almacén Logístico",
-        texto: "Auditoría de plagas completa. Sierra Guard identificó riesgos que otros no vieron. Ahora tenemos plan preventivo y monitorización. Muy satisfecho.",
+        tipo: "Panadería en Segovia",
+        texto: "Las hormigas se nos estaban metiendo en el almacén de harina. No podíamos usar veneno fuerte por el alimento. Nos pusieron un gel específico y en dos días desaparecieron todas las hileras. Un alivio.",
         rating: 5
       }
     ],
@@ -175,7 +175,7 @@ export const serviceCategoriesData: ServiceCategory[] = [
     intro: "Expertos en desratización en Segovia. Eliminamos ratas y ratones mediante estrategias de control integral y sellado estructural definitivo (Rodent Proofing). Solución rápida, discreta y 100% eficaz. Evita riesgos sanitarios y daños materiales con nuestra garantía de eliminación certificada.",
     servicios: [
       {
-        titulo: "Control Integral",
+        titulo: "Desratización Integral",
         descripcion: "Sistemas de control seguros y eficaces",
         items: ["Inspección detallada", "Estaciones de seguridad", "Control de actividad", "Reportes de seguimiento"],
         servicePageSlug: "desratizacion-ratas"
@@ -235,19 +235,19 @@ export const serviceCategoriesData: ServiceCategory[] = [
     testimonios: [
       {
         nombre: "Carlos Fernández",
-        empresa: "Almacén Logístico Azoguejo",
+        tipo: "Empresa Logística en Hontoria",
         texto: "El sistema de control de Sierra Guard revolucionó nuestro control de plagas. Eficacia total, reducción de 95% en 30 días. Excelente inversión.",
         rating: 5
       },
       {
         nombre: "Ana Martínez",
-        empresa: "Tienda de Alimentación",
+        tipo: "Nave Industrial en Valverde",
         texto: "Ratas en el almacén. Sierra Guard hizo auditoría, selló todo, instaló estaciones de control. Problema resuelto. Muy profesional.",
         rating: 5
       },
       {
         nombre: "Luis García",
-        empresa: "Vivienda Antigua Segovia",
+        tipo: "Chalet en La Lastrilla",
         texto: "Ratones en casa. Sierra Guard identificó puntos de entrada, selló todo, instaló trampas. Ahora duermo tranquilo.",
         rating: 5
       }
@@ -350,13 +350,13 @@ export const serviceCategoriesData: ServiceCategory[] = [
     testimonios: [
       {
         nombre: "Dr. Miguel Sánchez",
-        empresa: "Clínica San Juan",
+        tipo: "Clínica Privada en Segovia",
         texto: "Auditoría de legionella de Sierra Guard fue completa y profesional. Identificaron problemas que otros no vieron. Ahora tenemos sistema de purificación UV-C. Muy satisfecho.",
         rating: 5
       },
       {
         nombre: "Isabel Ruiz",
-        empresa: "Gimnasio Fitness Plus",
+        tipo: "Gimnasio en Segovia",
         texto: "Desinfección de vestuarios y piscina. Sierra Guard utilizó métodos profesionales sin residuos químicos. Nuestros clientes notan la diferencia.",
         rating: 5
       }
@@ -449,7 +449,7 @@ export const serviceCategoriesData: ServiceCategory[] = [
     testimonios: [
       {
         nombre: "Roberto Díaz",
-        empresa: "Comercio Centro Histórico",
+        tipo: "Ático en Segovia",
         texto: "Palomas en la terraza. Sierra Guard instaló pinchos antipalomas. Problema resuelto sin dañar animales. Excelente solución.",
         rating: 5
       }

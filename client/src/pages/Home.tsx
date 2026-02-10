@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Link, useLocation } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FaqSection from "@/components/FaqSection";
 import { locationPagesData } from "@/lib/locationPagesData";
 import { serviceCategoriesData } from "@/lib/serviceCategoriesData";
 
@@ -343,7 +344,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-3 max-w-[1100px] mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4 max-w-[1100px] mx-auto">
             {[
               "La Lastrilla", "El Espinar", "San Rafael", "Villacastín", 
               "Ituero y Lama", "Otero de Herreros", "Navas de San Antonio", 
@@ -356,7 +357,7 @@ export default function Home() {
               const page = Object.values(locationPagesData).find(p => p.barrio === zona);
               const slug = page ? page.slug : null;
               
-              const chipClass = "h-[40px] px-4 rounded-[10px] bg-white/5 border border-white/10 flex items-center justify-center text-white text-sm font-medium transition-all hover:bg-white/10 hover:border-white/20 w-full";
+              const chipClass = "h-[40px] md:h-[60px] px-4 md:px-6 rounded-[10px] bg-white/5 border border-white/10 flex items-center justify-center text-white text-sm md:text-lg font-medium transition-all hover:bg-white/10 hover:border-white/20 w-full";
 
               if (slug) {
                 return (
@@ -607,7 +608,7 @@ export default function Home() {
                     </div>
                     <div>
                        <span className="block text-lg font-bold text-gray-900 mb-1">Dirección</span>
-                       <span className="block text-gray-600 mb-1">Próximamente</span>
+                       <span className="block text-gray-600 mb-1">C. de José Zorrilla, 132, 40002 Segovia</span>
                        <span className="block text-xs font-bold text-gray-400 uppercase tracking-wider">Oficina Central</span>
                     </div>
                 </div>
@@ -631,50 +632,37 @@ export default function Home() {
       </section>
 
       {/* ===== FAQ SECTION ===== */}
-      <section className="py-20 bg-gray-50">
-        <div className="container max-w-3xl">
-          <h2 className="text-4xl font-bold text-center mb-4 text-foreground">
-            Preguntas frecuentes sobre Control de plagas en Segovia
-          </h2>
-          <p className="text-center text-muted-foreground mb-12">
-            Resolvemos tus dudas sobre nuestros servicios de control de plagas.
-          </p>
-
-          <div className="space-y-6">
-            {[
-              {
-                pregunta: "¿Cuánto tiempo tarda en responder Sierra Guard?",
-                respuesta: "Garantizamos respuesta en menos de 24 horas. Para emergencias urgentes (avispas, plagas activas), respondemos en 2-4 horas.",
-              },
-              {
-                pregunta: "¿Utilizáis químicos tóxicos?",
-                respuesta: "No. Utilizamos métodos profesionales certificados CEPA. Para chinches, ofrecemos tratamiento térmico sin químicos. Para otras plagas, usamos cebos de baja toxicidad seguros para familias y mascotas.",
-              },
-              {
-                pregunta: "¿Ofrecéis garantía?",
-                respuesta: "Sí. Garantía 100% - Si ves plagas después de nuestro tratamiento, repetimos sin coste adicional.",
-              },
-              {
-                pregunta: "¿Cuál es el precio?",
-                respuesta: "Los precios varían según el tipo de plaga y tamaño del espacio. Ofrecemos presupuesto gratuito por teléfono sin compromiso.",
-              },
-              {
-                pregunta: "¿Trabajáis en fin de semana?",
-                respuesta: "Sí, disponibles 24/7 incluyendo festivos. Servicio urgente garantizado.",
-              },
-              {
-                pregunta: "¿Cubríis todos los barrios de Segovia?",
-                respuesta: "Sí. Cobertura total en Segovia. Desde Centro Histórico hasta Peñuelas, llegamos a todos los barrios.",
-              },
-            ].map((item, idx) => (
-              <div key={idx} className="p-6 bg-white rounded-lg border border-gray-200 hover:shadow-md transition-shadow">
-                <h3 className="text-lg font-bold text-foreground mb-3">{item.pregunta}</h3>
-                <p className="text-muted-foreground leading-relaxed">{item.respuesta}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FaqSection
+        title="Preguntas frecuentes sobre Control de plagas en Segovia"
+        description="Resolvemos tus dudas sobre nuestros servicios de control de plagas."
+        bgColor="bg-gray-50"
+        faqs={[
+          {
+            question: "¿Cuánto tiempo tarda en responder Sierra Guard?",
+            answer: "Garantizamos respuesta en menos de 24 horas. Para emergencias urgentes (avispas, plagas activas), respondemos en 2-4 horas.",
+          },
+          {
+            question: "¿Utilizáis químicos tóxicos?",
+            answer: "No. Utilizamos métodos profesionales certificados CEPA. Para chinches, ofrecemos tratamiento térmico sin químicos. Para otras plagas, usamos cebos de baja toxicidad seguros para familias y mascotas.",
+          },
+          {
+            question: "¿Ofrecéis garantía?",
+            answer: "Sí. Garantía 100% - Si ves plagas después de nuestro tratamiento, repetimos sin coste adicional.",
+          },
+          {
+            question: "¿Cuál es el precio?",
+            answer: "Los precios varían según el tipo de plaga y tamaño del espacio. Ofrecemos presupuesto gratuito por teléfono sin compromiso.",
+          },
+          {
+            question: "¿Trabajáis en fin de semana?",
+            answer: "Sí, disponibles 24/7 incluyendo festivos. Servicio urgente garantizado.",
+          },
+          {
+            question: "¿Cubríis todos los barrios de Segovia?",
+            answer: "Sí. Cobertura total en Segovia. Desde Centro Histórico hasta Peñuelas, llegamos a todos los barrios.",
+          },
+        ]}
+      />
 
 
       <Footer />

@@ -1,5 +1,6 @@
 import { Calendar, Clock, Tag, ArrowLeft, CheckCircle2, Target, AlertTriangle, ShieldCheck, Search, Coins, XCircle, AlertOctagon, Eye, Bug, MapPin } from "lucide-react";
 import { Link, useParams } from "wouter";
+import FaqSection from "@/components/FaqSection";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getBlogArticle, blogArticles } from "@/lib/blogData";
@@ -35,21 +36,61 @@ export default function BlogArticlePage() {
     <div className="min-h-screen bg-white">
       <Header />
 
-      {/* ===== BREADCRUMBS ===== */}
-      <div className="bg-gray-50 border-b border-border">
-        <div className="container py-4">
-          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <a href="/" className="hover:text-primary">Inicio</a>
-            <span>/</span>
-            <a href="/blog" className="hover:text-primary">Blog</a>
-            <span>/</span>
-            <span className="text-foreground font-medium">{article.title}</span>
+      {/* ===== HERO SECTION (Premium Dark) ===== */}
+      <section className="relative pt-20 pb-12 lg:pt-28 lg:pb-16 overflow-hidden bg-slate-900">
+        {/* Background Gradient & Blobs */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3" />
+          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[100px] translate-y-1/3 -translate-x-1/4" />
+        </div>
+
+        <div className="container relative z-10 max-w-4xl mx-auto px-4">
+          {/* Breadcrumbs */}
+          <div className="flex items-center gap-2 text-sm text-slate-400 mb-4 font-medium">
+            <Link href="/">
+              <span className="hover:text-emerald-400 cursor-pointer transition-colors">Inicio</span>
+            </Link>
+            <span className="text-slate-600">/</span>
+            <Link href="/blog">
+              <span className="hover:text-emerald-400 cursor-pointer transition-colors">Blog</span>
+            </Link>
+            <span className="text-slate-600">/</span>
+            <span className="text-slate-200 truncate max-w-[200px] sm:max-w-md">{article.title}</span>
+          </div>
+
+          <div className="flex flex-col items-start">
+            <span className="inline-block px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold rounded-full uppercase tracking-wider mb-4">
+              {article.category}
+            </span>
+            
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight tracking-tight">
+              {article.title}
+            </h1>
+            
+            <div className="flex flex-wrap items-center gap-6 text-sm text-slate-400 border-t border-slate-800 pt-6 w-full">
+              <div className="flex items-center gap-2">
+                <Calendar size={18} className="text-emerald-500" />
+                <span className="font-medium text-slate-300">{new Date(article.date).toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Clock size={18} className="text-emerald-500" />
+                <span className="font-medium text-slate-300">{article.readTime} min lectura</span>
+              </div>
+              <div className="flex items-center gap-2 ml-auto">
+                <div className="flex -space-x-2">
+                  <div className="w-8 h-8 rounded-full bg-slate-700 border-2 border-slate-900 flex items-center justify-center text-xs font-bold text-white">
+                    SG
+                  </div>
+                </div>
+                <span className="text-slate-500">Por <span className="text-slate-300">Sierra Guard</span></span>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* ===== ARTÍCULO ===== */}
-      <article className="py-16">
+      <article className="py-12 bg-white">
         {/* Schema.org JSON-LD */}
         {article.schema && (
           <script
@@ -58,45 +99,24 @@ export default function BlogArticlePage() {
           />
         )}
 
-        <div className="container max-w-3xl">
-          {/* Metadata */}
-          <div className="mb-8">
-            {/* Imagen Principal */}
-            {article.image && (
-              <div className="mb-8 rounded-xl overflow-hidden shadow-lg">
-                <img 
-                  src={article.image} 
-                  alt={article.title} 
-                  className="w-full h-auto object-cover max-h-[300px]"
-                />
-              </div>
-            )}
-
-            <div className="flex items-center gap-4 mb-4 text-sm text-muted-foreground">
-              <div className="flex items-center gap-1">
-                <Calendar size={16} />
-                <span>{new Date(article.date).toLocaleDateString('es-ES')}</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <Clock size={16} />
-                <span>{article.readTime} min lectura</span>
-              </div>
-              <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-semibold">
-                {article.category}
-              </span>
+        <div className="container max-w-3xl -mt-20 relative z-20">
+          {/* Imagen Principal */}
+          {article.image && (
+            <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+              <img 
+                src={article.image} 
+                alt={article.title} 
+                className="w-full h-auto object-cover max-h-[500px]"
+              />
             </div>
+          )}
 
-            <h1 className="text-5xl font-bold text-foreground mb-4 leading-tight">
-              {article.title}
-            </h1>
-
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              {article.excerpt}
-            </p>
-          </div>
+          <p className="text-xl md:text-2xl text-slate-600 leading-relaxed mb-12 font-medium border-l-4 border-emerald-500 pl-6 italic">
+            {article.excerpt}
+          </p>
 
           {/* Contenido */}
-          <div className="prose prose-lg max-w-none mb-12">
+          <div className="prose prose-lg prose-slate max-w-none mb-12 prose-headings:font-bold prose-headings:text-slate-900 prose-p:text-slate-600 prose-a:text-emerald-600 prose-strong:text-slate-900 prose-img:rounded-xl">
             {article.content.split('\n\n').map((block, index) => {
               // Helper para renderizar negritas
               const renderTextWithBold = (text: string) => {
@@ -480,24 +500,48 @@ export default function BlogArticlePage() {
 
           {/* Artículos relacionados */}
           {relatedArticles.length > 0 && (
-            <div>
-              <h2 className="text-3xl font-bold text-foreground mb-8">Artículos Relacionados</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="mt-20 border-t border-gray-100 pt-16">
+              <div className="flex items-center justify-between mb-8">
+                <h2 className="text-3xl font-bold text-slate-900">Artículos Relacionados</h2>
+                <Link href="/blog">
+                  <span className="text-emerald-600 font-semibold hover:text-emerald-700 cursor-pointer flex items-center gap-2">
+                    Ver todos <ArrowLeft size={16} className="rotate-180" />
+                  </span>
+                </Link>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {relatedArticles.map(relatedArticle => (
-                  <Link key={relatedArticle.id} href={`/blog/${relatedArticle.slug}`}>
-                    <div className="border border-border rounded-lg p-6 hover:shadow-lg transition cursor-pointer">
-                      <div className="text-sm text-muted-foreground mb-2">
-                        {new Date(relatedArticle.date).toLocaleDateString('es-ES')}
+                  <article key={relatedArticle.id} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col h-full border border-gray-100">
+                    {relatedArticle.image && (
+                      <Link href={`/blog/${relatedArticle.slug}`}>
+                        <div className="w-full h-40 overflow-hidden cursor-pointer relative">
+                          <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors z-10" />
+                          <img 
+                            src={relatedArticle.image} 
+                            alt={relatedArticle.title} 
+                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          />
+                        </div>
+                      </Link>
+                    )}
+                    <div className="p-6 flex flex-col flex-grow">
+                      <div className="text-xs font-bold text-emerald-600 mb-2 uppercase tracking-wide">
+                        {relatedArticle.category}
                       </div>
-                      <h3 className="font-bold text-foreground mb-3 line-clamp-2 hover:text-primary transition">
-                        {relatedArticle.title}
-                      </h3>
-                      <p className="text-sm text-muted-foreground line-clamp-2 mb-4">
-                        {relatedArticle.excerpt}
-                      </p>
-                      <span className="text-primary font-semibold text-sm">Leer más →</span>
+                      <Link href={`/blog/${relatedArticle.slug}`}>
+                        <h3 className="font-bold text-slate-900 mb-3 line-clamp-2 hover:text-emerald-600 transition cursor-pointer text-lg leading-tight">
+                          {relatedArticle.title}
+                        </h3>
+                      </Link>
+                      <div className="mt-auto flex items-center justify-between pt-4 border-t border-gray-50 text-xs text-slate-500">
+                        <span>{new Date(relatedArticle.date).toLocaleDateString('es-ES')}</span>
+                        <span className="flex items-center gap-1">
+                          {relatedArticle.readTime} min <Clock size={12} />
+                        </span>
+                      </div>
                     </div>
-                  </Link>
+                  </article>
                 ))}
               </div>
             </div>

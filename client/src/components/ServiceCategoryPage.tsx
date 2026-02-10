@@ -28,8 +28,10 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import FaqSection from "@/components/FaqSection";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import StickyCallButton from "@/components/StickyCallButton";
 import { ServiceCategory } from "@/lib/serviceCategoriesData";
 import { useEffect } from "react";
 import { Link } from "wouter";
@@ -106,6 +108,8 @@ export default function ServiceCategoryPage({ service }: ServiceCategoryPageProp
           telephone: "+34921234567",
           address: {
               "@type": "PostalAddress",
+              streetAddress: "C. de José Zorrilla, 132",
+              postalCode: "40002",
               addressLocality: "Segovia",
               addressRegion: "Segovia",
               addressCountry: "ES"
@@ -179,29 +183,26 @@ export default function ServiceCategoryPage({ service }: ServiceCategoryPageProp
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
+                <a href="tel:+34921234567" className="w-full sm:w-auto">
+                  <Button
+                    size="lg"
+                    className="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-lg h-14 px-8 rounded-xl shadow-lg shadow-emerald-500/20 transition-all hover:scale-105"
+                  >
+                    <Phone className="mr-2 h-5 w-5" />
+                    Llamar ahora
+                  </Button>
+                </a>
+                
                 <Button
                   size="lg"
-                  className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-lg h-14 px-8 rounded-xl shadow-lg shadow-emerald-500/20 transition-all hover:scale-105"
+                  className="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white border border-white/20 font-bold text-lg h-14 px-8 rounded-xl backdrop-blur-sm transition-all hover:scale-105"
                   onClick={() => {
                     const form = document.getElementById("contact-form");
                     form?.scrollIntoView({ behavior: "smooth" });
                   }}
                 >
-                  <Phone className="mr-2 h-5 w-5" />
-                  {service.cta}
+                  Pedir Presupuesto
                 </Button>
-                
-                <div className="flex items-center gap-4 px-6 h-14 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm">
-                   <div className="flex -space-x-1">
-                      {[1,2,3,4,5].map(i => (
-                        <Star key={i} size={18} className="fill-yellow-400 text-yellow-400" />
-                      ))}
-                   </div>
-                   <div className="flex flex-col">
-                     <span className="text-white text-sm font-bold leading-none">4.9/5</span>
-                     <span className="text-slate-400 text-xs font-medium leading-none mt-1">Google Reviews</span>
-                   </div>
-                </div>
               </div>
             </div>
 
@@ -293,6 +294,28 @@ export default function ServiceCategoryPage({ service }: ServiceCategoryPageProp
         </div>
       </section>
 
+      {/* ===== URGENCY CTA BANNER ===== */}
+      <section className="bg-emerald-900 py-12 border-y border-emerald-800">
+        <div className="container max-w-7xl">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
+             <div className="space-y-2">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/20 border border-red-500/30 text-red-300 text-sm font-bold animate-pulse mb-2">
+                  <span className="w-2 h-2 rounded-full bg-red-500"></span>
+                  Servicio de Urgencias 24h
+                </div>
+                <h3 className="text-2xl lg:text-3xl font-bold text-white">¿Tienes una urgencia con {service.nombre.toLowerCase()}?</h3>
+                <p className="text-emerald-100 text-lg">Nuestros técnicos están listos para actuar. Respuesta inmediata.</p>
+             </div>
+             <a href="tel:+34921234567" className="flex-shrink-0">
+               <Button size="lg" className="bg-white text-emerald-900 hover:bg-emerald-50 font-bold text-xl h-16 px-10 rounded-xl shadow-lg hover:shadow-white/10 transition-all transform hover:-translate-y-1">
+                 <Phone className="mr-3 h-6 w-6 text-emerald-600" />
+                 Llamar: 921 234 567
+               </Button>
+             </a>
+          </div>
+        </div>
+      </section>
+
       {/* ===== CALCULADORA CTA ===== */}
       <section className="py-12 bg-primary text-white">
         <div className="container max-w-7xl flex flex-col md:flex-row items-center justify-between gap-6">
@@ -368,32 +391,48 @@ export default function ServiceCategoryPage({ service }: ServiceCategoryPageProp
         </div>
       </section>
 
-      {/* ===== CÓMO LO HACEMOS ===== */}
-      <section className="py-24 bg-gray-50/50 border-y border-border overflow-hidden">
+      {/* ===== CÓMO LO HACEMOS (UX Mejorado) ===== */}
+      <section className="py-24 bg-gradient-to-b from-gray-50 to-white border-y border-gray-100 overflow-hidden">
         <div className="container max-w-7xl">
           <div className="text-center mb-20">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">Nuestro Proceso de Trabajo</h2>
-            <p className="text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto">
-              Un sistema probado y eficaz para eliminar tu problema de raíz y prevenir futuras reapariciones.
+            <span className="inline-block px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-bold tracking-wide uppercase mb-4">
+              Metodología Sierra Guard
+            </span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
+              Nuestro Proceso de Trabajo
+            </h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+              Un sistema científico y probado en 5 pasos para eliminar tu problema de raíz y prevenir futuras reapariciones.
             </p>
           </div>
 
           <div className="relative">
-            {/* Connecting Line (Desktop) */}
-            <div className="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-gray-200 -z-0"></div>
+            {/* Connecting Line (Desktop Only - LG+) */}
+            <div className="hidden lg:block absolute top-12 left-[10%] w-[80%] h-0.5 bg-gradient-to-r from-transparent via-emerald-200 to-transparent -z-0"></div>
 
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-6">
               {service.proceso.map((paso, index) => (
                 <div key={paso.paso} className="relative z-10 flex flex-col items-center text-center group">
-                  <div className="w-24 h-24 bg-white border-4 border-gray-100 rounded-full flex items-center justify-center mb-6 shadow-sm group-hover:border-primary/30 group-hover:shadow-lg transition-all duration-300">
-                    <span className="text-3xl lg:text-4xl font-bold text-primary">{paso.paso}</span>
+                  {/* Number Badge */}
+                  <div className="w-24 h-24 bg-white border-4 border-gray-50 rounded-full flex items-center justify-center mb-6 shadow-sm group-hover:border-emerald-500 group-hover:shadow-emerald-100 group-hover:shadow-xl transition-all duration-500 relative">
+                    <span className="text-3xl font-extrabold text-slate-300 group-hover:text-emerald-600 transition-colors duration-300">
+                      {paso.paso}
+                    </span>
+                    {/* Active Dot */}
+                    <div className="absolute -bottom-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                      <div className="w-4 h-4 bg-emerald-500 rounded-full border-4 border-white shadow-sm"></div>
+                    </div>
                   </div>
-                  <h3 className="text-xl lg:text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
-                    {paso.titulo}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed text-sm lg:text-base">
-                    {paso.descripcion}
-                  </p>
+                  
+                  {/* Content Card */}
+                  <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 w-full h-full flex flex-col items-center">
+                    <h3 className="text-lg font-bold text-slate-900 mb-3 group-hover:text-emerald-700 transition-colors">
+                      {paso.titulo}
+                    </h3>
+                    <p className="text-slate-500 text-sm leading-relaxed">
+                      {paso.descripcion}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -435,7 +474,7 @@ export default function ServiceCategoryPage({ service }: ServiceCategoryPageProp
                       </Avatar>
                       <div>
                         <p className="font-bold text-foreground text-sm">{testimonio.nombre}</p>
-                        <p className="text-xs text-muted-foreground">{testimonio.empresa}</p>
+                        <p className="text-xs text-muted-foreground">{testimonio.tipo}</p>
                       </div>
                     </div>
                   </CardFooter>
@@ -447,31 +486,10 @@ export default function ServiceCategoryPage({ service }: ServiceCategoryPageProp
       )}
 
       {/* ===== PREGUNTAS FRECUENTES ===== */}
-      {service.faqs && service.faqs.length > 0 && (
-        <section className="py-20 bg-gray-50/50">
-          <div className="container max-w-3xl">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Preguntas Frecuentes</h2>
-              <p className="text-lg text-muted-foreground">
-                Resolvemos tus dudas sobre nuestro servicio de {service.nombre.toLowerCase()}.
-              </p>
-            </div>
-            
-            <Accordion type="single" collapsible className="w-full bg-white rounded-xl shadow-sm border border-gray-100 px-6 py-2">
-              {service.faqs.map((faq, index) => (
-                <AccordionItem key={index} value={`item-${index}`} className="border-b-gray-100 last:border-0">
-                  <AccordionTrigger className="text-left text-lg font-semibold text-foreground hover:text-primary hover:no-underline py-5">
-                    {faq.question}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground text-base leading-relaxed pb-6">
-                    {faq.answer}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </div>
-        </section>
-      )}
+      <FaqSection 
+        faqs={service.faqs || []}
+        description={`Resolvemos tus dudas sobre nuestro servicio de ${service.nombre.toLowerCase()}.`}
+      />
 
       {/* ===== CTA FINAL ===== */}
       <section className="py-12 bg-primary text-white relative overflow-hidden">
@@ -483,22 +501,32 @@ export default function ServiceCategoryPage({ service }: ServiceCategoryPageProp
           <p className="text-lg md:text-xl text-emerald-100 mb-6 max-w-2xl mx-auto leading-relaxed">
             Llámanos ahora y recibe una consulta gratis. <br/>Respuesta garantizada en 24 horas.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              className="bg-white text-primary hover:bg-gray-100 font-bold text-lg h-12 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-              onClick={() => {
-                const form = document.getElementById("contact-form");
-                form?.scrollIntoView({ behavior: "smooth" });
-              }}
-            >
-              <Phone className="mr-2" size={20} />
-              {service.cta}
-            </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a href="tel:+34921234567" className="w-full sm:w-auto">
+              <Button
+                size="lg"
+                className="w-full bg-white text-emerald-600 hover:bg-emerald-50 font-bold text-lg h-14 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              >
+                <Phone className="mr-2" size={20} />
+                Llamar: 921 234 567
+              </Button>
+            </a>
+            
+            <a href="mailto:contacto@controldeplagassegovia.com" className="w-full sm:w-auto">
+              <Button
+                size="lg"
+                className="w-full bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold text-lg h-14 px-8 rounded-xl transition-all duration-300"
+              >
+                Pedir Presupuesto
+              </Button>
+            </a>
           </div>
         </div>
       </section>
       <Footer />
+      
+      {/* Sticky Call Button for Mobile */}
+      <StickyCallButton />
     </div>
   );
 }

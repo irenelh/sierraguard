@@ -1,9 +1,43 @@
 import { Button } from "@/components/ui/button";
-import { Phone, CheckCircle2, MapPin, Shield, Zap, Award, ChevronDown, ChevronUp, ArrowRight } from "lucide-react";
+import { 
+  Phone, 
+  CheckCircle2, 
+  MapPin, 
+  Shield, 
+  Zap, 
+  Award, 
+  ArrowRight, 
+  Calculator,
+  Bug,
+  Search,
+  Home,
+  AlertTriangle,
+  Target,
+  PawPrint,
+  Wind,
+  ShieldAlert
+} from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import FaqSection from "@/components/FaqSection";
+import { serviceCategoriesData } from "@/lib/serviceCategoriesData";
+
+const getServiceIcon = (title: string) => {
+  const t = title.toLowerCase();
+  if (t.includes("cucaracha") || t.includes("insecto")) return <Bug className="w-8 h-8 text-emerald-600" />;
+  if (t.includes("chinche")) return <Search className="w-8 h-8 text-emerald-600" />;
+  if (t.includes("termita") || t.includes("madera") || t.includes("carcoma")) return <Home className="w-8 h-8 text-emerald-600" />;
+  if (t.includes("avispa") || t.includes("velutina")) return <AlertTriangle className="w-8 h-8 text-emerald-600" />;
+  if (t.includes("hormiga")) return <Target className="w-8 h-8 text-emerald-600" />;
+  if (t.includes("pulga") || t.includes("garrapata") || t.includes("ácaro")) return <PawPrint className="w-8 h-8 text-emerald-600" />;
+  if (t.includes("mosquito") || t.includes("aire") || t.includes("conductos") || t.includes("legionella")) return <Wind className="w-8 h-8 text-emerald-600" />;
+  if (t.includes("araña")) return <ShieldAlert className="w-8 h-8 text-emerald-600" />;
+  if (t.includes("rat") || t.includes("rodent")) return <ShieldAlert className="w-8 h-8 text-emerald-600" />;
+  return <Shield className="w-8 h-8 text-emerald-600" />;
+};
 
 /**
  * Componente LocationPage Reutilizable
@@ -51,6 +85,25 @@ export default function LocationPage({
   zonasCercanas,
   mapEmbedUrl,
 }: LocationPageProps) {
+  // Obtener todos los servicios del sistema para mostrar el catálogo completo
+  // Filtramos para mostrar solo los 6-9 más relevantes y evitar una lista excesiva
+  const priorityServices = [
+    "Control de Cucarachas",
+    "Control de Chinches", 
+    "Control de Termitas",
+    "Control de Avispas",
+    "Desratización Integral",
+    "Control de Hormigas",
+    "Desinfección de Patógenos",
+    "Auditoría de Legionella",
+    "Control de Pulgas y Ácaros"
+  ];
+
+  const allServices = serviceCategoriesData
+    .flatMap(category => category.servicios)
+    .filter(service => priorityServices.includes(service.titulo))
+    .sort((a, b) => priorityServices.indexOf(a.titulo) - priorityServices.indexOf(b.titulo));
+
   // Actualizar meta tags dinámicamente y resetear scroll
   useEffect(() => {
     // Scroll al inicio al cargar la página
@@ -71,11 +124,13 @@ export default function LocationPage({
       url: `https://sierraguard.es/control-de-plagas-${barrio.toLowerCase().replace(/\s+/g, "-")}`,
       telephone: "+34921234567",
       address: {
-        "@type": "PostalAddress",
-        addressLocality: barrio,
-        addressRegion: "Segovia",
-        addressCountry: "ES",
-      },
+          "@type": "PostalAddress",
+          streetAddress: "C. de José Zorrilla, 132",
+          postalCode: "40002",
+          addressLocality: barrio,
+          addressRegion: "Segovia",
+          addressCountry: "ES",
+        },
       areaServed: {
         "@type": "City",
         name: barrio,
@@ -149,20 +204,29 @@ export default function LocationPage({
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4">
-                   <Button 
-                      size="lg" 
-                      className="bg-emerald-900 hover:bg-emerald-950 text-white font-bold text-lg lg:text-xl h-14 lg:h-16 px-8 lg:px-10 rounded-xl shadow-lg hover:shadow-emerald-900/20 w-full sm:w-auto flex items-center justify-center gap-3 transition-all transform hover:-translate-y-1"
-                      onClick={() => document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" })}
-                   >
-                      <Phone size={22} />
-                      {ctaText}
-                   </Button>
                    <a 
                       href="tel:+34921234567"
-                      className="flex items-center justify-center gap-3 px-8 h-14 lg:h-16 rounded-xl border-2 border-gray-200 hover:border-emerald-700 hover:bg-emerald-50 text-gray-700 hover:text-emerald-800 font-bold text-lg transition-all w-full sm:w-auto"
+                      className="w-full sm:w-auto"
                    >
-                      <span>Llamar Ahora</span>
+                      <Button 
+                        size="lg" 
+                        className="w-full bg-emerald-900 hover:bg-emerald-950 text-white font-bold text-lg lg:text-xl h-14 lg:h-16 px-8 lg:px-10 rounded-xl shadow-lg hover:shadow-emerald-900/20 flex items-center justify-center gap-3 transition-all transform hover:-translate-y-1"
+                      >
+                        <Phone size={22} />
+                        Llamar Ahora
+                      </Button>
                    </a>
+
+                   <Link href="/calculadora">
+                      <Button 
+                        size="lg"
+                        variant="outline"
+                        className="w-full sm:w-auto flex items-center justify-center gap-3 px-8 h-14 lg:h-16 rounded-xl border-2 border-gray-200 hover:border-emerald-700 hover:bg-emerald-50 text-gray-700 hover:text-emerald-800 font-bold text-lg transition-all"
+                      >
+                        <Calculator size={22} />
+                        Calculadora de Presupuestos
+                      </Button>
+                   </Link>
                 </div>
                 
                 <p className="mt-4 text-sm text-gray-500 flex items-center gap-2">
@@ -202,24 +266,45 @@ export default function LocationPage({
           </div>
         </section>
 
-        {/* SERVICIOS LISTA */}
-        <section className="py-12 px-4 bg-gray-50 border-y border-gray-200">
+        {/* SERVICIOS LISTA - PREMIUM DESIGN */}
+        <section className="py-20 px-4 bg-gray-50/50 border-y border-gray-200">
           <div className="container max-w-7xl mx-auto">
-            <h2 className="text-3xl lg:text-5xl font-bold mb-8 text-gray-900 text-center">Servicios de Control de Plagas en {barrio}</h2>
+            <h2 className="text-3xl lg:text-5xl font-bold mb-12 text-gray-900 text-center">Servicios de Control de Plagas en {barrio}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {serviciosEspecificos.map((servicio, idx) => (
-                <div key={idx} className="bg-white p-8 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 h-full flex flex-col">
-                  <h3 className="text-xl font-bold mb-4 text-emerald-900 border-b border-gray-100 pb-3">{servicio.titulo}</h3>
-                  <p className="text-gray-700 mb-6 flex-grow leading-relaxed">{servicio.descripcion}</p>
-                  <ul className="grid grid-cols-1 gap-3 mt-auto">
-                    {servicio.items.map((item, i) => (
-                      <li key={i} className="flex items-start gap-3 text-gray-600 text-sm font-medium">
-                        <CheckCircle2 className="text-emerald-600 w-5 h-5 flex-shrink-0" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+              {allServices.map((servicio, idx) => (
+                <Card key={idx} className="group bg-white hover:bg-gradient-to-b hover:from-white hover:to-emerald-50/30 transition-all duration-500 border-slate-100 hover:border-emerald-200 hover:shadow-xl hover:shadow-emerald-900/5 overflow-hidden relative h-full flex flex-col hover:-translate-y-1">
+                  
+                  {/* Decorative top accent */}
+                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-400 to-emerald-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  
+                  <CardHeader className="pb-4 relative">
+                    {/* Icon Container with Glass/Gradient feel */}
+                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-50 to-white border border-emerald-100 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-emerald-500/10 transition-all duration-500">
+                       {getServiceIcon(servicio.titulo)}
+                    </div>
+                    
+                    <CardTitle className="text-xl lg:text-2xl font-bold mb-3 text-slate-800 group-hover:text-emerald-700 transition-colors">
+                      {servicio.titulo}
+                    </CardTitle>
+                    
+                    <CardDescription className="text-base lg:text-lg text-slate-600 group-hover:text-slate-700">
+                      {servicio.descripcion}
+                    </CardDescription>
+                  </CardHeader>
+
+                  <CardContent className="flex-1 relative mt-auto">
+                    <ul className="space-y-3">
+                      {servicio.items.map((item, i) => (
+                        <li key={i} className="flex items-start gap-3 text-sm lg:text-base text-slate-500 group-hover:text-slate-600 transition-colors">
+                          <div className="mt-0.5 min-w-[18px] h-[18px] rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0">
+                            <CheckCircle2 size={12} className="text-emerald-600" />
+                          </div>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
               ))}
             </div>
             
@@ -264,41 +349,24 @@ export default function LocationPage({
           <div className="container max-w-7xl mx-auto">
             <h2 className="text-3xl lg:text-5xl font-bold mb-6">¿Problemas de plagas en {barrio}?</h2>
             <p className="text-xl lg:text-2xl mb-8 text-emerald-50">Actuamos rápido. Presupuesto sin compromiso.</p>
-            <Button 
-                size="lg" 
-                className="bg-white text-emerald-900 hover:bg-gray-100 font-bold text-lg lg:text-xl h-14 lg:h-16 px-8 lg:px-10 rounded shadow-lg w-full sm:w-auto"
-                onClick={() => document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" })}
-             >
-                <Phone className="mr-2" size={20} />
-                Llamar Ahora
-             </Button>
+            <a href="tel:+34921234567">
+              <Button 
+                  size="lg" 
+                  className="bg-white text-emerald-900 hover:bg-gray-100 font-bold text-lg lg:text-xl h-14 lg:h-16 px-8 lg:px-10 rounded shadow-lg w-full sm:w-auto"
+               >
+                  <Phone className="mr-2" size={20} />
+                  Llamar Ahora
+               </Button>
+            </a>
           </div>
         </section>
 
         {/* FAQ */}
-        {faqs && faqs.length > 0 && (
-          <section className="py-12 px-4 container max-w-7xl mx-auto">
-            <h2 className="text-2xl lg:text-4xl font-bold mb-8 text-gray-900">Preguntas Frecuentes</h2>
-            <div className="space-y-4">
-              {faqs.map((faq, idx) => (
-                <details key={idx} className="group bg-white border border-gray-200 rounded-sm">
-                  <summary className="flex justify-between items-center font-medium cursor-pointer list-none p-4 bg-gray-50 hover:bg-gray-100 transition-colors">
-                    <span className="text-lg lg:text-xl text-gray-900">{faq.question}</span>
-                    <span className="transition group-open:rotate-180">
-                      <ChevronDown size={20} />
-                    </span>
-                  </summary>
-                  <div className="text-gray-700 p-4 border-t border-gray-200 leading-relaxed">
-                    {faq.answer}
-                  </div>
-                </details>
-              ))}
-            </div>
-          </section>
-        )}
+        <FaqSection 
+          faqs={faqs || []} 
+          bgColor="bg-white"
+        />
 
-
-        
         {/* CONTACT FORM SIMPLE */}
         <section id="contact-form" className="py-12 px-4 bg-white">
            <div className={`container mx-auto border border-gray-200 p-6 sm:p-8 rounded-sm shadow-sm bg-gray-50 ${mapEmbedUrl ? 'max-w-7xl' : 'max-w-4xl'}`}>
@@ -384,21 +452,33 @@ export default function LocationPage({
 
             {/* CTA Magnético */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                size="lg"
-                className={`${
-                  ctaUrgencia
-                    ? "bg-red-600 hover:bg-red-700"
-                    : "bg-primary hover:bg-primary/90"
-                } text-white font-bold text-lg lg:text-xl h-14 lg:h-16 px-8 lg:px-10 rounded-lg shadow-lg hover:shadow-xl transition-all`}
-                onClick={() => {
-                  const form = document.getElementById("contact-form");
-                  form?.scrollIntoView({ behavior: "smooth" });
-                }}
+              <a 
+                 href="tel:+34921234567"
+                 className="w-full sm:w-auto"
               >
-                <Phone className="mr-2" size={20} />
-                {ctaText}
-              </Button>
+                <Button
+                  size="lg"
+                  className={`w-full ${
+                    ctaUrgencia
+                      ? "bg-red-600 hover:bg-red-700"
+                      : "bg-emerald-600 hover:bg-emerald-700"
+                  } text-white font-bold text-lg lg:text-xl h-14 lg:h-16 px-8 lg:px-10 rounded-xl shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-3 transform hover:-translate-y-1`}
+                >
+                  <Phone className="mr-2" size={20} />
+                  Llamar Ahora
+                </Button>
+              </a>
+
+              <Link href="/calculadora">
+                <Button 
+                  size="lg"
+                  variant="outline"
+                  className="w-full sm:w-auto flex items-center justify-center gap-3 px-8 h-14 lg:h-16 rounded-xl border-2 border-emerald-600/20 hover:border-emerald-600 hover:bg-emerald-50 text-emerald-900 font-bold text-lg transition-all"
+                >
+                  <Calculator size={20} />
+                  Calculadora
+                </Button>
+              </Link>
             </div>
 
             {/* Trust Badges */}
@@ -433,30 +513,44 @@ export default function LocationPage({
             Servicios de Control de Plagas en {barrio}
           </h2>
           <p className="text-center text-muted-foreground lg:text-xl mb-12 max-w-2xl mx-auto">
-            Soluciones adaptadas a las necesidades específicas de {barrio}
+            Soluciones integrales para todo tipo de plagas en {barrio}
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {serviciosEspecificos.map((servicio, idx) => (
-              <div
-                key={idx}
-                className="p-8 border-l-4 border-primary hover:shadow-lg transition-shadow"
-              >
-                <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
-                  {servicio.titulo}
-                </h3>
-                <p className="text-muted-foreground lg:text-lg mb-4 leading-relaxed">
-                  {servicio.descripcion}
-                </p>
-                <ul className="space-y-2">
-                  {servicio.items.map((item, itemIdx) => (
-                    <li key={itemIdx} className="flex items-start gap-2 text-sm lg:text-base text-muted-foreground">
-                      <CheckCircle2 size={16} className="text-primary mt-0.5 flex-shrink-0" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {allServices.map((servicio, idx) => (
+              <Card key={idx} className="group bg-white hover:bg-gradient-to-b hover:from-white hover:to-emerald-50/30 transition-all duration-500 border-slate-100 hover:border-emerald-200 hover:shadow-xl hover:shadow-emerald-900/5 overflow-hidden relative h-full flex flex-col hover:-translate-y-1">
+                
+                {/* Decorative top accent */}
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-400 to-emerald-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                
+                <CardHeader className="pb-4 relative">
+                  {/* Icon Container with Glass/Gradient feel */}
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-50 to-white border border-emerald-100 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-emerald-500/10 transition-all duration-500">
+                      {getServiceIcon(servicio.titulo)}
+                  </div>
+                  
+                  <CardTitle className="text-xl lg:text-2xl font-bold mb-3 text-slate-800 group-hover:text-emerald-700 transition-colors">
+                    {servicio.titulo}
+                  </CardTitle>
+                  
+                  <CardDescription className="text-base lg:text-lg text-slate-600 group-hover:text-slate-700">
+                    {servicio.descripcion}
+                  </CardDescription>
+                </CardHeader>
+
+                <CardContent className="flex-1 relative mt-auto">
+                  <ul className="space-y-3">
+                    {servicio.items.map((item, i) => (
+                      <li key={i} className="flex items-start gap-3 text-sm lg:text-base text-slate-500 group-hover:text-slate-600 transition-colors">
+                        <div className="mt-0.5 min-w-[18px] h-[18px] rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0">
+                          <CheckCircle2 size={12} className="text-emerald-600" />
+                        </div>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
             ))}
           </div>
           

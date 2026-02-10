@@ -13,6 +13,10 @@ import BlogArticlePage from "./pages/BlogArticlePage";
 import ContactPage from "./pages/ContactPage";
 import Calculadora from "./pages/Calculadora";
 import ScrollToTop from "./components/ScrollToTop";
+import AvisoLegal from "./pages/legal/AvisoLegal";
+import PoliticaPrivacidad from "./pages/legal/PoliticaPrivacidad";
+import PoliticaCookies from "./pages/legal/PoliticaCookies";
+import CookieBanner from "./components/CookieBanner";
 
 
 function AppRoutes() {
@@ -24,6 +28,9 @@ function AppRoutes() {
         {/* <Route path="/barrios" component={BarriosPage} /> */}
         <Route path="/calculadora" component={Calculadora} />
         <Route path="/contacto" component={ContactPage} />
+        <Route path="/aviso-legal" component={AvisoLegal} />
+        <Route path="/politica-privacidad" component={PoliticaPrivacidad} />
+        <Route path="/politica-cookies" component={PoliticaCookies} />
         <Route path="/blog/:slug" component={BlogArticlePage} />
         <Route path="/blog" component={BlogPage} />
         {/* Ruta catch-all para Categorías de Servicio y Location Pages */}
@@ -52,6 +59,7 @@ function App() {
           <Toaster />
           <Router>
             <AppRoutes />
+            <CookieBanner />
           </Router>
           <WhatsAppWidget />
         </TooltipProvider>

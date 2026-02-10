@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Phone, CheckCircle2, ArrowRight, ShieldCheck, Star } from "lucide-react";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import StickyCallButton from "@/components/StickyCallButton";
 
 /**
  * Página de Servicios
@@ -104,29 +106,26 @@ export default function ServicesPage() {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
+                <a href="tel:+34921234567" className="w-full sm:w-auto">
+                  <Button
+                    size="lg"
+                    className="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-lg h-14 px-8 rounded-xl shadow-lg shadow-emerald-500/20 transition-all hover:scale-105"
+                  >
+                    <Phone className="mr-2 h-5 w-5" />
+                    Llamar ahora
+                  </Button>
+                </a>
+                
                 <Button
                   size="lg"
-                  className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-lg h-14 px-8 rounded-xl shadow-lg shadow-emerald-500/20 transition-all hover:scale-105"
+                  className="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white border border-white/20 font-bold text-lg h-14 px-8 rounded-xl backdrop-blur-sm transition-all hover:scale-105"
                   onClick={() => {
                     const form = document.getElementById("contact-form");
                     form?.scrollIntoView({ behavior: "smooth" });
                   }}
                 >
-                  <Phone className="mr-2 h-5 w-5" />
-                  Llama ahora
+                  Pedir Presupuesto
                 </Button>
-                
-                <div className="flex items-center gap-4 px-6 h-14 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm">
-                   <div className="flex -space-x-1">
-                      {[1,2,3,4,5].map(i => (
-                        <Star key={i} size={18} className="fill-yellow-400 text-yellow-400" />
-                      ))}
-                   </div>
-                   <div className="flex flex-col">
-                     <span className="text-white text-sm font-bold leading-none">4.9/5</span>
-                     <span className="text-slate-400 text-xs font-medium leading-none mt-1">Google Reviews</span>
-                   </div>
-                </div>
               </div>
             </div>
 
@@ -236,41 +235,10 @@ export default function ServicesPage() {
       </section>
 
       {/* ===== FOOTER ===== */}
-      <footer className="bg-foreground text-white py-12">
-        <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            <div>
-              <h4 className="font-bold text-lg mb-4">Sierra Guard</h4>
-              <p className="text-gray-300 text-sm">
-                Control profesional de plagas en Segovia.
-              </p>
-            </div>
+      <Footer />
 
-            <div>
-              <h4 className="font-bold mb-4">Navegación</h4>
-              <ul className="space-y-2 text-sm text-gray-300">
-                <li><a href="/" className="hover:text-white transition">Inicio</a></li>
-                <li><a href="/servicios" className="hover:text-white transition">Servicios</a></li>
-                <li><a href="/barrios" className="hover:text-white transition">Barrios</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-bold mb-4">Contacto</h4>
-              <ul className="space-y-2 text-sm text-gray-300">
-                <li><a href="tel:+34921234567" className="hover:text-white transition">+34 921 234 567</a></li>
-                <li><a href="mailto:contacto@controldeplagassegovia.com" className="hover:text-white transition">contacto@controldeplagassegovia.com</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-700 pt-8">
-            <p className="text-center text-sm text-gray-400">
-              © 2026 Sierra Guard. Todos los derechos reservados.
-            </p>
-          </div>
-        </div>
-      </footer>
+      {/* Sticky Call Button for Mobile */}
+      <StickyCallButton />
     </div>
   );
 }
